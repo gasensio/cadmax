@@ -1,4 +1,4 @@
-<div class="col-md-4 blog-main box text-center" id="post_<% post.id %>">
+<div class="col-md-4 blog-main box text-center" id="post_<%= post.id %>">
 
 		<div class="panel panel-info"><!-- Panel Info -->
 
@@ -15,7 +15,7 @@
 					<button type="button" class="btn btn-warning" data-toggle="modal" data-target="#myupdatepost_<%= post.id %>">
 						Edit
 					</button>
-					<%= link_to 'Destroy' , post, method: :delete, class: "btn btn-danger" %>
+					<%= link_to 'Destroy' , post, method: :delete, class: "btn btn-danger", remote: :true %>
 				</div>
 
 			</div> <!-- Panel Body -->
