@@ -45,6 +45,8 @@ group :development, :test do
   gem 'devise'
 
   gem 'rails_admin'
+
+  gem 'bootstrap-datepicker-rails'
   
 end
 

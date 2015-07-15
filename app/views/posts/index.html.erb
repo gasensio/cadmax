@@ -1,3 +1,4 @@
+
 <div class="container">
 
     <div class="row">
@@ -13,9 +14,11 @@
 
     <div class="row" id="container_posts">
      <!-- <div class="panel-body">  Panel Body -->
+
         <table class="table table-bordered table-hover">
           <thead>
-            <tr class="active">
+            <tr class="info">
+            <th>Fecha de trabajo</th>
             <th>Pedido</th>
             <th>Horas ordinarias facturadas</th>
             <th>Horas no facturables</th>
@@ -27,25 +30,26 @@
             <th>Bolsa de horas utilizadas</th>
             </tr>
           </thead>
-          <thead>
-            <tr class="active">
-            <th>Pedido</th>
-            <th><%= Post.sum(:horasof) %></th>
-            <th>Horas no facturables</th>
-            <th>Extra</th>
-            <th><%= Post.sum(:extraf) %></th>
-            <th>Nocturnas</th>
-            <th>Vacaciones</th>
-            <th>Bolsa de horas generadas</th>
-            <th>Bolsa de horas utilizadas</th>
-            </tr>
-          </thead>
+
           <tbody  id="tabla">
             
 
         <%= render @posts %>
 
-                  </tbody>
+          <tr class="active">
+            <th></th>
+            <th>Totales</th>
+            <th><%= Post.sum(:horasof) %></th>
+            <th><%= Post.sum(:horasnf) %></th>
+            <th><%= Post.sum(:extra) %></th>
+            <th><%= Post.sum(:extraf) %></th>
+            <th><%= Post.sum(:nocturnas) %></th>
+            <th><%= Post.sum(:vacaciones) %></th>
+            <th><%= Post.sum(:bolsahg) %></th>
+            <th><%= Post.sum(:bolsahu) %></th>
+
+          </tr>
+          </tbody>
 
         </table>
 
@@ -60,50 +64,35 @@
               <h4 class="modal-title" id="myModalLabel">Post</h4>
             </div>
             <div class="modal-body">
-              <div class="field">
-                <%= f.label :title %><br>
-                <%= f.text_area :title, class: "form-control post_title" %>
-              </div>
-              <div class="field">
-                <%= f.label :content %><br>
-                <%= f.text_area :content, class: "form-control post_content" %>
-              </div>
-              <div class="field">
-                <%= f.label :pedido %><br>
-                <%= f.text_area :pedido, class: "form-control post_content" %>
-              </div>
-              <div class="field">
-                <%= f.label :horasof, 'Horas ordinarias facturadas' %><br>
-                <%= f.text_area :horasof, class: "form-control post_content" %>
-              </div>
-              <div class="field">
-                <%= f.label :horasnf, 'Horas no facturables' %><br>
-                <%= f.text_area :horasnf, class: "form-control post_content" %>
-              </div>
-              <div class="field">
-                <%= f.label :extra %><br>
-                <%= f.text_area :extra, class: "form-control post_content" %>
-              </div>
-              <div class="field">
-                <%= f.label :extraf, 'Extras festivas' %><br>
-                <%= f.text_area :extraf, class: "form-control post_content" %>
-              </div>
-              <div class="field">
-                <%= f.label :nocturnas %><br>
-                <%= f.text_area :nocturnas, class: "form-control post_content" %>
-              </div>
-              <div class="field">
-                <%= f.label :vacaciones %><br>
-                <%= f.text_area :vacaciones, class: "form-control post_content" %>
-              </div>
-              <div class="field">
-                <%= f.label :bolsahg, 'Bolsa de horas generadas' %><br>
-                <%= f.text_area :bolsahg, class: "form-control post_content" %>
-              </div>
-              <div class="field">
-                <%= f.label :bolsahu, 'Bolsa de horas utilizadas' %><br>
-                <%= f.text_area :bolsahu, class: "form-control post_content" %>
-              </div>
+              
+                
+                <%= f.text_area :title, class: "form-control post_title", label: false, autofocus: true, placeholder: "Titulo", rows: 1 %><br>
+
+                <%= f.text_area :content, class: "form-control post_content", label: false, placeholder: "Contenido", rows: 1 %><br>
+                <div class="input-group">
+                
+                <%= f.datetime_field :fecha, class: "form-control post_content datepicker", :data => {:provide => 'datepicker'}, label: false, placeholder: "Fecha", rows: 1 %><span class="input-group-addon" id="basic-addon1" >
+                <span class="glyphicon glyphicon-menu-hamburger" aria-hidden="true"></span>
+              </span></div> <br>
+
+                <%= f.text_area :pedido, class: "form-control post_content", label: false, placeholder: "Pedido", rows: 1 %><br>
+
+                <%= f.text_area :horasof, class: "form-control post_content", label: false, placeholder: "Horas ordinarias facturadas", rows: 1 %><br>
+
+                <%= f.text_area :horasnf, class: "form-control post_content", label: false, placeholder: "Horas no facturadas", rows: 1 %><br>
+
+                <%= f.text_area :extra, class: "form-control post_content", label: false, placeholder: "Extra", rows: 1 %><br>
+
+                <%= f.text_area :extraf, class: "form-control post_content", label: false, placeholder: "Extra facturadas", rows: 1 %><br>
+
+                <%= f.text_area :nocturnas, class: "form-control post_content", label: false, placeholder: "Nocturnas", rows: 1 %><br>
+
+                <%= f.text_area :vacaciones, class: "form-control post_content", label: false, placeholder: "Vacaciones", rows: 1 %><br>
+
+                <%= f.text_area :bolsahg, class: "form-control post_content", label: false, placeholder: "Bolsa de horas generadas", rows: 1 %><br>
+
+                <%= f.text_area :bolsahu, class: "form-control post_content", label: false, placeholder: "Bolsa de horas utilizadas", rows: 1 %><br>
+
             </div>
 
             <div class="modal-footer">
@@ -114,6 +103,7 @@
         </div>
       </div>
       <% end %>
+
 
 
 
