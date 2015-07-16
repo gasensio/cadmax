@@ -23,7 +23,7 @@
 
 # Time
   # ----------------------------
-  Time::DATE_FORMATS[:default] = " %d-%m-%Y"         # 2013-11-03 14:22:18
+  Time::DATE_FORMATS[:default] = "%d-%m-%Y"         # 2013-11-03 14:22:18
   #Time::DATE_FORMATS[:default] = "&proc"                     # November 3rd, 2013 14:22
   #Time::DATE_FORMATS[:default] = "%B %d, %Y %H:%M"           # November 3, 2013 14:22
   #Time::DATE_FORMATS[:default] = "%a, %d %b %Y %H:%M:%S %z"  # Sun, 3 Nov 2013 14:22:18 -0700
