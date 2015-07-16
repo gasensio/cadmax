@@ -20,7 +20,8 @@
 $(document).ready(function(){
     $('.datepicker').datepicker({
     	autoclose: true,
-    	language: "es"
+    	language: "es",
+    	orientation: "top auto"
     });
   });
 
