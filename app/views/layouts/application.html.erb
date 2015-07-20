@@ -18,11 +18,17 @@
 <body>
 	<div class="container">
 		<div class="row">
+
 	<% if user_signed_in? %>
 
-	<p>Hello, <%= current_user.name %> - <%= link_to "Sign_out", destroy_user_session_path, :method => 'delete' %></p>
-
-	<br>
+	<h5>Hola, <%= current_user.name %> - <%= link_to "Sign out", destroy_user_session_path, :method => 'delete' %></h5>
+	<div class="container">
+	<% flash.each do |type, message| %>
+	<div class="alert alert-info fade-in">
+		<button class="close" data-dismiss="alert">x</button>
+		<%= message %>
+		<% end %>
+	</div>
 
 	<% end %>
 	

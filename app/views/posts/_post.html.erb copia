@@ -1,11 +1,28 @@
 			
-      
-        
-     
 
+			<tr id="post_<%= post.id %>">
 
-   
+				<th><%= post.fecha %></th>
+				<th><%= post.pedido %></th>
+				<th><%= post.horasof %></th>
+				<th><%= post.horasnf %></th>
+				<th><%= post.extra %></th>
+				<th><%= post.extraf %></th>
+				<th><%= post.nocturnas %></th>
+				<th><%= post.vacaciones %></th>
+				<th><%= post.bolsahg %></th>
+				<th><%= post.bolsahu %></th>
+				<th>
+					<button type="button" class="btn btn-warning btn-xs" data-toggle="modal" data-target="#myupdatepost_<%= post.id %>">
+									Edit
+					</button>
+				</th>
 
+				<th>
+					<%= link_to 'Delete' , post, method: :delete, class: "btn btn-danger btn-xs", remote: :true, data: {confirm: 'Are you sure?'} %>
+				</th>
+
+			</tr>
 
 
 
@@ -13,8 +30,8 @@
 
 
 		<!-- Modal - update posts -->
-		<%= form_for(@post, :method => :put, remote: true) do |f| %>
-		<div class="modal fade" id="myupdatepost_<%= @post.id %>" tabindex="-1" role="dialog" aria-labelledby="myModelLabel" aria-hidden="true" data-target="myupdatepost_<%= @post.id %>">>
+		<%= form_for(post, :method => :put, remote: true) do |f| %>
+		<div class="modal fade" id="myupdatepost_<%= post.id %>" tabindex="-1" role="dialog" aria-labelledby="myModelLabel" aria-hidden="true">
 		<div class="modal-dialog">
 		  <div class="modal-content">
 			<div class="modal-header">
@@ -30,7 +47,7 @@
                 <div class="input-group">
                 <%= f.datetime_field :fecha, class: "form-control post_content datepicker", :data => {:provide => 'datepicker'}, label: false, placeholder: "Fecha", rows: 1 %><span class="input-group-addon" id="basic-addon1" >
                 <span class="glyphicon glyphicon-menu-hamburger" aria-hidden="true"></span>
-              </span></div>
+              </span></div> <br>
 
                 <%= f.text_area :pedido, class: "form-control", label: false, placeholder: "Pedido", rows: 1 %><br>
 
@@ -51,7 +68,7 @@
                 <%= f.text_area :bolsahu, class: "form-control", label: false, placeholder: "Bolsa de horas utilizadas", rows: 1 %><br>
             </div>
             <div class="modal-footer">
-            	<button type="button" id="myupdatebutton_<%= @post.id %>" class="btn btn-default" data-dismiss="modal">Close</button>
+            	<button type="button" id="myupdatebutton_<%= post.id %>" class="btn btn-default" data-dismiss="modal">Close</button>
             	<%= submit_tag "Update", class: "btn btn-primary" %>
             </div>
 		  </div>

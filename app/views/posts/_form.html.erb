@@ -11,16 +11,37 @@
     </div>
   <% end %>
 
-  <div class="field">
-    <%= f.label :title %><br>
-    <%= f.text_field :title %>
-  </div>
-  <div class="field">
-    <%= f.label :content %><br>
-    <%= f.text_area :content %>
-  </div>
+                <%= f.text_area :title, class: "form-control post_title", label: false, autofocus: true, placeholder: "Titulo", rows: 1 %><br>
+
+                <%= f.text_area :content, class: "form-control post_content", label: false, placeholder: "Contenido", rows: 1 %><br>
+                <div class="input-group">
+                
+                <%= f.date_field :alta, class: "form-control post_content datepicker", :data => {:provide => 'datepicker'}, label: false, placeholder: "Alta", rows: 1 %><span class="input-group-addon" id="basic-addon1" >
+                <span class="glyphicon glyphicon-menu-hamburger" aria-hidden="true"></span>
+              </span></div> <br>
+
+                <%= f.text_area :pedido, class: "form-control post_content", label: false, placeholder: "Pedido", rows: 1 %><br>
+
+                <%= f.text_area :horasof, class: "form-control post_content", label: false, placeholder: "Horas ordinarias facturadas", rows: 1 %><br>
+
+                <%= f.text_area :horasnf, class: "form-control post_content", label: false, placeholder: "Horas no facturadas", rows: 1 %><br>
+
+                <%= f.text_area :extra, class: "form-control post_content", label: false, placeholder: "Extra", rows: 1 %><br>
+
+                <%= f.text_area :extraf, class: "form-control post_content", label: false, placeholder: "Extra facturadas", rows: 1 %><br>
+
+                <%= f.text_area :nocturnas, class: "form-control post_content", label: false, placeholder: "Nocturnas", rows: 1 %><br>
+
+                <%= f.text_area :vacaciones, class: "form-control post_content", label: false, placeholder: "Vacaciones", rows: 1 %><br>
+
+                <%= f.text_area :bolsahg, class: "form-control post_content", label: false, placeholder: "Bolsa de horas generadas", rows: 1 %><br>
+
+                <%= f.text_area :bolsahu, class: "form-control post_content", label: false, placeholder: "Bolsa de horas utilizadas", rows: 1 %><br>
 
   <div class="actions">
     <%= f.submit %>
   </div>
+
+  <button type="button" class="btn btn-default" data-dismiss="modal" id="mynewpostclose">Close</button>
+              <%= submit_tag "Create", class: "btn btn-primary" %>
 <% end %>

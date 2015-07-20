@@ -1,98 +1,94 @@
 <div class="container">
 
     <div class="row">
-      <div class="text-center">
+      <div class="col-md-4">
+      <%= image_tag "logo.png", class: "img-responsive" %>
+      </div>
+      <div class="col-md-8 text-center">
         <button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#mynewpost">
           New Post
         </button>
       </div>
     </div>
 
-    <br>
-    <hr>
 
-    <div class="row" id="container_posts">
-     <ul class="nav nav-tabs" role="tablist" id="mesestab">
+    <div class="row">
+      <div id ="posts">  
+        <h2 id="month">
+          <%= link_to "", {date: @date.prev_month}, class: "glyphicon glyphicon-chevron-left btn btn-primary btn-lg" %>
+          <%= @date.strftime("%B %Y") %>
+          <%=link_to "", {date: @date.next_month}, class: "glyphicon glyphicon-chevron-right btn btn-primary btn-lg" %>
+        </h2>
+        <%= calendar @date do |date| %>
+        <%= date.day %>
+        <% if @posts_by_date[date] %>
+        <ul>
+          <% @posts_by_date[date].each do |post| %>
+          <li id="post_<%= post.id %>"><%= link_to post.title, post %>
+            <%= link_to 'Delete' , post, method: :delete, class: "btn btn-danger btn-xs", remote: :true, data: {confirm: 'Are you sure?'} %>
+            <button type="button" class="btn btn-warning btn-xs" data-toggle="modal" data-target="#myupdatepost_<%= post.id %>">
+              Edit
+            </button>
 
-        <li role="presentation" class="active"><a href="#enero" aria-controls="enero" data-target="#enero" role="tab" data-toggle="tab">Enero</a></li>
-        <li role="presentation"><a href="#febrero" aria-controls="febrero" data-target="#febrero" role="tab" data-toggle="tab">Febrero</a></li>
-        <li role="presentation"><a href="#marzo" aria-controls="marzo" data-target="#marzo" role="tab" data-toggle="tab">Marzo</a></li>
-        <li role="presentation"><a href="#abril" aria-controls="abril" data-target="#abril" role="tab" data-toggle="tab">Abril</a></li>
-        <li role="presentation"><a href="#mayo" aria-controls="settings" role="tab" data-toggle="tab">Mayo</a></li>
-        <li role="presentation"><a href="#junio" aria-controls="settings" role="tab" data-toggle="tab">Junio</a></li>
-        <li role="presentation"><a href="#julio" aria-controls="settings" role="tab" data-toggle="tab">Julio</a></li>
-        <li role="presentation"><a href="#agosto" aria-controls="settings" role="tab" data-toggle="tab">Agosto</a></li>
-        <li role="presentation"><a href="#septiembre" aria-controls="settings" role="tab" data-toggle="tab">Septiembre</a></li>
-        <li role="presentation"><a href="#octubre" aria-controls="settings" role="tab" data-toggle="tab">Octubre</a></li>
-        <li role="presentation"><a href="#noviembre" aria-controls="settings" role="tab" data-toggle="tab">Noviembre</a></li>
-        <li role="presentation"><a href="#diciembre" aria-controls="settings" role="tab" data-toggle="tab">Diciembre</a></li>
+            <!-- Modal - update posts -->
+            <%= form_for( post, :method => :put, remote: true) do |f| %> 
+            <div class="modal fade" id="myupdatepost_<%= post.id %>" tabindex="-1" role="dialog" aria-labelledby="myModelLabel" aria-hidden="true" data-target="myupdatepost_<%= post.id %>">
 
-    </ul>
-        
-    <div class="tab-content">
-        <div role="tabpanel" class="tab-pane active" id="enero">
-        <%= render 'thead' %> 
-        <%= render @posts.where(:fecha => "2015-01-01".."2015-01-31") %>
-        <%= render 'tfooter' %>
-        </div>
-        <div role="tabpanel" class="tab-pane" id="febrero">
-        <%= render 'thead' %> 
-        <%= render @posts.where(:fecha => "2015-02-01".."2015-02-31") %>
-        <%= render 'tfooter' %>
-        </div>
-        <div role="tabpanel" class="tab-pane" id="marzo">
-        <%= render 'thead' %> 
-        <%= render @posts.where(:fecha => "2015-03-01".."2015-03-31") %>
-        <%= render 'tfooter' %>
-        </div>
-        <div role="tabpanel" class="tab-pane" id="abril">
-        <%= render 'thead' %> 
-        <%= render @posts.where(:fecha => "2015-04-01".."2015-04-31") %>
-        <%= render 'tfooter' %>
-        </div>
-        <div role="tabpanel" class="tab-pane" id="mayo">
-        <%= render 'thead' %> 
-        <%= render @posts.where(:fecha => "2015-05-01".."2015-05-31") %>
-        <%= render 'tfooter' %>
-        </div>
-        <div role="tabpanel" class="tab-pane" id="junio">
-        <%= render 'thead' %> 
-        <%= render @posts.where(:fecha => "2015-06-01".."2015-06-31") %>
-        <%= render 'tfooter' %>
-        </div>
-        <div role="tabpanel" class="tab-pane" id="julio">
-        <%= render 'thead' %> 
-        <%= render @posts.where(:fecha => "2015-07-01".."2015-07-31") %>
-        <%= render 'tfooter' %>
-        </div>
-        <div role="tabpanel" class="tab-pane" id="agosto">
-        <%= render 'thead' %> 
-        <%= render @posts.where(:fecha => "2015-08-01".."2015-08-31") %>
-        <%= render 'tfooter' %>
-        </div>
-        <div role="tabpanel" class="tab-pane" id="septiembre">
-        <%= render 'thead' %> 
-        <%= render @posts.where(:fecha => "2015-09-01".."2015-09-31") %>
-        <%= render 'tfooter' %>
-        </div>
-        <div role="tabpanel" class="tab-pane" id="octubre">
-        <%= render 'thead' %> 
-        <%= render @posts.where(:fecha => "2015-10-01".."2015-10-31") %>
-        <%= render 'tfooter' %>
-        </div>
-        <div role="tabpanel" class="tab-pane" id="noviembre">
-        <%= render 'thead' %> 
-        <%= render @posts.where(:fecha => "2015-11-01".."2015-11-31") %>
-        <%= render 'tfooter' %>
-        </div>
-        <div role="tabpanel" class="tab-pane" id="diciembre">
-        <%= render 'thead' %> 
-        <%= render @posts.where(:fecha => "2015-12-01".."2015-12-31") %>
-        <%= render 'tfooter' %>
-        </div>
-      
+              <div class="modal-dialog">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                    <h4 class="modal-title" id="myModalLabel">Edit</h4>
+                  </div>
+                  <div class="modal-body">
+
+                    <%= f.text_area :title, class: "form-control", label: false, autofocus: true, placeholder: "Titulo", rows: 1 %><br>
+
+                    <%= f.text_area :content, class: "form-control", label: false, placeholder: "Contenido", rows: 1 %><br>
+
+                    <div class="input-group">
+                      <%= f.date_field :alta, class: "form-control post_content datepicker", :data => {:provide => 'datepicker'}, label: false, placeholder: "Alta", rows: 1 %><span class="input-group-addon" id="basic-addon1" >
+                      <span class="glyphicon glyphicon-menu-hamburger" aria-hidden="true"></span>
+                    </span></div> <br>
+
+                    <%= f.text_area :pedido, class: "form-control", label: false, placeholder: "Pedido", rows: 1 %><br>
+
+                    <%= f.text_area :horasof, class: "form-control", label: false, placeholder: "Horas ordinarias facturadas", rows: 1 %><br>
+
+                    <%= f.text_area :horasnf, class: "form-control", label: false, placeholder: "Horas no facturadas", rows: 1 %><br>
+
+                    <%= f.text_area :extra, class: "form-control", label: false, placeholder: "Extra", rows: 1 %><br>
+
+                    <%= f.text_area :extraf, class: "form-control", label: false, placeholder: "Extra facturadas", rows: 1 %><br>
+
+                    <%= f.text_area :nocturnas, class: "form-control", label: false, placeholder: "Nocturnas", rows: 1 %><br>
+
+                    <%= f.text_area :vacaciones, class: "form-control", label: false, placeholder: "Vacaciones", rows: 1 %><br>
+
+                    <%= f.text_area :bolsahg, class: "form-control", label: false, placeholder: "Bolsa de horas generadas", rows: 1 %><br>
+
+                    <%= f.text_area :bolsahu, class: "form-control", label: false, placeholder: "Bolsa de horas utilizadas", rows: 1 %><br>
+                  </div>
+                  <div class="modal-footer">
+                    <button type="button" id="myupdatebutton" class="btn btn-default" data-dismiss="modal">Close</button>
+                    <%= submit_tag "Update", class: "btn btn-primary" %>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <% end %>
+            <!-- Modal -->
+
+
+          </li>
+          <% end %>
+        </ul>
+        <% end %>
+        <% end %>
       </div>
+ 
 
+    <p><%= link_to "New Post", new_post_path %></p>
     <!--  Modal create action -->
     <%= form_for(@post, remote: true) do |f| %>
     <div class="modal fade" id="mynewpost" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
@@ -105,13 +101,12 @@
             </div>
             <div class="modal-body">
               
-                
                 <%= f.text_area :title, class: "form-control post_title", label: false, autofocus: true, placeholder: "Titulo", rows: 1 %><br>
 
                 <%= f.text_area :content, class: "form-control post_content", label: false, placeholder: "Contenido", rows: 1 %><br>
                 <div class="input-group">
                 
-                <%= f.datetime_field :fecha, class: "form-control post_content datepicker", :data => {:provide => 'datepicker'}, label: false, placeholder: "Fecha", rows: 1 %><span class="input-group-addon" id="basic-addon1" >
+                <%= f.datetime_field :alta, class: "form-control post_content datepicker", :data => {:provide => 'datepicker'}, label: false, placeholder: "Alta", rows: 1 %><span class="input-group-addon" id="basic-addon1" >
                 <span class="glyphicon glyphicon-menu-hamburger" aria-hidden="true"></span>
               </span></div> <br>
 
@@ -143,9 +138,7 @@
         </div>
       </div>
       <% end %>
+      </div>
 
-
-
-
-<!-- </div> -->
+    
 

@@ -5,10 +5,8 @@ class PostsController < ApplicationController
   # GET /posts
   # GET /posts.json
   def index
-    @posts = Post.all
+    @posts = Post.where(:user_id => current_user).order("fecha ASC")
     @post = Post.new
-    @posts_by_date = @posts.group_by(&:alta)
-    @date = params[:date] ? Date.parse(params[:date]) : Date.today
   end
 
   # GET /posts/1
@@ -78,6 +76,6 @@ class PostsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def post_params
-      params.require(:post).permit(:title, :content, :pedido, :horasof, :horasnf, :extra, :extraf, :nocturnas, :vacaciones, :bolsahg, :bolsahu, :alta )
+      params.require(:post).permit(:title, :content, :pedido, :horasof, :horasnf, :extra, :extraf, :nocturnas, :vacaciones, :bolsahg, :bolsahu, :fecha )
     end
 end

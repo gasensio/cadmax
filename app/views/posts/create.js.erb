@@ -2,5 +2,6 @@ $("#mynewpost").modal('hide');
 $(".post_title").val('');
 $(".post_content").val('');
 
-$("tbody").prepend('<%= j render @post %>');
-$("#post_<%= @post.id %>").hide().fadeIn(1000);
+$(document).ajaxStop(function(){
+    window.location.reload();
+});

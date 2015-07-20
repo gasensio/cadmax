@@ -21,7 +21,8 @@ $(document).ready(function(){
     $('.datepicker').datepicker({
     	autoclose: true,
     	language: "es",
-    	orientation: "top auto"
+    	orientation: "top auto",
+    	dateFormat: "dd-mm-yyyy"
     });
   });
 

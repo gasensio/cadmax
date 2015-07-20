@@ -1,0 +1,106 @@
+<div class="container">
+
+    <div class="row">
+      <div class="col-md-4">
+      <%= image_tag "logo.png", class: "img-responsive" %>
+      </div>
+      <div class="col-md-8 text-center">
+        <button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#mynewpost">
+          New Post
+        </button>
+      </div>
+    </div>
+
+    <br>
+    
+
+    <div class="row" id="container_posts">
+     <ul class="nav nav-tabs" role="tablist" id="mesestab">
+
+        <li role="presentation" class="active"><a href="#todo" aria-controls="todo" data-target="#todo" role="tab" data-toggle="tab">Todo</a></li>
+        <li role="presentation"><a href="#enero" aria-controls="enero" data-target="#enero" role="tab" data-toggle="tab">Enero</a></li>
+        <li role="presentation"><a href="#febrero" aria-controls="febrero" data-target="#febrero" role="tab" data-toggle="tab">Febrero</a></li>
+        <li role="presentation"><a href="#marzo" aria-controls="marzo" data-target="#marzo" role="tab" data-toggle="tab">Marzo</a></li>
+        <li role="presentation"><a href="#abril" aria-controls="abril" data-target="#abril" role="tab" data-toggle="tab">Abril</a></li>
+        <li role="presentation"><a href="#mayo" aria-controls="settings" role="tab" data-toggle="tab">Mayo</a></li>
+        <li role="presentation"><a href="#junio" aria-controls="settings" role="tab" data-toggle="tab">Junio</a></li>
+        <li role="presentation"><a href="#julio" aria-controls="settings" role="tab" data-toggle="tab">Julio</a></li>
+        <li role="presentation"><a href="#agosto" aria-controls="settings" role="tab" data-toggle="tab">Agosto</a></li>
+        <li role="presentation"><a href="#septiembre" aria-controls="settings" role="tab" data-toggle="tab">Septiembre</a></li>
+        <li role="presentation"><a href="#octubre" aria-controls="settings" role="tab" data-toggle="tab">Octubre</a></li>
+        <li role="presentation"><a href="#noviembre" aria-controls="settings" role="tab" data-toggle="tab">Noviembre</a></li>
+        <li role="presentation"><a href="#diciembre" aria-controls="settings" role="tab" data-toggle="tab">Diciembre</a></li>
+
+    </ul>
+        
+    <div class="tab-content">
+        <div role="tabpanel" class="tab-pane active" id="todo">
+        <%= render 'thead' %> 
+        <%= render @posts %>
+        <%= render 'tfooter' %>
+        </div>
+        <div role="tabpanel" class="tab-pane" id="enero">
+        <%= render 'thead' %> 
+        <%= render @posts.where(:fecha => "2015-01-01".."2015-01-31") %>
+        <%= render 'tfooter' %>
+        </div>
+        <div role="tabpanel" class="tab-pane" id="febrero">
+        <%= render 'thead' %> 
+        <%= render @posts.where(:fecha => "2015-2-1".."2015-2-28") %>
+        <%= render 'tfooter' %>
+        </div>
+
+      
+      </div>
+
+    <!--  Modal create action -->
+    <%= form_for(@post, remote: true) do |f| %>
+    <div class="modal fade" id="mynewpost" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+        <div class="modal-dialog">
+          <div class="modal-content">
+
+            <div class="modal-header">
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+              <h4 class="modal-title" id="myModalLabel">Post</h4>
+            </div>
+            <div class="modal-body">
+              
+                <%= f.text_area :title, class: "form-control post_title", label: false, autofocus: true, placeholder: "Titulo", rows: 1 %><br>
+
+                <%= f.text_area :content, class: "form-control post_content", label: false, placeholder: "Contenido", rows: 1 %><br>
+                <div class="input-group">
+                
+                <%= f.datetime_field :fecha, class: "form-control post_content datepicker", :data => {:provide => 'datepicker'}, label: false, placeholder: "Fecha", rows: 1 %><span class="input-group-addon" id="basic-addon1" >
+                <span class="glyphicon glyphicon-menu-hamburger" aria-hidden="true"></span>
+              </span></div> <br>
+
+                <%= f.text_area :pedido, class: "form-control post_content", label: false, placeholder: "Pedido", rows: 1 %><br>
+
+                <%= f.text_area :horasof, class: "form-control post_content", label: false, placeholder: "Horas ordinarias facturadas", rows: 1 %><br>
+
+                <%= f.text_area :horasnf, class: "form-control post_content", label: false, placeholder: "Horas no facturadas", rows: 1 %><br>
+
+                <%= f.text_area :extra, class: "form-control post_content", label: false, placeholder: "Extra", rows: 1 %><br>
+
+                <%= f.text_area :extraf, class: "form-control post_content", label: false, placeholder: "Extra facturadas", rows: 1 %><br>
+
+                <%= f.text_area :nocturnas, class: "form-control post_content", label: false, placeholder: "Nocturnas", rows: 1 %><br>
+
+                <%= f.text_area :vacaciones, class: "form-control post_content", label: false, placeholder: "Vacaciones", rows: 1 %><br>
+
+                <%= f.text_area :bolsahg, class: "form-control post_content", label: false, placeholder: "Bolsa de horas generadas", rows: 1 %><br>
+
+                <%= f.text_area :bolsahu, class: "form-control post_content", label: false, placeholder: "Bolsa de horas utilizadas", rows: 1 %><br>
+
+            </div>
+
+            <div class="modal-footer">
+              <button type="button" class="btn btn-default" data-dismiss="modal" id="mynewpostclose">Close</button>
+              <%= submit_tag "Create", class: "btn btn-primary" %>
+            </div>
+          </div>
+        </div>
+      </div>
+      <% end %>
+
+
