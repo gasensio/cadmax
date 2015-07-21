@@ -1,11 +1,4 @@
 $("#myupdatepost_<%= @post.id %>").modal('hide');
-
-$("#post_<%= @post.id %>") function(){
-
-	$(this).remove();
-	
-});
-
 $(document).ajaxStop(function(){
     window.location.reload();
 });
