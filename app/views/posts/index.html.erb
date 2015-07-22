@@ -66,9 +66,9 @@
   <div class="row">
     <div id ="posts">  
       <h4 id="month">
-        <%= link_to "", {date: @date.prev_month}, class: "glyphicon glyphicon-chevron-left btn btn-primary btn" %>
+        <%= link_to "", {date: @date.prev_month}, class: "fa fa-chevron-left btn" %>
         <%= @date.strftime("%B %Y") %>
-        <%=link_to "", {date: @date.next_month}, class: "glyphicon glyphicon-chevron-right btn btn-primary btn" %>
+        <%=link_to "", {date: @date.next_month}, class: "fa fa-chevron-right btn" %>
       </h4>
       <%= calendar @date do |date| %>
       <%= date.day %>
@@ -80,8 +80,8 @@
 
         <li id="post_<%= post.id %>">
           <div class="pull-right">
-          <%= link_to '' , post, class: "glyphicon glyphicon-pencil", remote: :true, data: {toggle: "modal", target: "#myupdatepost_#{post.id}"} %>
-          <%= link_to '' , post, method: :delete, class: "glyphicon glyphicon-remove-circle", remote: :true, data: {confirm: 'Are you sure?'} %>
+          <%= link_to '' , post, class: "fa fa-pencil", remote: :true, data: {toggle: "modal", target: "#myupdatepost_#{post.id}"} %>
+          <%= link_to '' , post, method: :delete, class: "fa fa-trash-o", remote: :true, data: {confirm: 'Are you sure?'} %>
           </div>
           <% if current_user.admin? %>
           <%= link_to post, data: {toggle: "modal", target: "#mytable_#{post.id}"} do %>
