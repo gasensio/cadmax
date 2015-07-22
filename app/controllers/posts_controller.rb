@@ -13,11 +13,13 @@ class PostsController < ApplicationController
     @post = Post.new
     @posts_by_date = @posts.group_by(&:alta)
     @date = params[:date] ? Date.parse(params[:date]) : Date.today
+    @users = User.all
   end
 
   # GET /posts/1
   # GET /posts/1.json
   def show
+     @post = Post.all
   end
 
   # GET /posts/new

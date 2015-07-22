@@ -16,7 +16,7 @@ module CalendarHelper
 		end
 
 		def header
-			content_tag :tr, class: "info" do
+			content_tag :tr, class: "tableheader info" do
 				HEADER.map { |day| content_tag :th, day }.join.html_safe
 			end
 		end

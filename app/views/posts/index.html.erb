@@ -44,6 +44,23 @@
               <td><%= Post.where(:alta => "2015-01-01".."2015-12-31", :user_id => current_user).sum(:bolsahu) %></td>
               <td><%= Post.where(:alta => "2015-01-01".."2015-12-31", :user_id => current_user).sum(:bolsahg) - Post.where(:alta => "2015-01-01".."2015-12-31", :user_id => current_user).sum(:bolsahu) %></td>
             </tr>
+            <tr> 
+                  
+                    <% if current_user.admin? %>
+                    <%= select_tag 'user_id', options_for_select(@users.collect{ |u| [u.name, u.id] }, :selected => params[:user]) %>
+                    <% @users.each do |user| %>
+                    <ul class="users">
+                      <li>
+                        
+                        <%= user.name %>
+                      </li>
+                      </ul>
+                    <% end %>
+                    
+                    <% else %>
+                    <% end %>
+                    
+             </tr>
           </tbody>
         </table>
       </div>
@@ -52,29 +69,37 @@
 
   <div class="row">
     <div id ="posts">  
-      <h3 id="month">
-        <%= link_to "", {date: @date.prev_month}, class: "glyphicon glyphicon-chevron-left btn btn-primary btn-lg" %>
+      <h4 id="month">
+        <%= link_to "", {date: @date.prev_month}, class: "glyphicon glyphicon-chevron-left btn btn-primary btn" %>
         <%= @date.strftime("%B %Y") %>
-        <%=link_to "", {date: @date.next_month}, class: "glyphicon glyphicon-chevron-right btn btn-primary btn-lg" %>
-      </h3>
+        <%=link_to "", {date: @date.next_month}, class: "glyphicon glyphicon-chevron-right btn btn-primary btn" %>
+      </h4>
       <%= calendar @date do |date| %>
       <%= date.day %>
       <% if @posts_by_date[date] %>
       <ul>
         <% @posts_by_date[date].each do |post| %>
 
-        <li id="post_<%= post.id %>">
-          <% if current_user.admin? %>
-          <%= link_to post do %>
-          <%= post.title %>-<%= post.user.name %><% end %>
-          <% else %>
-          <%= link_to post.title, post %>
-          <% end %>
 
-          <div  class="pull-right">
+
+        <li id="post_<%= post.id %>">
+          <div class="pull-right">
           <%= link_to '' , post, class: "glyphicon glyphicon-pencil", remote: :true, data: {toggle: "modal", target: "#myupdatepost_#{post.id}"} %>
           <%= link_to '' , post, method: :delete, class: "glyphicon glyphicon-remove-circle", remote: :true, data: {confirm: 'Are you sure?'} %>
           </div>
+          <% if current_user.admin? %>
+          <%= link_to post, data: {toggle: "modal", target: "#mytable_#{post.id}"} do %>
+          <%= post.title %><br><%= post.user.name %>
+          <% end %>
+          <% else %>
+          <%= link_to post.title, post, data: {toggle: "modal", target: "#mytable_#{post.id}"} %>
+          <% end %>
+
+
+
+          
+
+
 
           <!-- Modal - update posts -->
           <%= form_for( post, :method => :put, remote: true) do |f| %> 
@@ -87,33 +112,57 @@
                   <h4 class="modal-title" id="myModalLabel">Edit</h4>
                 </div>
                 <div class="modal-body">
-
-                  <%= f.text_area :title, class: "form-control", label: false, autofocus: true, placeholder: "Titulo", rows: 1 %><br>
-
-                  <%= f.text_area :content, class: "form-control", label: false, placeholder: "Contenido", rows: 1 %><br>
-
-                  <div class="input-group">
-                    <%= f.date_field :alta, class: "form-control post_content datepicker", :data => {:provide => 'datepicker'}, label: false, placeholder: "Alta", rows: 1 %><span class="input-group-addon" id="basic-addon1" >
-                    <span class="glyphicon glyphicon-menu-hamburger" aria-hidden="true"></span>
-                  </span></div> <br>
-
-                  <%= f.text_area :pedido, class: "form-control", label: false, placeholder: "Pedido", rows: 1 %><br>
-
-                  <%= f.text_area :horasof, class: "form-control", label: false, placeholder: "Horas ordinarias facturadas", rows: 1 %><br>
-
-                  <%= f.text_area :horasnf, class: "form-control", label: false, placeholder: "Horas no facturadas", rows: 1 %><br>
-
-                  <%= f.text_area :extra, class: "form-control", label: false, placeholder: "Extra", rows: 1 %><br>
-
-                  <%= f.text_area :extraf, class: "form-control", label: false, placeholder: "Extra facturadas", rows: 1 %><br>
-
-                  <%= f.text_area :nocturnas, class: "form-control", label: false, placeholder: "Nocturnas", rows: 1 %><br>
-
-                  <%= f.text_area :vacaciones, class: "form-control", label: false, placeholder: "Vacaciones", rows: 1 %><br>
-
-                  <%= f.text_area :bolsahg, class: "form-control", label: false, placeholder: "Bolsa de horas generadas", rows: 1 %><br>
-
-                  <%= f.text_area :bolsahu, class: "form-control", label: false, placeholder: "Bolsa de horas utilizadas", rows: 1 %><br>
+                  <div class="row">
+                    <div class="col-md-6">
+                      <%= f.text_area :title, class: "form-control post_title", label: false, autofocus: "true", placeholder: "Titulo", rows: 1 %><br>
+                    </div>
+                    <div class="col-md-6">
+                      <%= f.text_area :content, class: "form-control post_content col-md-6", label: false, placeholder: "Contenido", rows: 1 %><br>
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="col-md-6">
+                      <div class="input-group">
+                        <%= f.datetime_field :alta, class: "form-control post_content datepicker", :data => {:provide => 'datepicker'}, label: false, placeholder: "Alta", rows: 1 %><span class="input-group-addon" id="basic-addon1" >
+                        <span class="glyphicon glyphicon-menu-hamburger" aria-hidden="true"></span>
+                      </span></div> <br>
+                    </div>
+                    <div class="col-md-6">
+                      <%= f.text_area :pedido, class: "form-control post_content", label: false, placeholder: "Pedido", rows: 1 %><br>
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="col-md-6">
+                      <%= f.number_field :horasof, class: "form-control post_content", label: false, placeholder: "Horas ordinarias facturadas", rows: 1, step: 0.5 %><br>
+                    </div>
+                    <div class="col-md-6">
+                      <%= f.number_field :horasnf, class: "form-control post_content", label: false, placeholder: "Horas no facturadas", rows: 1, step: 0.5 %><br>
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="col-md-6">
+                      <%= f.number_field :extra, class: "form-control post_content", label: false, placeholder: "Extra", rows: 1, step: 0.5 %><br>
+                    </div>
+                    <div class="col-md-6">
+                      <%= f.number_field :extraf, class: "form-control post_content", label: false, placeholder: "Extra facturadas", rows: 1, step: 0.5 %><br>
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="col-md-6">
+                      <%= f.number_field :nocturnas, class: "form-control post_content", label: false, placeholder: "Nocturnas", rows: 1, step: 0.5 %><br>
+                    </div>
+                    <div class="col-md-6">
+                      <%= f.number_field :vacaciones, class: "form-control post_content", label: false, placeholder: "Vacaciones", rows: 1, step: 0.5 %><br>
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="col-md-6">
+                      <%= f.number_field :bolsahg, class: "form-control post_content", label: false, placeholder: "Bolsa de horas generadas", rows: 1, step: 0.5 %><br>
+                    </div>
+                    <div class="col-md-6">
+                      <%= f.number_field :bolsahu, class: "form-control post_content", label: false, placeholder: "Bolsa de horas utilizadas", rows: 1, step: 0.5 %><br>
+                    </div>
+                  </div>
                 </div>
                 <div class="modal-footer">
                   <button type="button" id="myupdatebutton" class="btn btn-default" data-dismiss="modal">Close</button>
@@ -124,6 +173,63 @@
           </div>
           <% end %>
           <!-- Modal -->
+
+          <!-- Modal - viev posts -->
+         
+          <div class="modal fade" id="mytable_<%= post.id %>" tabindex="-1" role="dialog" aria-labelledby="myModelLabel" aria-hidden="true" data-target="mytable_<%= post.id %>">
+
+            <div class="modal-dialog autowidth">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                  <h4 class="modal-title" id="myModalLabel">Entrada</h4>
+                </div>
+                <div class="modal-body">
+                  <table class="table table-bordered table-condensed" id="tabla_view">
+                    <thead class="active">
+                      <tr>
+                        <th>Titulo</th>
+                        <th>Contenido</th>
+                        <th>Fecha</th>
+                        <th>Pedido</th>
+                        <th>Horas ordinarias facturadas</th>
+                        <th>Horas no facturadas</th>
+                        <th>Extra</th>
+                        <th>Nocturnas</th>
+                        <th>Vacaciones</th>
+                        <th>Bolsa de horas generadas</th>
+                        <th>Bolsa de horas utilizadas</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <th><%= post.title %></th>
+                        <th><%= post.content %></th>
+                        <th><%= post.alta %></th>
+                        <th><%= post.pedido %></th>
+                        <th><%= post.horasof %></th>
+                        <th><%= post.horasnf %></th>
+                        <th><%= post.extra %></th>
+                        <th><%= post.nocturnas %></th>
+                        <th><%= post.vacaciones %></th>
+                        <th><%= post.bolsahg %></th>
+                        <th><%= post.bolsahu %></th>
+                      </tr>
+                    </tbody>
+                  </table>
+
+                </div>
+
+
+
+
+              </div>
+            </div>
+
+            </div>
+           
+
+          <!--End  Modal - viev posts -->
 
 
         </li>
@@ -147,34 +253,57 @@
             <h4 class="modal-title" id="myModalLabel">Post</h4>
           </div>
           <div class="modal-body">
-
-            <%= f.text_area :title, class: "form-control post_title", label: false, autofocus: true, placeholder: "Titulo", rows: 1 %><br>
-
-            <%= f.text_area :content, class: "form-control post_content", label: false, placeholder: "Contenido", rows: 1 %><br>
-            <div class="input-group">
-
-              <%= f.datetime_field :alta, class: "form-control post_content datepicker", :data => {:provide => 'datepicker'}, label: false, placeholder: "Alta", rows: 1 %><span class="input-group-addon" id="basic-addon1" >
-              <span class="glyphicon glyphicon-menu-hamburger" aria-hidden="true"></span>
-            </span></div> <br>
-
-            <%= f.text_area :pedido, class: "form-control post_content", label: false, placeholder: "Pedido", rows: 1 %><br>
-
-            <%= f.text_area :horasof, class: "form-control post_content", label: false, placeholder: "Horas ordinarias facturadas", rows: 1 %><br>
-
-            <%= f.text_area :horasnf, class: "form-control post_content", label: false, placeholder: "Horas no facturadas", rows: 1 %><br>
-
-            <%= f.text_area :extra, class: "form-control post_content", label: false, placeholder: "Extra", rows: 1 %><br>
-
-            <%= f.text_area :extraf, class: "form-control post_content", label: false, placeholder: "Extra facturadas", rows: 1 %><br>
-
-            <%= f.text_area :nocturnas, class: "form-control post_content", label: false, placeholder: "Nocturnas", rows: 1 %><br>
-
-            <%= f.text_area :vacaciones, class: "form-control post_content", label: false, placeholder: "Vacaciones", rows: 1 %><br>
-
-            <%= f.text_area :bolsahg, class: "form-control post_content", label: false, placeholder: "Bolsa de horas generadas", rows: 1 %><br>
-
-            <%= f.text_area :bolsahu, class: "form-control post_content", label: false, placeholder: "Bolsa de horas utilizadas", rows: 1 %><br>
-
+            <div class="row">
+              <div class="col-md-6">
+                <%= f.text_area :title, class: "form-control post_title", label: false, autofocus: "true", placeholder: "Titulo", rows: 1 %><br>
+              </div>
+              <div class="col-md-6">
+                <%= f.text_area :content, class: "form-control post_content col-md-6", label: false, placeholder: "Contenido", rows: 1 %><br>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-md-6">
+                <div class="input-group">
+                  <%= f.datetime_field :alta, class: "form-control post_content datepicker", :data => {:provide => 'datepicker'}, label: false, placeholder: "Alta", rows: 1 %><span class="input-group-addon" id="basic-addon1" >
+                  <span class="glyphicon glyphicon-menu-hamburger" aria-hidden="true"></span>
+                </span></div> <br>
+              </div>
+              <div class="col-md-6">
+                <%= f.text_area :pedido, class: "form-control post_content", label: false, placeholder: "Pedido", rows: 1 %><br>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-md-6">
+                <%= f.number_field :horasof, class: "form-control post_content", label: false, placeholder: "Horas ordinarias facturadas", rows: 1, step: 0.5 %><br>
+              </div>
+              <div class="col-md-6">
+                <%= f.number_field :horasnf, class: "form-control post_content", label: false, placeholder: "Horas no facturadas", rows: 1, step: 0.5 %><br>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-md-6">
+                <%= f.number_field :extra, class: "form-control post_content", label: false, placeholder: "Extra", rows: 1, step: 0.5 %><br>
+              </div>
+              <div class="col-md-6">
+                <%= f.number_field :extraf, class: "form-control post_content", label: false, placeholder: "Extra facturadas", rows: 1, step: 0.5 %><br>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-md-6">
+                <%= f.number_field :nocturnas, class: "form-control post_content", label: false, placeholder: "Nocturnas", rows: 1, step: 0.5 %><br>
+              </div>
+              <div class="col-md-6">
+                <%= f.number_field :vacaciones, class: "form-control post_content", label: false, placeholder: "Vacaciones", rows: 1, step: 0.5 %><br>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-md-6">
+                <%= f.number_field :bolsahg, class: "form-control post_content", label: false, placeholder: "Bolsa de horas generadas", rows: 1, step: 0.5 %><br>
+              </div>
+              <div class="col-md-6">
+                <%= f.number_field :bolsahu, class: "form-control post_content", label: false, placeholder: "Bolsa de horas utilizadas", rows: 1, step: 0.5 %><br>
+              </div>
+            </div>
           </div>
 
           <div class="modal-footer">
@@ -185,6 +314,8 @@
       </div>
     </div>
     <% end %>
+
+
   </div>
 </div>
 
