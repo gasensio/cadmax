@@ -32,3 +32,5 @@ $('#mesestab a').click(function (e) {
   $(this).tab('show')
 })
 
+$('.collapse').collapse()
+

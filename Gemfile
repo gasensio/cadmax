@@ -47,8 +47,9 @@ group :development, :test do
   gem 'rails_admin'
 
   gem 'bootstrap-datepicker-rails'
+
   
 end
 
-gem 'twitter-bootstrap-rails', :git => 'git://github.com/seyhunak/twitter-bootstrap-rails.git'
+gem 'twitter-bootstrap-rails'
 

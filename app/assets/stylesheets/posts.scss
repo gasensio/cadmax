@@ -59,6 +59,9 @@ a:visited {color:none!important}
 	max-width: 150px;
 	line-height: 16px;
 }
+#posts .notmonth ul>li {
+	background-color: rgba(4, 151, 219, 0.5);;
+}
 .pull-right a {color:#fff;}
 .tableheader tr {
 	
@@ -69,4 +72,6 @@ a:visited {color:none!important}
 width: auto!important;
 	
 }
-
+.wspace {
+	white-space: nowrap;
+}

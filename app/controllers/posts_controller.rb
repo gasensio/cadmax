@@ -2,13 +2,16 @@ class PostsController < ApplicationController
   before_action :authenticate_user!
   before_action :set_post, only: [:show, :edit, :update, :destroy]
 
+
+
   # GET /posts
   # GET /posts.json
   def index
     if current_user.admin?
-    @posts = Post.all
+      @posts = Post.all.search(params[:search])
+      @posts_by_date = Post.search(params[:search])
     else
-    @posts = Post.all.where(:user_id => current_user)
+      @posts = Post.all.where(:user_id => current_user)
     end
     @post = Post.new
     @posts_by_date = @posts.group_by(&:alta)

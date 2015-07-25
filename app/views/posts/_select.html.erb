@@ -1,0 +1,53 @@
+<% if current_user.admin? %>
+<%= select_tag 'user_id', options_for_select(@users.collect{ |u| [u.name, u.id] }, :selected => params[:user], :onchange => "this.form.submit();") %>
+<% @users.each do |user| %>
+
+
+
+<div class="col-md-6">
+  <table class="table">
+    <h4 class="text-center">Resumen año 2015 de <%= @user_name %></h4>
+    <thead>
+      <tr class="info">
+        <td>Vacaciones</td>
+        <td>Total año</td>
+        <td>Disfrutadas</td>
+        <td>Restan</td>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td></td>
+        <td>22</td>
+        <td><%= Post.where(:alta => "2015-01-01".."2015-12-31", :user_id => User).sum(:vacaciones) %></td>
+        <td><%= 22 - Post.sum(:vacaciones) %></td>
+      </tr>
+    </tbody>
+    <thead>
+      <tr class="info">
+        <td>Bolsa Horas</td>
+        <td>Acumuladas</td>
+        <td>Disfrutadas</td>
+        <td>Restan</td>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td></td>
+        <td><%= Post.where(:alta => "2015-01-01".."2015-12-31", :user_id => User).sum(:bolsahg) %></td>
+        <td><%= Post.where(:alta => "2015-01-01".."2015-12-31", :user_id => User).sum(:bolsahu) %></td>
+        <td><%= Post.where(:alta => "2015-01-01".."2015-12-31", :user_id => User).sum(:bolsahg) - Post.where(:alta => "2015-01-01".."2015-12-31", :user_id => User).sum(:bolsahu) %></td>
+      </tr>
+      <tr> 
+      </div> 
+
+      <% end %>
+
+      <% else %>
+      <h2><%= current_user %></h2>
+      <% end %>
+
+    </tr>
+  </tbody>
+</table>
+</div>
