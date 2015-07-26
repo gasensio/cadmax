@@ -6,31 +6,61 @@
   <div class="row">
       <div class="col-md-6">
         <%= image_tag "logo.png", class: "img-responsive" %>
-        <button type="button" class="btn btn-primary btn" data-toggle="modal" data-target="#mynewpost">
-          Nueva ficha
-        </button>
+
 
         
       </div>
 
 
-<div class="col-md-6">
+
 
 <% if current_user.admin? %>
-<%= form_tag posts_path, method: "get",:onchange => "this.form.submit();", class: "form-group form-inline" do %>
-<%= select_tag 'search', options_for_select(@users.collect{ |u| [u.name, u.id] }), class: "form-control" %>
-<%= submit_tag 'seleccionar', name: nil, type: "submit", class: "btn btn-default" %>
-<% end %>
- <% else %>
- <div class="panel panel-default ">
-  <div class="panel-body text-right bg-info">
-    <h4 class="text-center"><%= current_user.name %></h4>
-  </div>
-</div>
-      <% end %>
+    <div class="col-md-3">
+      <div class="panel panel-info">
+        <div class="panel-heading">
+          <h3 class="panel-title">Filtrar resultados</h3>
+        </div>
+        <div class="panel-body">
+          <%= form_tag posts_path, method: "get", class: "form-group form-inline" do %>
+          <%= select_tag 'search', options_for_select(@users.collect{ |u| [u.name, u.id] }), class: "form-control", :onchange => "this.form.submit();" %>
+          <% end %>
+          <%= button_to "Reset", posts_path, :class => "btn btn-default", :method => :get %>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-3">
+      <div class="panel panel-info">
+        <div class="panel-heading">
+          <h3 class="panel-title"><%= current_user.name %></h3>
+        </div>
+        <div class="panel-body">
+          <p>Crear nuevo registro de horas</p><br>
+          <button type="button" class="btn btn-primary btn" data-toggle="modal" data-target="#mynewpost">
+            Nueva ficha
+          </button>
+        </div>
+      </div>
+    </div>
+<% else %>
 
-</div>
-</div>
+
+
+    <div class="col-md-6">
+     <div class="panel panel-info">
+      <div class="panel-heading">
+        <h3 class="panel-title"><%= current_user.name %></h3>
+      </div>
+      <div class="panel-body">
+        <p>Crear nuevo registro de horas</p><br>
+        <button type="button" class="btn btn-primary btn" data-toggle="modal" data-target="#mynewpost">
+          Nueva ficha
+        </button>
+      </div>
+    </div>
+    </div>
+        <% end %>
+</div> <!-- end row -->
+
 
 
              
@@ -95,7 +125,7 @@
                     <div class="col-md-6">
                       <div class="input-group">
                         <%= f.date_field :alta, class: "form-control post_content datepicker", :data => {:provide => 'datepicker'}, label: false, placeholder: "Alta", rows: 1 %><span class="input-group-addon" id="basic-addon1" >
-                        <span class="glyphicon glyphicon-menu-hamburger" aria-hidden="true"></span>
+                        <span class="fa fa-calendar" aria-hidden="true"></span>
                       </span></div> <br>
                     </div>
                     <div class="col-md-6">
@@ -236,7 +266,7 @@
               <div class="col-md-6">
                 <div class="input-group">
                   <%= f.date_field :alta, class: "form-control post_content datepicker", :data => {:provide => 'datepicker'}, label: false, placeholder: "Alta", rows: 1 %><span class="input-group-addon" id="basic-addon1" >
-                  <span class="glyphicon glyphicon-menu-hamburger" aria-hidden="true"></span>
+                  <span class="fa fa-calendar" aria-hidden="true"></span>
                 </span></div> <br>
               </div>
               <div class="col-md-6">
@@ -291,27 +321,29 @@
 
 <% @users.each do |user| %>
 
-      <div class="col-md-6">
-      <div class="panel panel-info">
+
+
+
+
+ <div class="col-md-6">
+        <div class="panel panel-info">
         <div class="panel-heading">
           <h3 class="panel-title">Resumen año 2015 de <%= user.name %></h3>
         </div>
         <div class="panel-body">
-          
-          <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
-            <div class="panel panel-default">
-              <div class="panel-heading" role="tab" id="headingOne">
-                <h4 class="panel-title">
-                  <a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapse<%= user.id %>" aria-expanded="true" aria-controls="collapseOne">
 
-                    Enero
-                  </a>
-                </h4>
-              </div>
-
-              <div id="collapse<%= user.id %>" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingOne">
-                <div class="panel-body">
-                  <table class="table">
+<div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
+  <div class="panel panel-default">
+    <div class="panel-heading" role="tab" id="heading<%= user.id %>">
+      <h4 class="panel-title">
+        <a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapse<%= user.id %>" aria-expanded="false" collapsible="true" aria-controls="collapse<%= user.id %>">
+          Vacaciones de <%= user.name %>
+        </a>
+      </h4>
+    </div>
+    <div id="collapse<%= user.id %>" class="panel-collapse collapse" role="tabpanel" aria-labelledby="heading<%= user.id %>">
+      <div class="panel-body">
+        <table class="table">
                     <thead>
                       <tr class="active">
                         <td><strong>Vacaciones</strong></td>
@@ -394,18 +426,32 @@
                 <td><%= Post.where(:alta => "2015-12-01".."2015-12-31", :user_id => user).sum(:vacaciones) %></td>
                 <td><strong><%= 22 - Post.where(:alta => "2015-12-01".."2015-12-31", :user_id => user).sum(:vacaciones) %></strong></td>
               </tr>
-                                    
-                  
-                
-
               <tr class="bg-success">
                 <td>Total</td>
                 <td>22</td>
                 <td><%= Post.where(:alta => "2015-01-01".."2015-12-31", :user_id => user).sum(:vacaciones) %></td>
                 <td><strong><%= 22 - Post.where(:alta => "2015-01-01".."2015-12-31", :user_id => user).sum(:vacaciones) %></strong></td>
               </tr>
-            </tbody>
-            <thead>
+              </tbody>
+            </table>
+      </div>
+    </div>
+  </div>
+  <div class="panel panel-default">
+    <div class="panel-heading" role="tab" id="heading<%= user.id %>-1">
+      <h4 class="panel-title">
+        <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapse<%= user.id %>-1" aria-expanded="false" aria-controls="collapse<%= user.id %>-1">
+
+            Bolsa Horas de <%= user.name %>
+
+        </a>
+      </h4>
+    </div>
+    <div id="collapse<%= user.id %>-1" class="panel-collapse collapse" role="tabpanel" aria-labelledby="heading<%= user.id %>-1">
+      <div class="panel-body">
+ 
+          <table class="table">
+          <thead>
               <tr class="active">
                 <td><strong>Bolsa Horas</strong></td>
                 <td>Acumuladas</td>
@@ -415,25 +461,117 @@
             </thead>
             <tbody>
               <tr>
-                <td></td>
+                <td>Enero</td>
+                <td><%= Post.where(:alta => "2015-01-01".."2015-01-31", :user_id => user).sum(:bolsahg) %></td>
+                <td><%= Post.where(:alta => "2015-01-01".."2015-01-31", :user_id => user).sum(:bolsahu) %></td>
+                <td><strong><%= Post.where(:alta => "2015-01-01".."2015-01-31", :user_id => user).sum(:bolsahg) - Post.where(:alta => "2015-01-01".."2015-01-31", :user_id => user).sum(:bolsahu) %></strong></td>
+              </tr>
+              <tr>
+                <td>Febrero</td>
+                <td><%= Post.where(:alta => "2015-02-01".."2015-02-31", :user_id => user).sum(:bolsahg) %></td>
+                <td><%= Post.where(:alta => "2015-02-01".."2015-02-31", :user_id => user).sum(:bolsahu) %></td>
+                <td><strong><%= Post.where(:alta => "2015-02-01".."2015-02-31", :user_id => user).sum(:bolsahg) - Post.where(:alta => "2015-02-01".."2015-02-31", :user_id => user).sum(:bolsahu) %></strong></td>
+              </tr>
+              <tr>
+                <td>Marzo</td>
+                <td><%= Post.where(:alta => "2015-03-01".."2015-03-31", :user_id => user).sum(:bolsahg) %></td>
+                <td><%= Post.where(:alta => "2015-03-01".."2015-03-31", :user_id => user).sum(:bolsahu) %></td>
+                <td><strong><%= Post.where(:alta => "2015-03-01".."2015-03-31", :user_id => user).sum(:bolsahg) - Post.where(:alta => "2015-03-01".."2015-03-31", :user_id => user).sum(:bolsahu) %></strong></td>
+              </tr>
+              <tr>
+                <td>Abril</td>
+                <td><%= Post.where(:alta => "2015-04-01".."2015-04-31", :user_id => user).sum(:bolsahg) %></td>
+                <td><%= Post.where(:alta => "2015-04-01".."2015-04-31", :user_id => user).sum(:bolsahu) %></td>
+                <td><strong><%= Post.where(:alta => "2015-04-01".."2015-04-31", :user_id => user).sum(:bolsahg) - Post.where(:alta => "2015-04-01".."2015-04-31", :user_id => user).sum(:bolsahu) %></strong></td>
+              </tr>
+              <tr>
+                <td>Marzo</td>
+                <td><%= Post.where(:alta => "2015-05-01".."2015-05-31", :user_id => user).sum(:bolsahg) %></td>
+                <td><%= Post.where(:alta => "2015-05-01".."2015-05-31", :user_id => user).sum(:bolsahu) %></td>
+                <td><strong><%= Post.where(:alta => "2015-05-01".."2015-05-31", :user_id => user).sum(:bolsahg) - Post.where(:alta => "2015-05-01".."2015-05-31", :user_id => user).sum(:bolsahu) %></strong></td>
+              </tr>
+              <tr>
+                <td>Marzo</td>
+                <td><%= Post.where(:alta => "2015-06-01".."2015-06-31", :user_id => user).sum(:bolsahg) %></td>
+                <td><%= Post.where(:alta => "2015-06-01".."2015-06-31", :user_id => user).sum(:bolsahu) %></td>
+                <td><strong><%= Post.where(:alta => "2015-06-01".."2015-06-31", :user_id => user).sum(:bolsahg) - Post.where(:alta => "2015-06-01".."2015-06-31", :user_id => user).sum(:bolsahu) %></strong></td>
+              </tr>
+              <tr>
+                <td>Marzo</td>
+                <td><%= Post.where(:alta => "2015-07-01".."2015-07-31", :user_id => user).sum(:bolsahg) %></td>
+                <td><%= Post.where(:alta => "2015-07-01".."2015-07-31", :user_id => user).sum(:bolsahu) %></td>
+                <td><strong><%= Post.where(:alta => "2015-07-01".."2015-07-31", :user_id => user).sum(:bolsahg) - Post.where(:alta => "2015-07-01".."2015-07-31", :user_id => user).sum(:bolsahu) %></strong></td>
+              </tr>
+              <tr>
+                <td>Marzo</td>
+                <td><%= Post.where(:alta => "2015-08-01".."2015-08-31", :user_id => user).sum(:bolsahg) %></td>
+                <td><%= Post.where(:alta => "2015-08-01".."2015-08-31", :user_id => user).sum(:bolsahu) %></td>
+                <td><strong><%= Post.where(:alta => "2015-08-01".."2015-08-31", :user_id => user).sum(:bolsahg) - Post.where(:alta => "2015-08-01".."2015-08-31", :user_id => user).sum(:bolsahu) %></strong></td>
+              </tr>
+              <tr>
+                <td>Marzo</td>
+                <td><%= Post.where(:alta => "2015-09-01".."2015-09-31", :user_id => user).sum(:bolsahg) %></td>
+                <td><%= Post.where(:alta => "2015-09-01".."2015-09-31", :user_id => user).sum(:bolsahu) %></td>
+                <td><strong><%= Post.where(:alta => "2015-09-01".."2015-09-31", :user_id => user).sum(:bolsahg) - Post.where(:alta => "2015-09-01".."2015-09-31", :user_id => user).sum(:bolsahu) %></strong></td>
+              </tr>
+              <tr>
+                <td>Marzo</td>
+                <td><%= Post.where(:alta => "2015-10-01".."2015-10-31", :user_id => user).sum(:bolsahg) %></td>
+                <td><%= Post.where(:alta => "2015-10-01".."2015-10-31", :user_id => user).sum(:bolsahu) %></td>
+                <td><strong><%= Post.where(:alta => "2015-10-01".."2015-10-31", :user_id => user).sum(:bolsahg) - Post.where(:alta => "2015-10-01".."2015-10-31", :user_id => user).sum(:bolsahu) %></strong></td>
+              </tr>
+              <tr>
+                <td>Marzo</td>
+                <td><%= Post.where(:alta => "2015-11-01".."2015-11-31", :user_id => user).sum(:bolsahg) %></td>
+                <td><%= Post.where(:alta => "2015-11-01".."2015-11-31", :user_id => user).sum(:bolsahu) %></td>
+                <td><strong><%= Post.where(:alta => "2015-11-01".."2015-11-31", :user_id => user).sum(:bolsahg) - Post.where(:alta => "2015-11-01".."2015-11-31", :user_id => user).sum(:bolsahu) %></strong></td>
+              </tr>
+              <tr>
+                <td>Marzo</td>
+                <td><%= Post.where(:alta => "2015-12-01".."2015-12-31", :user_id => user).sum(:bolsahg) %></td>
+                <td><%= Post.where(:alta => "2015-12-01".."2015-12-31", :user_id => user).sum(:bolsahu) %></td>
+                <td><strong><%= Post.where(:alta => "2015-12-01".."2015-12-31", :user_id => user).sum(:bolsahg) - Post.where(:alta => "2015-12-01".."2015-12-31", :user_id => user).sum(:bolsahu) %></strong></td>
+              </tr>
+              <tr class="bg-success">
+                <td>Total</td>
                 <td><%= Post.where(:alta => "2015-01-01".."2015-12-31", :user_id => user).sum(:bolsahg) %></td>
                 <td><%= Post.where(:alta => "2015-01-01".."2015-12-31", :user_id => user).sum(:bolsahu) %></td>
                 <td><strong><%= Post.where(:alta => "2015-01-01".."2015-12-31", :user_id => user).sum(:bolsahg) - Post.where(:alta => "2015-01-01".."2015-12-31", :user_id => user).sum(:bolsahu) %></strong></td>
               </tr>
               <tr> 
-
-
-
               </tr>
             </tbody>
           </table>
-             </div>
+
+
       </div>
-         </div>
-      </div>
-        </div>
-      </div>
-      </div>
+    </div>
+  </div>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      
       <% end %>
 
       <% else %>
@@ -444,4 +582,6 @@
 </div>
 
     
+
+
 
