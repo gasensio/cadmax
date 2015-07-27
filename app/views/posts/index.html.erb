@@ -123,8 +123,8 @@
                   </div>
                   <div class="row">
                     <div class="col-md-6">
-                      <div class="input-group">
-                        <%= f.date_field :alta, class: "form-control post_content datepicker", :data => {:provide => 'datepicker'}, label: false, placeholder: "Alta", rows: 1 %><span class="input-group-addon" id="basic-addon1" >
+                      <div class="input-group date">
+                        <%= f.text_field :alta, class: "form-control post_content datepicker", :data => {:provide => 'datepicker'}, label: false, placeholder: "Alta", rows: 1 %><span class="input-group-addon" id="basic-addon1" >
                         <span class="fa fa-calendar" aria-hidden="true"></span>
                       </span></div> <br>
                     </div>
@@ -363,8 +363,8 @@
                   <tr>
                 <td>Febrero</td>
                 <td>22</td>
-                <td><%= Post.where(:alta => "2015-02-01".."2015-02-31", :user_id => user).sum(:vacaciones) %></td>
-                <td><strong><%= 22 - Post.where(:alta => "2015-02-01".."2015-02-31", :user_id => user).sum(:vacaciones) %></strong></td>
+                <td><%= Post.where(:alta => "2015-02-01".."2015-02-28", :user_id => user).sum(:vacaciones) %></td>
+                <td><strong><%= 22 - Post.where(:alta => "2015-02-01".."2015-02-28", :user_id => user).sum(:vacaciones) %></strong></td>
               </tr>
               <tr>
                 <td>Marzo</td>
@@ -375,8 +375,8 @@
               <tr>
                 <td>Abril</td>
                 <td>22</td>
-                <td><%= Post.where(:alta => "2015-04-01".."2015-04-31", :user_id => user).sum(:vacaciones) %></td>
-                <td><strong><%= 22 - Post.where(:alta => "2015-04-01".."2015-04-31", :user_id => user).sum(:vacaciones) %></strong></td>
+                <td><%= Post.where(:alta => "2015-04-01".."2015-04-30", :user_id => user).sum(:vacaciones) %></td>
+                <td><strong><%= 22 - Post.where(:alta => "2015-04-01".."2015-04-30", :user_id => user).sum(:vacaciones) %></strong></td>
               </tr>
               <tr>
                 <td>Mayo</td>
@@ -387,8 +387,8 @@
               <tr>
                 <td>Junio</td>
                 <td>22</td>
-                <td><%= Post.where(:alta => "2015-06-01".."2015-06-31", :user_id => user).sum(:vacaciones) %></td>
-                <td><strong><%= 22 - Post.where(:alta => "2015-06-01".."2015-06-31", :user_id => user).sum(:vacaciones) %></strong></td>
+                <td><%= Post.where(:alta => "2015-06-01".."2015-06-30", :user_id => user).sum(:vacaciones) %></td>
+                <td><strong><%= 22 - Post.where(:alta => "2015-06-01".."2015-06-30", :user_id => user).sum(:vacaciones) %></strong></td>
               </tr>
               <tr>
                 <td>Julio</td>
@@ -405,8 +405,8 @@
               <tr>
                 <td>Septiembre</td>
                 <td>22</td>
-                <td><%= Post.where(:alta => "2015-09-01".."2015-09-31", :user_id => user).sum(:vacaciones) %></td>
-                <td><strong><%= 22 - Post.where(:alta => "2015-09-01".."2015-09-31", :user_id => user).sum(:vacaciones) %></strong></td>
+                <td><%= Post.where(:alta => "2015-09-01".."2015-09-30", :user_id => user).sum(:vacaciones) %></td>
+                <td><strong><%= 22 - Post.where(:alta => "2015-09-01".."2015-09-30", :user_id => user).sum(:vacaciones) %></strong></td>
               </tr>
               <tr>
                 <td>Octubre</td>
@@ -417,8 +417,8 @@
               <tr>
                 <td>Noviembre</td>
                 <td>22</td>
-                <td><%= Post.where(:alta => "2015-11-01".."2015-11-31", :user_id => user).sum(:vacaciones) %></td>
-                <td><strong><%= 22 - Post.where(:alta => "2015-11-01".."2015-11-31", :user_id => user).sum(:vacaciones) %></strong></td>
+                <td><%= Post.where(:alta => "2015-11-01".."2015-11-30", :user_id => user).sum(:vacaciones) %></td>
+                <td><strong><%= 22 - Post.where(:alta => "2015-11-01".."2015-11-30", :user_id => user).sum(:vacaciones) %></strong></td>
               </tr>
               <tr>
                 <td>Diciembre</td>

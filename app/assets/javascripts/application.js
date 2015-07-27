@@ -20,18 +20,20 @@
 
 $(document).ready(function(){
     $('.datepicker').datepicker({
-    	autoclose: true,
-    	language: "es",
-    	orientation: "top auto",
-    	dateFormat: "dd-mm-yyyy"
+    	autoclose: 'true',
+    	language: 'es',
+    	orientation: 'top auto',
+    	dateFormat: 'dd-mm-yyyy',
+    	todayHighlight: true,
+    	todayBtn: true
     });
   });
 
 $('#mesestab a').click(function (e) {
   e.preventDefault()
   $(this).tab('show')
-})
+});
 
-$('.collapse').collapse({ collapsible: true, active: false })
+$('.collapse').collapse({ collapsible: true, active: false });
 
 
