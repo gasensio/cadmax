@@ -468,9 +468,9 @@
               </tr>
               <tr>
                 <td>Febrero</td>
-                <td><%= Post.where(:alta => "2015-02-01".."2015-02-31", :user_id => user).sum(:bolsahg) %></td>
-                <td><%= Post.where(:alta => "2015-02-01".."2015-02-31", :user_id => user).sum(:bolsahu) %></td>
-                <td><strong><%= Post.where(:alta => "2015-02-01".."2015-02-31", :user_id => user).sum(:bolsahg) - Post.where(:alta => "2015-02-01".."2015-02-31", :user_id => user).sum(:bolsahu) %></strong></td>
+                <td><%= Post.where(:alta => "2015-02-01".."2015-02-28", :user_id => user).sum(:bolsahg) %></td>
+                <td><%= Post.where(:alta => "2015-02-01".."2015-02-28", :user_id => user).sum(:bolsahu) %></td>
+                <td><strong><%= Post.where(:alta => "2015-02-01".."2015-02-28", :user_id => user).sum(:bolsahg) - Post.where(:alta => "2015-02-01".."2015-02-28", :user_id => user).sum(:bolsahu) %></strong></td>
               </tr>
               <tr>
                 <td>Marzo</td>
@@ -480,54 +480,54 @@
               </tr>
               <tr>
                 <td>Abril</td>
-                <td><%= Post.where(:alta => "2015-04-01".."2015-04-31", :user_id => user).sum(:bolsahg) %></td>
-                <td><%= Post.where(:alta => "2015-04-01".."2015-04-31", :user_id => user).sum(:bolsahu) %></td>
-                <td><strong><%= Post.where(:alta => "2015-04-01".."2015-04-31", :user_id => user).sum(:bolsahg) - Post.where(:alta => "2015-04-01".."2015-04-31", :user_id => user).sum(:bolsahu) %></strong></td>
+                <td><%= Post.where(:alta => "2015-04-01".."2015-04-30", :user_id => user).sum(:bolsahg) %></td>
+                <td><%= Post.where(:alta => "2015-04-01".."2015-04-30", :user_id => user).sum(:bolsahu) %></td>
+                <td><strong><%= Post.where(:alta => "2015-04-01".."2015-04-30", :user_id => user).sum(:bolsahg) - Post.where(:alta => "2015-04-01".."2015-04-30", :user_id => user).sum(:bolsahu) %></strong></td>
               </tr>
               <tr>
-                <td>Marzo</td>
+                <td>Mayo</td>
                 <td><%= Post.where(:alta => "2015-05-01".."2015-05-31", :user_id => user).sum(:bolsahg) %></td>
                 <td><%= Post.where(:alta => "2015-05-01".."2015-05-31", :user_id => user).sum(:bolsahu) %></td>
                 <td><strong><%= Post.where(:alta => "2015-05-01".."2015-05-31", :user_id => user).sum(:bolsahg) - Post.where(:alta => "2015-05-01".."2015-05-31", :user_id => user).sum(:bolsahu) %></strong></td>
               </tr>
               <tr>
-                <td>Marzo</td>
-                <td><%= Post.where(:alta => "2015-06-01".."2015-06-31", :user_id => user).sum(:bolsahg) %></td>
-                <td><%= Post.where(:alta => "2015-06-01".."2015-06-31", :user_id => user).sum(:bolsahu) %></td>
-                <td><strong><%= Post.where(:alta => "2015-06-01".."2015-06-31", :user_id => user).sum(:bolsahg) - Post.where(:alta => "2015-06-01".."2015-06-31", :user_id => user).sum(:bolsahu) %></strong></td>
+                <td>Junio</td>
+                <td><%= Post.where(:alta => "2015-06-01".."2015-06-30", :user_id => user).sum(:bolsahg) %></td>
+                <td><%= Post.where(:alta => "2015-06-01".."2015-06-30", :user_id => user).sum(:bolsahu) %></td>
+                <td><strong><%= Post.where(:alta => "2015-06-01".."2015-06-30", :user_id => user).sum(:bolsahg) - Post.where(:alta => "2015-06-01".."2015-06-30", :user_id => user).sum(:bolsahu) %></strong></td>
               </tr>
               <tr>
-                <td>Marzo</td>
+                <td>Julio</td>
                 <td><%= Post.where(:alta => "2015-07-01".."2015-07-31", :user_id => user).sum(:bolsahg) %></td>
                 <td><%= Post.where(:alta => "2015-07-01".."2015-07-31", :user_id => user).sum(:bolsahu) %></td>
                 <td><strong><%= Post.where(:alta => "2015-07-01".."2015-07-31", :user_id => user).sum(:bolsahg) - Post.where(:alta => "2015-07-01".."2015-07-31", :user_id => user).sum(:bolsahu) %></strong></td>
               </tr>
               <tr>
-                <td>Marzo</td>
+                <td>Agosto</td>
                 <td><%= Post.where(:alta => "2015-08-01".."2015-08-31", :user_id => user).sum(:bolsahg) %></td>
                 <td><%= Post.where(:alta => "2015-08-01".."2015-08-31", :user_id => user).sum(:bolsahu) %></td>
                 <td><strong><%= Post.where(:alta => "2015-08-01".."2015-08-31", :user_id => user).sum(:bolsahg) - Post.where(:alta => "2015-08-01".."2015-08-31", :user_id => user).sum(:bolsahu) %></strong></td>
               </tr>
               <tr>
-                <td>Marzo</td>
-                <td><%= Post.where(:alta => "2015-09-01".."2015-09-31", :user_id => user).sum(:bolsahg) %></td>
-                <td><%= Post.where(:alta => "2015-09-01".."2015-09-31", :user_id => user).sum(:bolsahu) %></td>
-                <td><strong><%= Post.where(:alta => "2015-09-01".."2015-09-31", :user_id => user).sum(:bolsahg) - Post.where(:alta => "2015-09-01".."2015-09-31", :user_id => user).sum(:bolsahu) %></strong></td>
+                <td>Septiembre</td>
+                <td><%= Post.where(:alta => "2015-09-01".."2015-09-30", :user_id => user).sum(:bolsahg) %></td>
+                <td><%= Post.where(:alta => "2015-09-01".."2015-09-30", :user_id => user).sum(:bolsahu) %></td>
+                <td><strong><%= Post.where(:alta => "2015-09-01".."2015-09-30", :user_id => user).sum(:bolsahg) - Post.where(:alta => "2015-09-01".."2015-09-30", :user_id => user).sum(:bolsahu) %></strong></td>
               </tr>
               <tr>
-                <td>Marzo</td>
+                <td>Octubre</td>
                 <td><%= Post.where(:alta => "2015-10-01".."2015-10-31", :user_id => user).sum(:bolsahg) %></td>
                 <td><%= Post.where(:alta => "2015-10-01".."2015-10-31", :user_id => user).sum(:bolsahu) %></td>
                 <td><strong><%= Post.where(:alta => "2015-10-01".."2015-10-31", :user_id => user).sum(:bolsahg) - Post.where(:alta => "2015-10-01".."2015-10-31", :user_id => user).sum(:bolsahu) %></strong></td>
               </tr>
               <tr>
-                <td>Marzo</td>
-                <td><%= Post.where(:alta => "2015-11-01".."2015-11-31", :user_id => user).sum(:bolsahg) %></td>
-                <td><%= Post.where(:alta => "2015-11-01".."2015-11-31", :user_id => user).sum(:bolsahu) %></td>
-                <td><strong><%= Post.where(:alta => "2015-11-01".."2015-11-31", :user_id => user).sum(:bolsahg) - Post.where(:alta => "2015-11-01".."2015-11-31", :user_id => user).sum(:bolsahu) %></strong></td>
+                <td>Noviembre</td>
+                <td><%= Post.where(:alta => "2015-11-01".."2015-11-30", :user_id => user).sum(:bolsahg) %></td>
+                <td><%= Post.where(:alta => "2015-11-01".."2015-11-30", :user_id => user).sum(:bolsahu) %></td>
+                <td><strong><%= Post.where(:alta => "2015-11-01".."2015-11-30", :user_id => user).sum(:bolsahg) - Post.where(:alta => "2015-11-01".."2015-11-30", :user_id => user).sum(:bolsahu) %></strong></td>
               </tr>
               <tr>
-                <td>Marzo</td>
+                <td>Diciembre</td>
                 <td><%= Post.where(:alta => "2015-12-01".."2015-12-31", :user_id => user).sum(:bolsahg) %></td>
                 <td><%= Post.where(:alta => "2015-12-01".."2015-12-31", :user_id => user).sum(:bolsahu) %></td>
                 <td><strong><%= Post.where(:alta => "2015-12-01".."2015-12-31", :user_id => user).sum(:bolsahg) - Post.where(:alta => "2015-12-01".."2015-12-31", :user_id => user).sum(:bolsahu) %></strong></td>
