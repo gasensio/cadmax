@@ -4,7 +4,7 @@ class Post < ActiveRecord::Base
 
   def self.search(search)
   	if search
-  		where(['user_id LIKE ?' , "#{search}" ])
+  		where(['cast(user_id as text) LIKE ?' , "#{search}" ])
   	else
   		all
   	end
