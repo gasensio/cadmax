@@ -22,7 +22,7 @@
         </div>
         <div class="panel-body">
           <%= form_tag posts_path, method: "get", class: "form-group form-inline" do %>
-          <%= select_tag 'search', options_for_select(@users.collect{ |u| [u.name, u.id] }), class: "form-control", :onchange => "this.form.submit();"  %>
+          <%= select_tag 'search', options_for_select(@users.collect{ |u| [u.name, u.id] },params[:search] ), class: "form-control", :onchange => "this.form.submit();" %>
           <% end %>
           <%= button_to "Reset", posts_path, :class => "btn btn-default", :method => :get %>
         </div>
