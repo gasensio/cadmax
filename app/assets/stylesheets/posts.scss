@@ -16,7 +16,7 @@
 	color: #777;
 	height:80px;
 	vertical-align: top;
-	font-size: 16px;
+	font-size: 12px;
 	overflow: hidden;
 	}
 	.notmonth {color:#CCC;}
@@ -26,8 +26,8 @@
 #posts #month {
 	margin: 0;
 	paddint-top: 10px;
-	padding-bottom: 10px;
-	text-align: right;
+	padding-bottom: 15px;
+	text-align: center;
 	a {
 	text-decoration: none;
 	padding: 5px 10px;
@@ -79,4 +79,31 @@ width: auto!important;
 input[type="date"]::-webkit-calendar-picker-indicator,
 input[type="date"]::-webkit-inner-spin-button{
     display: none;
+}
+@-moz-document url-prefix() {
+    fieldset {
+        display: table-cell;
+    }
+}
+fieldset {
+    min-width: 0; 
+    width: 100%; 
+}
+.font12 {
+	font-size: 12px;
+}
+.padleft0 {
+	padding-left: 0px;
+}
+.padright0 {
+	padding-right: 0px;
+}
+.marbot0 {
+	margin-bottom: 0px
+}
+#mes {
+	margin-bottom: 0px;
+	margin-top:0px;
+	padding: 4px 0 3px 0;
+	color: #000;
 }

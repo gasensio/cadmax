@@ -1,12 +1,10 @@
 		<header>
 			<nav class="navbar navbar-default navbar-fixed-top">
 			  <div class="container">
-			  	<ul class="nav navbar-nav">
 			  		<div class="navbar-header">
-			  			<a class="navbar-brand" href="#">Aplicacion control de horas</a>
-			  		</div>
-			        
-			    </ul>
+			  			<%= image_tag "logope.png", class: "img-responsive logo pull-left", alt: "brand" %>
+						</div>
+			
 			<% if user_signed_in? %>
 				<h5 class="navbar-text navbar-right">Hola, <%= link_to current_user.name, edit_user_registration_path, :method => 'get' %> - <%= link_to "Cerrar sesion", destroy_user_session_path, :method => 'delete' %></h5>
 			<% end %>

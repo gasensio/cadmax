@@ -15,6 +15,7 @@ class PostsController < ApplicationController
     end
     @post = Post.new
     @posts_by_date = @posts.group_by(&:alta)
+    @posts_by_user = @posts.group_by(&:user_id)
     @date = params[:date] ? Date.parse(params[:date]) : Date.today
     @users = User.all
   end

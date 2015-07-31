@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150718233401) do
+ActiveRecord::Schema.define(version: 20150730184746) do
 
   create_table "posts", force: :cascade do |t|
     t.string   "title"
@@ -19,14 +19,14 @@ ActiveRecord::Schema.define(version: 20150718233401) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.string   "pedido"
-    t.integer  "horasof"
-    t.integer  "horasnf"
-    t.integer  "extra"
-    t.integer  "extraf"
-    t.integer  "nocturnas"
-    t.integer  "vacaciones"
-    t.integer  "bolsahg"
-    t.integer  "bolsahu"
+    t.decimal  "horasof"
+    t.decimal  "horasnf"
+    t.decimal  "extra"
+    t.decimal  "extraf"
+    t.decimal  "nocturnas"
+    t.decimal  "vacaciones"
+    t.decimal  "bolsahg"
+    t.decimal  "bolsahu"
     t.datetime "fecha"
     t.integer  "user_id"
     t.date     "alta"
