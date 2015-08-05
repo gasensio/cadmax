@@ -4,15 +4,13 @@
 #posts .calendar {
 	border-collapse: collapse;
 	width: 100%;
-
-
 	th {
-
 	width: 14.2856142857143%;
+	text-align:center;
+
 	
 	}
 	td {
-
 	color: #777;
 	height:80px;
 	vertical-align: top;
@@ -22,7 +20,6 @@
 	.notmonth {color:#CCC;}
 	.today {background-color:#D7F2FF;}
 }
-
 #posts #month {
 	margin: 0;
 	paddint-top: 10px;

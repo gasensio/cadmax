@@ -1,14 +1,9 @@
 
 
 <%= render "header" %>
-<div class="container">
-
-  <div class="row">
+<div class="container-fluid">
+<div class="row">
     
-
-
-
-
 <% if current_user.admin? %>
     <div class="col-md-6">
       <%= image_tag "logo.png", class: "img-responsive" %>
@@ -129,7 +124,8 @@
           </div>
           <% if current_user.admin? %>
           <%= link_to post, data: {toggle: "modal", target: "#mytable_#{post.id}"} do %>
-          <%= post.title %><br><%= post.user.name %>
+          <%= post.title %><br><%= post.user.name %><br> 
+          Total: <%= Post.where(:alta => date, :id => post.id).sum(:horasof) + Post.where(:alta => date, :id => post.id).sum(:horasnf) + Post.where(:alta => date, :id => post.id).sum(:extra) + Post.where(:alta => date, :id => post.id).sum(:extraf) + Post.where(:alta => date, :id => post.id).sum(:nocturnas) + Post.where(:alta => date, :id => post.id).sum(:vacaciones) + Post.where(:alta => date, :id => post.id).sum(:bolsahg) + Post.where(:alta => date, :id => post.id).sum(:bolsahu) %> horas
           <% end %>
           <% else %>
           <%= link_to post.title, post, data: {toggle: "modal", target: "#mytable_#{post.id}"} %>
@@ -235,6 +231,7 @@
                         <th>Horas ordinarias facturadas</th>
                         <th>Horas no facturadas</th>
                         <th>Extra</th>
+                        <th>Extra facturadas</th>
                         <th>Nocturnas</th>
                         <th>Vacaciones</th>
                         <th>Bolsa de horas generadas</th>
@@ -250,6 +247,7 @@
                         <th><%= post.horasof %></th>
                         <th><%= post.horasnf %></th>
                         <th><%= post.extra %></th>
+                        <th><%= post.extraf %></th>
                         <th><%= post.nocturnas %></th>
                         <th><%= post.vacaciones %></th>
                         <th><%= post.bolsahg %></th>
@@ -367,7 +365,7 @@
       <div class="panel panel-info">
       <div class="panel-heading"><h3 class="panel-title text-center">Resumen mensual de <%= l(@date, format: "%B %Y") %> de <%= user.name %></h3></div>
 
-      <table class="table table-bordered font12">
+      <table class="table table-bordered font12 text-center">
         <thead>
           <tr class="active">
             <td><strong>Fecha</strong></td>
@@ -421,7 +419,7 @@
       <div class="panel panel panel-danger">
       <div class="panel-heading"><h3 class="panel-title text-center">Resumen anual de <%= l(@date, format: "%Y") %> de <%= user.name %></h3></div>
 
-      <table class="table table-bordered font12">
+      <table class="table table-bordered font12 text-center">
         <thead>
           <tr class="active">
             <td></td>
