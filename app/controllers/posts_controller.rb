@@ -18,6 +18,11 @@ class PostsController < ApplicationController
     @posts_by_user = @posts.group_by(&:user_id)
     @date = params[:date] ? Date.parse(params[:date]) : Date.today
     @users = User.all
+    respond_to do |format|
+        format.html
+        format.csv { send_data @posts.to_csv }
+        format.xls # { send_data @posts.to_csv(col_sep: "\t") }
+      end
   end
 
   # GET /posts/1
