@@ -1,7 +1,8 @@
 class Post < ActiveRecord::Base
 
 	belongs_to :user
-
+  has_many :proyectos
+  
   def self.search(search)
   	if search
   		where(['cast(user_id as text) LIKE ?' , "#{search}" ])
@@ -9,6 +10,7 @@ class Post < ActiveRecord::Base
   		all
   	end
   end
+
 
   def self.to_csv(options = {})
   CSV.generate(options) do |csv|

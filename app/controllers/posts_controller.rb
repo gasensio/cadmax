@@ -18,17 +18,36 @@ class PostsController < ApplicationController
     @posts_by_user = @posts.group_by(&:user_id)
     @date = params[:date] ? Date.parse(params[:date]) : Date.today
     @users = User.all
+    @proyecto = Proyecto.new
+    @proyectos = Proyecto.all
     respond_to do |format|
         format.html
         format.csv { send_data @posts.to_csv }
         format.xls # { send_data @posts.to_csv(col_sep: "\t") }
+        format.pdf do
+          pdf = PartePdf.new(@post)
+          send_data pdf.render, filename: "Parte.pdf",
+                                type: "application/pdf",
+                                disposition: "attachment"
+        end
       end
   end
 
   # GET /posts/1
   # GET /posts/1.json
   def show
-     @post = Post.all
+     @post = Post.find(params[:id])
+     respond_to do |format|
+        format.html
+        format.csv { send_data @posts.to_csv }
+        format.xls # { send_data @posts.to_csv(col_sep: "\t") }
+        format.pdf do
+          pdf = PartePdf.new(@post)
+          send_data pdf.render, filename: "Parte.pdf",
+                                type: "application/pdf",
+                                disposition: "inline"
+        end
+      end
   end
 
   # GET /posts/new
@@ -43,7 +62,11 @@ class PostsController < ApplicationController
   # POST /posts
   # POST /posts.json
   def create
+    if current_user.admin?
+    @post = Post.new(post_params)
+    else
     @post = current_user.posts.new(post_params)
+    end
 
     respond_to do |format|
       if @post.save
@@ -93,6 +116,6 @@ class PostsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def post_params
-      params.require(:post).permit(:title, :content, :pedido, :horasof, :horasnf, :extra, :extraf, :nocturnas, :vacaciones, :bolsahg, :bolsahu, :alta, :search, :status )
+      params.require(:post).permit(:title, :content, :pedido, :horasof, :horasnf, :extra, :extraf, :nocturnas, :vacaciones, :bolsahg, :bolsahu, :alta, :search, :status, :proyecto, :cliente, :user_id, :inicio, :fin )
     end
 end

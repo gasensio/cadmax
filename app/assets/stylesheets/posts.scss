@@ -7,8 +7,7 @@
 	th {
 	width: 14.2856142857143%;
 	text-align:center;
-
-	
+	vertical-align: top;
 	}
 	td {
 	color: #777;
@@ -104,3 +103,11 @@ fieldset {
 	padding: 4px 0 3px 0;
 	color: #000;
 }
+.tooltip.top .tooltip-inner {
+    background-color:#333;
+  }
+.tooltip.top .tooltip-arrow {
+          border-top-color: #333;
+}
+hr {margin-top:0;}
+

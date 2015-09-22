@@ -5,6 +5,7 @@ Rails.application.routes.draw do
   root 'posts#index'
 end
   resources :posts
+  resources :proyectos
   devise_for :users, controllers: { registrations: "registrations" }
   resources :users, only: [:show]
 

@@ -61,3 +61,6 @@ end
 
   gem 'twitter-bootstrap-rails'
 
+  gem 'prawn'
+
+  gem 'prawn-table'
