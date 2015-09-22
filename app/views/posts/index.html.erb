@@ -100,6 +100,9 @@
             <%= link_to "CSV", posts_path(format: "csv"), :class => "btn btn-primary btn-group", :type => "button" %>
             <%= link_to "Excel", posts_path(format: "xls"), :class => "btn btn-primary btn-group", :type => "button" %>
           </div>
+
+          <p><%= link_to "Parte de trabajo diario (PDF)", posts_path(Post.where(:alta => @date.month), format: "pdf") %></p>
+
         </div>
       </div>
     </div>
