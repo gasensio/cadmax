@@ -6,12 +6,11 @@ class Post < ActiveRecord::Base
   
   def self.search(search)
   	if search
-  		where(['user_id LIKE ? OR proyecto LIKE ?' , "#{search}", "#{search}" ])
+      where(['cast(user_id as text) LIKE ? OR cast(proyecto as text) LIKE ?' , "#{search}", "#{search}"])
   	else
   		all
   	end
   end
-
 
 
   def self.to_csv(options = {})
