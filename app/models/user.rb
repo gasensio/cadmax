@@ -5,6 +5,8 @@ class User < ActiveRecord::Base
          :recoverable, :rememberable, :trackable, :validatable
 
   has_many :posts, dependent: :destroy
+  has_many :proyectos
+  has_many :clientes
 
   def self.options_for_select
   order('LOWER(name)').map { |e| [e.name, e.id] }

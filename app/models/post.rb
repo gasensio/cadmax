@@ -2,14 +2,16 @@ class Post < ActiveRecord::Base
 
 	belongs_to :user
   has_many :proyectos
+  has_many :clientes
   
   def self.search(search)
   	if search
-  		where(['cast(user_id as text) LIKE ?' , "#{search}" ])
+  		where(['user_id LIKE ? OR proyecto LIKE ?' , "#{search}", "#{search}" ])
   	else
   		all
   	end
   end
+
 
 
   def self.to_csv(options = {})

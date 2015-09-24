@@ -9,7 +9,7 @@ class PartePdf < Prawn::Document
 		pedido
 		titular
 		tabla
-	
+		tecnico
 		horario
 		footer
 

@@ -6,6 +6,7 @@ Rails.application.routes.draw do
 end
   resources :posts
   resources :proyectos
+  resources :clientes
   devise_for :users, controllers: { registrations: "registrations" }
   resources :users, only: [:show]
 

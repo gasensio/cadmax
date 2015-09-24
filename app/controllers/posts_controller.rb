@@ -20,6 +20,8 @@ class PostsController < ApplicationController
     @users = User.all
     @proyecto = Proyecto.new
     @proyectos = Proyecto.all
+    @cliente = Cliente.new
+    @clientes = Cliente.all
     respond_to do |format|
         format.html
         format.csv { send_data @posts.to_csv }
@@ -116,6 +118,6 @@ class PostsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def post_params
-      params.require(:post).permit(:title, :content, :pedido, :horasof, :horasnf, :extra, :extraf, :nocturnas, :vacaciones, :bolsahg, :bolsahu, :alta, :search, :status, :proyecto, :cliente, :user_id, :inicio, :fin )
+      params.require(:post).permit(:title, :content, :pedido, :horasof, :horasnf, :extra, :extraf, :nocturnas, :vacaciones, :bolsahg, :bolsahu, :alta, :search, :status, :proyecto, :cliente, :user_id, :inicio, :fin, :name, :searchproye )
     end
 end

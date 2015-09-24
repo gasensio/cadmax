@@ -1,27 +1,27 @@
-class ProyectosController < ApplicationController
+class ClientesController < ApplicationController
 	before_action :authenticate_user!
 
 	def index
-		@proyectos = Proyecto.all
+		@clientes = Cliente.all
 	end
 
 	def new
-		@proyecto = Proyecto.new
+		@cliente = Cliente.new
 	end
 
 	def show
-		@proyecto = Proyecto.all
+		@cliente = Cliente.all
  	end
 	def edit
  	end
 
 
 	def create
-		@proyecto = Proyecto.new(proyecto_params)
+		@cliente = Cliente.new(cliente_params)
 
 		respond_to do |format|
-			if @proyecto.save
-				format.html { redirect_to posts_path, notice: 'Proyecto was successfully created.' }
+			if @cliente.save
+				format.html { redirect_to posts_path, notice: 'Cliente was successfully created.' }
 				format.json { render :show, status: :created, location: @post }
 				format.js
 			else
@@ -33,10 +33,10 @@ class ProyectosController < ApplicationController
 	end
 
 	def update
-		@proyecto = Proyecto.find params[:id]
+		@cliente = Cliente.find params[:id]
 		respond_to do |format|
-			if @proyecto.update(proyecto_params)
-				format.html { redirect_to posts_path, notice: 'Proyecto was successfully updated.' }
+			if @cliente.update(cliente_params)
+				format.html { redirect_to posts_path, notice: 'Cliente was successfully updated.' }
 				format.js
 			else
 				format.html { render :edit }
@@ -48,13 +48,13 @@ class ProyectosController < ApplicationController
 
 	private
     # Use callbacks to share common setup or constraints between actions.
-    def set_proyecto
-      @proyecto = Proyecto.find(params[:id])
+    def set_cliente
+      @cliente = Cliente.find(params[:id])
     end
 
     # Never trust parameters from the scary internet, only allow the white list through.
-    def proyecto_params
-      params.require(:proyecto).permit(:name)
+    def cliente_params
+      params.require(:cliente).permit(:name)
     end
 
 
