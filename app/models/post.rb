@@ -6,7 +6,7 @@ class Post < ActiveRecord::Base
   
   def self.search(search)
   	if search
-      where(['cast(user_id as text) LIKE ? OR cast(proyecto as text) LIKE ?' , "#{search}", "#{search}"])
+      where(['cast(user_id as text) LIKE ? OR cast(proyecto as text) LIKE ? OR cast(cliente as text) LIKE ?' , "#{search}", "#{search}", "#{search}"])
   	else
   		all
   	end

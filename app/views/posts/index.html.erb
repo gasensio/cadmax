@@ -217,6 +217,17 @@
 
           <% end %>
         </div>
+        <br>
+        <div class"col-md-4">
+          <%= form_tag posts_path, method: "get", class: "form-group" do %>
+          <%= select_tag 'search', options_for_select(@clientes.collect{ |u| [ u.name ]}, params[:search]), :include_blank => "Seleccionar cliente", class: "form-control form-group input-sm", :onchange => "window.location.replace('/?date=#{@date}+posts?&search='+$(this).val());" %>
+
+          <%= link_to "Reset", root_path, :class => "btn-sm btn-danger form-group" %>
+
+          <% end %>
+        </div>
+
+
         </div>
       </div>
     </div>
@@ -412,6 +423,14 @@
                       <%= f.number_field :bolsahu, class: "form-control post_content", label: false, placeholder: "Bolsa de horas utilizadas", rows: 1, step: 0.5 %><br>
                     </div>
                   </div>
+                  <div class="row">
+                    <div class="col-md-6">
+                      <%= f.number_field :viaje, class: "form-control post_content", label: false, placeholder: "Tiempo de Viaje", rows: 1, step: 0.5 %><br>
+                    </div>
+                    <div class="col-md-6">
+                      <%= f.number_field :espera, class: "form-control post_content", label: false, placeholder: "Tiempo de Espera", rows: 1, step: 0.5 %><br>
+                    </div>
+                  </div>
 
                   <div class="row">
                     <div class="col-md-6 form-inline">
@@ -487,6 +506,8 @@
                         <th>Vacaciones</th>
                         <th>Bolsa de horas generadas</th>
                         <th>Bolsa de horas utilizadas</th>
+                        <th>T.Viaje</th>
+                        <th>T.Espera</th>
                       </tr>
                     </thead>
                     <tbody>
@@ -505,6 +526,8 @@
                         <th id="vacaciones"><%= post.vacaciones %></th>
                         <th><%= post.bolsahg %></th>
                         <th><%= post.bolsahu %></th>
+                        <th><%= post.viaje %></th>
+                        <th><%= post.espera %></th>
                       </tr>
                     </tbody>
                   </table>
@@ -551,11 +574,12 @@
                 <%= f.select :proyecto, options_for_select(@proyectos.collect{ |u| [u.proyecto] },params[:user_id] ), {:include_blank => "Seleccionar proyecto"}, { :required => true, class: "form-control"} %>
               </div>
               <div class="col-md-6">
-                <%= f.text_area :title, class: "form-control post_title", label: false, autofocus: "true", placeholder: "Recurso", rows: 1 %><br>
-              </div>
-              <div class="col-md-6">
                 <%= f.select :cliente, options_for_select(@clientes.collect{ |u| [u.name] },params[:user_id] ), {:include_blank => "Seleccionar cliente", :required => true}, {class: "form-control"} %><br>
               </div>
+              <div class="col-md-6">
+                <%= f.text_area :title, class: "form-control post_title", label: false, autofocus: "true", placeholder: "Recurso", rows: 1 %><br>
+              </div>
+              
               <div class="col-md-6">
                 <%= f.text_area :content, class: "form-control post_content", label: false, placeholder: "Comentario", rows: 1 %><br>
               </div>
@@ -601,6 +625,14 @@
               </div>
               <div class="col-md-6">
                 <%= f.number_field :bolsahu, class: "form-control post_content", label: false, placeholder: "Bolsa de horas utilizadas", rows: 1, step: 0.5 %><br>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-md-6">
+                <%= f.number_field :viaje, class: "form-control post_content", label: false, placeholder: "Tiempo de Viaje", rows: 1, step: 0.5 %><br>
+              </div>
+              <div class="col-md-6">
+                <%= f.number_field :espera, class: "form-control post_content", label: false, placeholder: "Tiempo de Espera", rows: 1, step: 0.5 %><br>
               </div>
             </div>
 
