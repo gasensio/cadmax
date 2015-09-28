@@ -57,6 +57,14 @@ class PostsController < ApplicationController
     @post = Post.new
   end
 
+  def resumen
+    @posts = Post.all.search(params[:search])
+      @posts_by_date = Post.search(params[:search])
+    @users = User.all
+    @date = params[:date] ? Date.parse(params[:date]) : Date.today
+
+  end
+
   # GET /posts/1/edit
   def edit
   end

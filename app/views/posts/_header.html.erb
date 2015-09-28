@@ -6,6 +6,10 @@
 						</div>
 			
 			<% if user_signed_in? %>
+			<ul class="nav navbar-nav">
+				<li class="<%= active_class(posts_path) %>"><%= link_to "Inicio", posts_path %></li>
+				<li class="<%= active_class(posts_resumen_path) %>"><%= link_to "Resumen", posts_resumen_path %></li>
+			</ul>
 				<h5 class="navbar-text navbar-right">Hola, <%= link_to current_user.name, edit_user_registration_path, :method => 'get' %> - <%= link_to "Cerrar sesion", destroy_user_session_path, :method => 'delete' %></h5>
 			<% end %>
 			  </div>

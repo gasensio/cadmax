@@ -1,0 +1,150 @@
+<%= render 'header' %>
+
+        <div class="row">
+          <h4 id="month">
+        <div class="btn-group block pull-right" role="group" aria-label="...">
+          <button type="button" class="btn btn-default"><%= link_to "", {date: @date.prev_month}, class: "fa fa-chevron-left btn" %></button>
+          <button type="button" class="btn btn-default disabled"><h4 id="mes"><%= l(@date, format: "%B %Y") %></h4></button>
+          <button type="button" class="btn btn-default"><%= link_to "", {date: @date.next_month}, class: "fa fa-chevron-right btn" %></button>
+        </div>
+      </h4>
+        </div>
+
+
+
+<div>
+
+  <!-- Nav tabs -->
+  <ul class="nav nav-tabs" role="tablist">
+    <% @users.each do |user| %>
+    <li role="presentation" class=""><a href="#<%= user.id %>" aria-controls="<%= user.id %>" role="tab" data-toggle="tab"><%= user.name %></a></li>
+
+    <% end %>
+  </ul>
+
+  <!-- Tab panes -->
+
+  
+
+  <div class="tab-content">
+    <% @users.each do |user| %>
+    <div role="tabpanel" class="tab-pane fade in" id="<%= user.id %>">
+
+
+
+
+      <div class="panel panel-info">
+      <div class="panel-heading"><h3 class="panel-title text-center">Resumen mensual de <%= l(@date, format: "%B %Y") %> de <%= user.name %></h3></div>
+
+      <table class="table table-bordered font12 text-center">
+        <thead>
+          <tr class="active">
+            <td><strong>Fecha</strong></td>
+            <td><strong>Proyecto</strong></td>
+            <td><strong>Recurso</strong></td>
+            <td><strong>Comentario</strong></td>
+            <td><strong>Pedido</strong></td>
+            <td><strong>Horas ordinarias facturadas</strong></td>
+            <td><strong>Horas no facturadas</strong></td>
+            <td><strong>Extra</strong></td>
+            <td><strong>Nocturnas</strong></td>
+            <td><strong>Vacaciones</strong></td>
+            <td><strong>Bolsa de horas generadas</strong></td>
+            <td><strong>Bolsa de horas utilizadas</strong></td>
+          </tr>
+        </thead>
+        <tbody>
+
+          <tr>
+            <% @posts.where(:alta => @date.beginning_of_month..@date.end_of_month, :user_id => user).order(alta: :asc).each do |post| %>
+                <td class="wspace"><h6><%= post.alta %></h6></td>
+                <td class="wspace"><h6><%= post.proyecto %></h6></td>
+                <td class="wspace"><h6><%= post.title %></h6></td>
+                <td><h6><%= post.content %></h6></td>
+                <td><h6><%= post.pedido %></h6></td>
+                <td><h6><%= post.horasof %></h6></td>
+                <td><h6><%= post.horasnf %></h6></td>
+                <td><h6><%= post.extra %></h6></td>
+                <td><h6><%= post.nocturnas %></h6></td>
+                <td><h6><%= post.vacaciones %></h6></td>
+                <td><h6><%= post.bolsahg %></h6></td>
+                <td><h6><%= post.bolsahu %></h6></td>
+                
+              </tr>
+              <% end %>
+               <tr class="active">
+                <td colspan = "5" class="text-right"><strong>Total</strong></td>
+                <td><strong><%= Post.where(:alta => @date.beginning_of_month..@date.end_of_month, :user_id => user).sum(:horasof) %></strong></td>
+                <td><strong><%= Post.where(:alta => @date.beginning_of_month..@date.end_of_month, :user_id => user).sum(:horasnf) %></strong></td>
+                <td><strong><%= Post.where(:alta => @date.beginning_of_month..@date.end_of_month, :user_id => user).sum(:extra) %></strong></td>
+                <td><strong><%= Post.where(:alta => @date.beginning_of_month..@date.end_of_month, :user_id => user).sum(:nocturnas) %></strong></td>
+                <td><strong><%= Post.where(:alta => @date.beginning_of_month..@date.end_of_month, :user_id => user).sum(:vacaciones) %></strong></td>
+                <td><strong><%= Post.where(:alta => @date.beginning_of_month..@date.end_of_month, :user_id => user).sum(:bolsahg) %></strong></td>
+                <td><strong><%= Post.where(:alta => @date.beginning_of_month..@date.end_of_month, :user_id => user).sum(:bolsahu) %></strong></td>
+               </tr>
+
+        </tbody>
+      </table>
+      </div>
+
+
+
+      <div class="panel panel panel-danger">
+      <div class="panel-heading"><h3 class="panel-title text-center">Resumen anual de <%= l(@date, format: "%Y") %> de <%= user.name %></h3></div>
+
+      <table class="table table-bordered font12 text-center">
+        <thead>
+          <tr class="active">
+            <td></td>
+            <td><strong>Horas ordinarias facturadas</strong></td>
+            <td><strong>Horas no facturadas</strong></td>
+            <td><strong>Extra</strong></td>
+            <td><strong>Nocturnas</strong></td>
+            <td><strong>Vacaciones</strong></td>
+            <td><strong>Bolsa de horas generadas</strong></td>
+            <td><strong>Bolsa de horas utilizadas</strong></td>
+          </tr>
+        </thead>
+        <tbody>
+
+          <tr>
+
+               <tr>
+                <td><strong>Total anual</strong></td>
+                <td><strong><%= Post.where(:alta => @date.beginning_of_year..@date.end_of_year, :user_id => user).sum(:horasof) %></strong></td>
+                <td><strong><%= Post.where(:alta => @date.beginning_of_year..@date.end_of_year, :user_id => user).sum(:horasnf) %></strong></td>
+                <td><strong><%= Post.where(:alta => @date.beginning_of_year..@date.end_of_year, :user_id => user).sum(:extra) %></strong></td>
+                <td><strong><%= Post.where(:alta => @date.beginning_of_year..@date.end_of_year, :user_id => user).sum(:nocturnas) %></strong></td>
+                <td><strong><%= Post.where(:alta => @date.beginning_of_year..@date.end_of_year, :user_id => user).sum(:vacaciones) %></strong></td>
+                <td><strong><%= Post.where(:alta => @date.beginning_of_year..@date.end_of_year, :user_id => user).sum(:bolsahg) %></strong></td>
+                <td><strong><%= Post.where(:alta => @date.beginning_of_year..@date.end_of_year, :user_id => user).sum(:bolsahu) %></strong></td>
+               </tr>
+
+        </tbody>
+      </table>
+      </div>
+      </div>
+
+
+
+      
+      <% end %>
+
+
+
+    </div>
+
+  </div>
+
+</div>
+
+
+
+
+
+
+
+
+    
+
+<%= render 'footer' %>

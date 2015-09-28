@@ -3,6 +3,7 @@ Rails.application.routes.draw do
   mount RailsAdmin::Engine => '/admin', as: 'rails_admin'
   scope "(:locale)", locale: /es|en/ do
   root 'posts#index'
+  get 'posts/resumen'
 end
   resources :posts
   resources :proyectos
