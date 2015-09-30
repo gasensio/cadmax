@@ -49,21 +49,14 @@ window.setTimeout(function() {
  
 });
 
-$(document).ready(function() {
 
-
-var elementAlreadyActive = false;
-$('.nav-tabs li').each(function(index, li) {
-    var element = $(li);
-     if (element.attr("class") == "active"){
-          elementAlreadyActive = true;
-     }
-
+$(window).load(function(){
+$( "#tabs li" ).first().addClass( "active" );
 });
-if (!elementAlreadyActive){
-    $('.nav-tabs li:first').addClass('active');
-    $('.tab-content div:first').addClass('active');
-} });
+$(window).load(function(){
+$( ".tab-pane " ).first().addClass( "active" );
+});
+
 
 
 

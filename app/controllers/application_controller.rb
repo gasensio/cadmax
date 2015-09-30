@@ -4,6 +4,8 @@ class ApplicationController < ActionController::Base
   protect_from_forgery with: :exception
   before_filter :set_timezone
 
+  add_flash_types :success, :warning, :danger, :info
+
  def set_timezone
    Time.zone = 'Madrid'
  end

@@ -15,7 +15,7 @@
 <div>
 
   <!-- Nav tabs -->
-  <ul class="nav nav-tabs" role="tablist">
+  <ul id="tabs" class="nav nav-tabs" role="tablist">
     <% @users.each do |user| %>
     <li role="presentation" class=""><a href="#<%= user.id %>" aria-controls="<%= user.id %>" role="tab" data-toggle="tab"><%= user.name %></a></li>
 
@@ -49,6 +49,8 @@
             <td><strong>Extra</strong></td>
             <td><strong>Nocturnas</strong></td>
             <td><strong>Vacaciones</strong></td>
+            <td><strong>Viaje</strong></td>
+            <td><strong>Espera</strong></td>
             <td><strong>Bolsa de horas generadas</strong></td>
             <td><strong>Bolsa de horas utilizadas</strong></td>
           </tr>
@@ -56,7 +58,7 @@
         <tbody>
 
           <tr>
-            <% @posts.where(:alta => @date.beginning_of_month..@date.end_of_month, :user_id => user).order(alta: :asc).each do |post| %>
+            <% Post.where(:alta => @date.beginning_of_month..@date.end_of_month, :user_id => user).order(alta: :asc).each do |post| %>
                 <td class="wspace"><h6><%= post.alta %></h6></td>
                 <td class="wspace"><h6><%= post.proyecto %></h6></td>
                 <td class="wspace"><h6><%= post.title %></h6></td>
@@ -67,6 +69,8 @@
                 <td><h6><%= post.extra %></h6></td>
                 <td><h6><%= post.nocturnas %></h6></td>
                 <td><h6><%= post.vacaciones %></h6></td>
+                <td><h6><%= post.viaje %></h6></td>
+                <td><h6><%= post.espera %></h6></td>
                 <td><h6><%= post.bolsahg %></h6></td>
                 <td><h6><%= post.bolsahu %></h6></td>
                 
@@ -79,6 +83,8 @@
                 <td><strong><%= Post.where(:alta => @date.beginning_of_month..@date.end_of_month, :user_id => user).sum(:extra) %></strong></td>
                 <td><strong><%= Post.where(:alta => @date.beginning_of_month..@date.end_of_month, :user_id => user).sum(:nocturnas) %></strong></td>
                 <td><strong><%= Post.where(:alta => @date.beginning_of_month..@date.end_of_month, :user_id => user).sum(:vacaciones) %></strong></td>
+                <td><strong><%= Post.where(:alta => @date.beginning_of_month..@date.end_of_month, :user_id => user).sum(:viaje) %></strong></td>
+                <td><strong><%= Post.where(:alta => @date.beginning_of_month..@date.end_of_month, :user_id => user).sum(:espera) %></strong></td>
                 <td><strong><%= Post.where(:alta => @date.beginning_of_month..@date.end_of_month, :user_id => user).sum(:bolsahg) %></strong></td>
                 <td><strong><%= Post.where(:alta => @date.beginning_of_month..@date.end_of_month, :user_id => user).sum(:bolsahu) %></strong></td>
                </tr>
@@ -101,6 +107,8 @@
             <td><strong>Extra</strong></td>
             <td><strong>Nocturnas</strong></td>
             <td><strong>Vacaciones</strong></td>
+            <td><strong>Viaje</strong></td>
+            <td><strong>Espera</strong></td>
             <td><strong>Bolsa de horas generadas</strong></td>
             <td><strong>Bolsa de horas utilizadas</strong></td>
           </tr>
@@ -116,6 +124,8 @@
                 <td><strong><%= Post.where(:alta => @date.beginning_of_year..@date.end_of_year, :user_id => user).sum(:extra) %></strong></td>
                 <td><strong><%= Post.where(:alta => @date.beginning_of_year..@date.end_of_year, :user_id => user).sum(:nocturnas) %></strong></td>
                 <td><strong><%= Post.where(:alta => @date.beginning_of_year..@date.end_of_year, :user_id => user).sum(:vacaciones) %></strong></td>
+                <td><strong><%= Post.where(:alta => @date.beginning_of_year..@date.end_of_year, :user_id => user).sum(:viaje) %></strong></td>
+                <td><strong><%= Post.where(:alta => @date.beginning_of_year..@date.end_of_year, :user_id => user).sum(:espera) %></strong></td>
                 <td><strong><%= Post.where(:alta => @date.beginning_of_year..@date.end_of_year, :user_id => user).sum(:bolsahg) %></strong></td>
                 <td><strong><%= Post.where(:alta => @date.beginning_of_year..@date.end_of_year, :user_id => user).sum(:bolsahu) %></strong></td>
                </tr>

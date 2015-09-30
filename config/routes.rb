@@ -4,10 +4,13 @@ Rails.application.routes.draw do
   scope "(:locale)", locale: /es|en/ do
   root 'posts#index'
   get 'posts/resumen'
+  get 'posts/foro'
+  get 'foros/index'
 end
   resources :posts
   resources :proyectos
   resources :clientes
+  resources :foros
   devise_for :users, controllers: { registrations: "registrations" }
   resources :users, only: [:show]
   

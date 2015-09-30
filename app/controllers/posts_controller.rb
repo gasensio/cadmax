@@ -58,8 +58,20 @@ class PostsController < ApplicationController
   end
 
   def resumen
+    @users = User.all
+    @date = params[:date] ? Date.parse(params[:date]) : Date.today
+    @proyecto = Proyecto.new
+    @proyectos = Proyecto.all
+
+  end
+
+  def foro
+    @foros = Foro.all
+    @foro = Foro.new
+    @proyectos = Proyecto.all
+    @proyecto = Proyecto.new
     @posts = Post.all.search(params[:search])
-      @posts_by_date = Post.search(params[:search])
+    @posts_by_date = Post.search(params[:search])
     @users = User.all
     @date = params[:date] ? Date.parse(params[:date]) : Date.today
 

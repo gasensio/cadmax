@@ -331,7 +331,7 @@
           <% if current_user.admin? %>
           <%= link_to post, data: {toggle: "modal", tooltip: "tooltip", title: "#{post.proyecto} - #{post.title}", target: "#mytable_#{post.id}"} do %>
           <%= post.proyecto %> - <%= post.title %><br><%= post.user.name %><br> 
-          Total: <%= Post.where(:alta => date, :id => post.id).sum(:horasof) + Post.where(:alta => date, :id => post.id).sum(:horasnf) + Post.where(:alta => date, :id => post.id).sum(:extra) + Post.where(:alta => date, :id => post.id).sum(:extraf) + Post.where(:alta => date, :id => post.id).sum(:nocturnas) + Post.where(:alta => date, :id => post.id).sum(:vacaciones) + Post.where(:alta => date, :id => post.id).sum(:bolsahg) + Post.where(:alta => date, :id => post.id).sum(:bolsahu) %> horas
+          Total: <%= Post.where(:alta => date, :id => post.id).sum(:horasof) + Post.where(:alta => date, :id => post.id).sum(:horasnf) + Post.where(:alta => date, :id => post.id).sum(:extra) + Post.where(:alta => date, :id => post.id).sum(:extraf) + Post.where(:alta => date, :id => post.id).sum(:nocturnas) + Post.where(:alta => date, :id => post.id).sum(:vacaciones) + Post.where(:alta => date, :id => post.id).sum(:bolsahg) + Post.where(:alta => date, :id => post.id).sum(:bolsahu) + Post.where(:alta => date, :id => post.id).sum(:viaje) + Post.where(:alta => date, :id => post.id).sum(:espera) %> horas
           <div class="pull-right">
           <%= link_to '' , post, class: "fa fa-pencil", remote: :true, data: {toggle: "modal", target: "#myupdatepost_#{post.id}"} %>
           <%= link_to '' , post, method: :delete, class: "fa fa-trash-o", remote: :true, data: {confirm: 'Are you sure?'} %>
@@ -340,7 +340,7 @@
           <% else %>
           <%= link_to post, data: {toggle: "modal", target: "#mytable_#{post.id}"} do %>
           <%= post.proyecto %> - <%= post.title %><br>
-          Total: <%= Post.where(:alta => date, :id => post.id).sum(:horasof) + Post.where(:alta => date, :id => post.id).sum(:horasnf) + Post.where(:alta => date, :id => post.id).sum(:extra) + Post.where(:alta => date, :id => post.id).sum(:extraf) + Post.where(:alta => date, :id => post.id).sum(:nocturnas) + Post.where(:alta => date, :id => post.id).sum(:vacaciones) + Post.where(:alta => date, :id => post.id).sum(:bolsahg) + Post.where(:alta => date, :id => post.id).sum(:bolsahu) %> horas
+          Total: <%= Post.where(:alta => date, :id => post.id).sum(:horasof) + Post.where(:alta => date, :id => post.id).sum(:horasnf) + Post.where(:alta => date, :id => post.id).sum(:extra) + Post.where(:alta => date, :id => post.id).sum(:extraf) + Post.where(:alta => date, :id => post.id).sum(:nocturnas) + Post.where(:alta => date, :id => post.id).sum(:vacaciones) + Post.where(:alta => date, :id => post.id).sum(:bolsahg) + Post.where(:alta => date, :id => post.id).sum(:bolsahu) + Post.where(:alta => date, :id => post.id).sum(:viaje) + Post.where(:alta => date, :id => post.id).sum(:espera) %> horas
           <div class="pull-right">
           <%= link_to '' , post, class: "fa fa-pencil", remote: :true, data: {toggle: "modal", target: "#myupdatepost_#{post.id}"} %>
           <%= link_to '' , post, method: :delete, class: "fa fa-trash-o", remote: :true, data: {confirm: 'Are you sure?'} %>
@@ -417,20 +417,21 @@
                   </div>
                   <div class="row">
                     <div class="col-md-6">
-                      <%= f.number_field :bolsahg, class: "form-control post_content", label: false, placeholder: "Bolsa de horas generadas", rows: 1, step: 0.5 %><br>
-                    </div>
-                    <div class="col-md-6">
-                      <%= f.number_field :bolsahu, class: "form-control post_content", label: false, placeholder: "Bolsa de horas utilizadas", rows: 1, step: 0.5 %><br>
-                    </div>
-                  </div>
-                  <div class="row">
-                    <div class="col-md-6">
                       <%= f.number_field :viaje, class: "form-control post_content", label: false, placeholder: "Tiempo de Viaje", rows: 1, step: 0.5 %><br>
                     </div>
                     <div class="col-md-6">
                       <%= f.number_field :espera, class: "form-control post_content", label: false, placeholder: "Tiempo de Espera", rows: 1, step: 0.5 %><br>
                     </div>
                   </div>
+                  <div class="row">
+                    <div class="col-md-6">
+                      <%= f.number_field :bolsahg, class: "form-control post_content", label: false, placeholder: "Bolsa de horas generadas", rows: 1, step: 0.5 %><br>
+                    </div>
+                    <div class="col-md-6">
+                      <%= f.number_field :bolsahu, class: "form-control post_content", label: false, placeholder: "Bolsa de horas utilizadas", rows: 1, step: 0.5 %><br>
+                    </div>
+                  </div>
+
 
                   <div class="row">
                     <div class="col-md-6 form-inline">
@@ -504,10 +505,11 @@
                         <th>Extra facturadas</th>
                         <th>Nocturnas/Efectivas</th>
                         <th>Vacaciones</th>
+                        <th>Viaje</th>
+                        <th>Espera</th>
                         <th>Bolsa de horas generadas</th>
                         <th>Bolsa de horas utilizadas</th>
-                        <th>T.Viaje</th>
-                        <th>T.Espera</th>
+                        
                       </tr>
                     </thead>
                     <tbody>
@@ -524,10 +526,11 @@
                         <th><%= post.extraf %></th>
                         <th><%= post.nocturnas %></th>
                         <th id="vacaciones"><%= post.vacaciones %></th>
-                        <th><%= post.bolsahg %></th>
-                        <th><%= post.bolsahu %></th>
                         <th><%= post.viaje %></th>
                         <th><%= post.espera %></th>
+                        <th><%= post.bolsahg %></th>
+                        <th><%= post.bolsahu %></th>
+                        
                       </tr>
                     </tbody>
                   </table>
@@ -621,20 +624,21 @@
             </div>
             <div class="row">
               <div class="col-md-6">
-                <%= f.number_field :bolsahg, class: "form-control post_content", label: false, placeholder: "Bolsa de horas generadas", rows: 1, step: 0.5 %><br>
-              </div>
-              <div class="col-md-6">
-                <%= f.number_field :bolsahu, class: "form-control post_content", label: false, placeholder: "Bolsa de horas utilizadas", rows: 1, step: 0.5 %><br>
-              </div>
-            </div>
-            <div class="row">
-              <div class="col-md-6">
                 <%= f.number_field :viaje, class: "form-control post_content", label: false, placeholder: "Tiempo de Viaje", rows: 1, step: 0.5 %><br>
               </div>
               <div class="col-md-6">
                 <%= f.number_field :espera, class: "form-control post_content", label: false, placeholder: "Tiempo de Espera", rows: 1, step: 0.5 %><br>
               </div>
             </div>
+            <div class="row">
+              <div class="col-md-6">
+                <%= f.number_field :bolsahg, class: "form-control post_content", label: false, placeholder: "Bolsa de horas generadas", rows: 1, step: 0.5 %><br>
+              </div>
+              <div class="col-md-6">
+                <%= f.number_field :bolsahu, class: "form-control post_content", label: false, placeholder: "Bolsa de horas utilizadas", rows: 1, step: 0.5 %><br>
+              </div>
+            </div>
+
 
             <div class="row">
               <div class="col-md-6 form-inline">
@@ -684,172 +688,10 @@
     </div>
     <% end %>
 
- <div class="col-md-12 padright0 padleft0">
-<% if current_user.admin? %>
 
-<% @users.each do |user| %>
-
-
-
-
-      <div class="panel panel-info">
-      <div class="panel-heading"><h3 class="panel-title text-center">Resumen mensual de <%= l(@date, format: "%B %Y") %> de <%= user.name %></h3></div>
-
-      <table class="table table-bordered font12 text-center">
-        <thead>
-          <tr class="active">
-            <td><strong>Fecha</strong></td>
-            <td><strong>Proyecto</strong></td>
-            <td><strong>Recurso</strong></td>
-            <td><strong>Comentario</strong></td>
-            <td><strong>Pedido</strong></td>
-            <td><strong>Horas ordinarias facturadas</strong></td>
-            <td><strong>Horas no facturadas</strong></td>
-            <td><strong>Extra</strong></td>
-            <td><strong>Nocturnas</strong></td>
-            <td><strong>Vacaciones</strong></td>
-            <td><strong>Bolsa de horas generadas</strong></td>
-            <td><strong>Bolsa de horas utilizadas</strong></td>
-          </tr>
-        </thead>
-        <tbody>
-
-          <tr>
-            <% @posts.where(:alta => @date.beginning_of_month..@date.end_of_month, :user_id => user).order(alta: :asc).each do |post| %>
-                <td class="wspace"><h6><%= post.alta %></h6></td>
-                <td class="wspace"><h6><%= post.proyecto %></h6></td>
-                <td class="wspace"><h6><%= post.title %></h6></td>
-                <td><h6><%= post.content %></h6></td>
-                <td><h6><%= post.pedido %></h6></td>
-                <td><h6><%= post.horasof %></h6></td>
-                <td><h6><%= post.horasnf %></h6></td>
-                <td><h6><%= post.extra %></h6></td>
-                <td><h6><%= post.nocturnas %></h6></td>
-                <td><h6><%= post.vacaciones %></h6></td>
-                <td><h6><%= post.bolsahg %></h6></td>
-                <td><h6><%= post.bolsahu %></h6></td>
-                
-              </tr>
-              <% end %>
-               <tr class="active">
-                <td colspan = "5" class="text-right"><strong>Total</strong></td>
-                <td><strong><%= Post.where(:alta => @date.beginning_of_month..@date.end_of_month, :user_id => user).sum(:horasof) %></strong></td>
-                <td><strong><%= Post.where(:alta => @date.beginning_of_month..@date.end_of_month, :user_id => user).sum(:horasnf) %></strong></td>
-                <td><strong><%= Post.where(:alta => @date.beginning_of_month..@date.end_of_month, :user_id => user).sum(:extra) %></strong></td>
-                <td><strong><%= Post.where(:alta => @date.beginning_of_month..@date.end_of_month, :user_id => user).sum(:nocturnas) %></strong></td>
-                <td><strong><%= Post.where(:alta => @date.beginning_of_month..@date.end_of_month, :user_id => user).sum(:vacaciones) %></strong></td>
-                <td><strong><%= Post.where(:alta => @date.beginning_of_month..@date.end_of_month, :user_id => user).sum(:bolsahg) %></strong></td>
-                <td><strong><%= Post.where(:alta => @date.beginning_of_month..@date.end_of_month, :user_id => user).sum(:bolsahu) %></strong></td>
-               </tr>
-
-        </tbody>
-      </table>
-      </div>
-
-
-
-      <div class="panel panel panel-danger">
-      <div class="panel-heading"><h3 class="panel-title text-center">Resumen anual de <%= l(@date, format: "%Y") %> de <%= user.name %></h3></div>
-
-      <table class="table table-bordered font12 text-center">
-        <thead>
-          <tr class="active">
-            <td></td>
-            <td><strong>Horas ordinarias facturadas</strong></td>
-            <td><strong>Horas no facturadas</strong></td>
-            <td><strong>Extra</strong></td>
-            <td><strong>Nocturnas</strong></td>
-            <td><strong>Vacaciones</strong></td>
-            <td><strong>Bolsa de horas generadas</strong></td>
-            <td><strong>Bolsa de horas utilizadas</strong></td>
-          </tr>
-        </thead>
-        <tbody>
-
-          <tr>
-
-               <tr>
-                <td><strong>Total anual</strong></td>
-                <td><strong><%= Post.where(:alta => @date.beginning_of_year..@date.end_of_year, :user_id => user).sum(:horasof) %></strong></td>
-                <td><strong><%= Post.where(:alta => @date.beginning_of_year..@date.end_of_year, :user_id => user).sum(:horasnf) %></strong></td>
-                <td><strong><%= Post.where(:alta => @date.beginning_of_year..@date.end_of_year, :user_id => user).sum(:extra) %></strong></td>
-                <td><strong><%= Post.where(:alta => @date.beginning_of_year..@date.end_of_year, :user_id => user).sum(:nocturnas) %></strong></td>
-                <td><strong><%= Post.where(:alta => @date.beginning_of_year..@date.end_of_year, :user_id => user).sum(:vacaciones) %></strong></td>
-                <td><strong><%= Post.where(:alta => @date.beginning_of_year..@date.end_of_year, :user_id => user).sum(:bolsahg) %></strong></td>
-                <td><strong><%= Post.where(:alta => @date.beginning_of_year..@date.end_of_year, :user_id => user).sum(:bolsahu) %></strong></td>
-               </tr>
-
-        </tbody>
-      </table>
-      </div>
-
-
-
-      
-      <% end %>
-
-      <% else %>
-
-      
-      <div class="panel panel-info">
-      <div class="panel-heading"><h3 class="panel-title text-center">Detalle de registros en <%= l(@date, format: "%B %Y") %></h3></div>
-
-      <table class="table table-bordered font12">
-        <thead>
-          <tr class="active">
-            <td><strong>Fecha</strong></td>
-            <td><strong>Proyecto</strong></td>
-            <td><strong>Recurso</strong></td>
-            <td><strong>Comentario</strong></td>
-            <td><strong>Pedido</strong></td>
-            <td><strong>Horas ordinarias facturadas</strong></td>
-            <td><strong>Horas no facturadas</strong></td>
-            <td><strong>Extra</strong></td>
-            <td><strong>Nocturnas</strong></td>
-            <td><strong>Vacaciones</strong></td>
-            <td><strong>Bolsa de horas generadas</strong></td>
-            <td><strong>Bolsa de horas utilizadas</strong></td>
-          </tr>
-        </thead>
-        <tbody>
-
-          <tr>
-            <% @posts.where(:alta => @date.beginning_of_month..@date.end_of_month).order(alta: :asc).each do |post| %>
-                <td class="wspace"><h6><%= post.alta %></h6></td>
-                <td class="wspace"><h6><%= post.proyecto %></h6></td>
-                <td class="wspace"><h6><%= post.title %></h6></td>
-                <td><h6><%= post.content %></h6></td>
-                <td><h6><%= post.pedido %></h6></td>
-                <td><h6><%= post.horasof %></h6></td>
-                <td><h6><%= post.horasnf %></h6></td>
-                <td><h6><%= post.extra %></h6></td>
-                <td><h6><%= post.nocturnas %></h6></td>
-                <td><h6><%= post.vacaciones %></h6></td>
-                <td><h6><%= post.bolsahg %></h6></td>
-                <td><h6><%= post.bolsahu %></h6></td>
-                
-              </tr>
-              <% end %>
-               <tr class="active">
-                <td colspan = "5" class="text-right"><strong>Total</strong></td>
-                <td><strong><%= Post.where(:alta => @date.beginning_of_month..@date.end_of_month, :user_id => current_user).sum(:horasof) %></strong></td>
-                <td><strong><%= Post.where(:alta => @date.beginning_of_month..@date.end_of_month, :user_id => current_user).sum(:horasnf) %></strong></td>
-                <td><strong><%= Post.where(:alta => @date.beginning_of_month..@date.end_of_month, :user_id => current_user).sum(:extra) %></strong></td>
-                <td><strong><%= Post.where(:alta => @date.beginning_of_month..@date.end_of_month, :user_id => current_user).sum(:nocturnas) %></strong></td>
-                <td><strong><%= Post.where(:alta => @date.beginning_of_month..@date.end_of_month, :user_id => current_user).sum(:vacaciones) %></strong></td>
-                <td><strong><%= Post.where(:alta => @date.beginning_of_month..@date.end_of_month, :user_id => current_user).sum(:bolsahg) %></strong></td>
-                <td><strong><%= Post.where(:alta => @date.beginning_of_month..@date.end_of_month, :user_id => current_user).sum(:bolsahu) %></strong></td>
-               </tr>
-
-        </tbody>
-      </table>
-      </div>
-    <% end %>
-
-  </div>
 </div>
 </div>
-    
+<br> 
 
 <%= render 'footer' %>
 
