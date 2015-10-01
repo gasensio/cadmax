@@ -96,6 +96,7 @@ GEM
     minitest (5.7.0)
     multi_json (1.11.2)
     nested_form (0.3.2)
+    newrelic_rpm (3.13.2.302)
     nokogiri (1.6.6.2)
       mini_portile (~> 0.6.0)
     orm_adapter (0.5.0)
@@ -220,6 +221,7 @@ DEPENDENCIES
   devise
   jbuilder (~> 2.0)
   jquery-rails
+  newrelic_rpm
   pg
   prawn
   prawn-table
