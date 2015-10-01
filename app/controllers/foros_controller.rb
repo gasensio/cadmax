@@ -4,7 +4,7 @@ class ForosController < ApplicationController
 
 
 	def index
-		@foros = Foro.all.search(params[:search]).order('created_at DESC')
+		@foros = Foro.all.search(params[:search]).order('created_at DESC').includes(:user, :proyecto)
 
 
     @foro = Foro.new

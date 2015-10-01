@@ -50,8 +50,8 @@ window.setTimeout(function() {
 });
 
 
-$(window).load(function(){
-$( "#tabs li" ).first().addClass( "active" );
+$(document).ready(function(){
+$( "#tabs li:first" ).addClass( "active" );
 });
 $(window).load(function(){
 $( ".tab-pane " ).first().addClass( "active" );

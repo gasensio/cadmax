@@ -8,7 +8,7 @@ class PostsController < ApplicationController
   # GET /posts.json
   def index
     if current_user.admin?
-      @posts = Post.all.search(params[:search])
+      @posts = Post.all.search(params[:search]).includes(:user)
       @posts_by_date = Post.search(params[:search])
     else
       @posts = Post.all.where(:user_id => current_user)
