@@ -77,7 +77,7 @@
               </tr>
               <% end %>
                <tr class="active">
-                <td colspan = "5" class="text-right"><strong>Total</strong></td>
+                <td colspan = "5" class="text-right"><strong>Total <%= l(@date, format: "%B %Y") %></strong></td>
                 <td><strong><%= Post.where(:alta => @date.beginning_of_month..@date.end_of_month, :user_id => user).sum(:horasof) %></strong></td>
                 <td><strong><%= Post.where(:alta => @date.beginning_of_month..@date.end_of_month, :user_id => user).sum(:horasnf) %></strong></td>
                 <td><strong><%= Post.where(:alta => @date.beginning_of_month..@date.end_of_month, :user_id => user).sum(:extra) %></strong></td>

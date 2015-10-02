@@ -3,6 +3,7 @@ class ProyectosController < ApplicationController
 
 	def index
 		@proyectos = Proyecto.all
+		@users = User.all
 	end
 
 	def new

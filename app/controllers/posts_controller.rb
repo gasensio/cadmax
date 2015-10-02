@@ -11,7 +11,7 @@ class PostsController < ApplicationController
       @posts = Post.all.search(params[:search]).includes(:user)
       @posts_by_date = Post.search(params[:search])
     else
-      @posts = Post.all.where(:user_id => current_user)
+      @posts = Post.all.where(:user_id => current_user).includes(:user)
     end
     @post = Post.new
     @posts_by_date = @posts.group_by(&:alta)

@@ -24,8 +24,8 @@
 	<div id="foro_<%= foro.id %>" class="row foro">
 	<div class="panel panel-default">
   	<div class="panel-heading">
-    <h3 class="panel-title"><%= foro.titulo %> - <%= foro.user.name %> <span class="pull-right">Proyecto <%= foro.proyecto.proyecto %>  -  Hace <%= time_ago_in_words(foro.created_at) %> 
-    	<%if current_user == foro.user %>- <%= link_to '' , foro, method: :delete, class: "fa fa-trash-o", remote: :true, data: {confirm: 'Are you sure?'} %></span></h3>
+    <h3 class="panel-title"><%= foro.titulo %> - <%= foro.user.name %> <span class="pull-right">Proyecto <%= foro.proyecto.proyecto %>  -  Hace <%= time_ago_in_words(foro.created_at) %>
+    	<% if current_user == foro.user or current_user.admin? %>- <%= link_to '' , foro, method: :delete, class: "fa fa-trash-o", remote: :true, data: {confirm: 'Are you sure?'} %></span></h3>
     	<% else %>
     </span></h3>
     	<% end %>

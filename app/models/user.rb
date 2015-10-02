@@ -6,7 +6,7 @@ class User < ActiveRecord::Base
 
   has_many :posts, dependent: :destroy
   has_many :foros
-  has_many :proyectos
+
 
 
   def self.options_for_select

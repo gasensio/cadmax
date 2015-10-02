@@ -1,8 +1,9 @@
 class Post < ActiveRecord::Base
 
 	belongs_to :user
-  has_many :proyectos
-  has_many :clientes
+
+
+  validates_presence_of :user
   
   def self.search(search)
   	if search
