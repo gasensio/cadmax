@@ -204,7 +204,7 @@
           <%= select_tag 'search', options_for_select(@users.collect{ |u| [ u.name, u.id ]}, params[:search]), :include_blank => "Seleccionar usuario", class: "form-control form-group input-sm", :onchange => "window.location.replace('/?date=#{@date}+posts?&search='+$(this).val());" %>
 
 
-          <%= link_to "Reset filtro", root_path(date: @date), :class => "btn-sm btn-danger form-group" %>
+          <%= link_to "Inicio", root_path(date: @date), :class => "btn-xs btn-warning form-group" %>
 
           <% end %>
         </div>
@@ -213,7 +213,7 @@
           <%= form_tag posts_path, method: "get", class: "form-group" do %>
           <%= select_tag 'search', options_for_select(@proyectos.collect{ |u| [ u.proyecto ]}, params[:search]), :include_blank => "Seleccionar proyecto", class: "form-control form-group input-sm", :onchange => "window.location.replace('/?date=#{@date}+posts?&search='+$(this).val());" %>
 
-          <%= link_to "Reset filtro", root_path(date: @date), :class => "btn-sm btn-danger form-group" %>
+          <%= link_to "Inicio", root_path(date: @date), :class => "btn-xs btn-warning form-group" %>
 
           <% end %>
         </div>
@@ -222,7 +222,7 @@
           <%= form_tag posts_path, method: "get", class: "form-group" do %>
           <%= select_tag 'search', options_for_select(@clientes.collect{ |u| [ u.name ]}, params[:search]), :include_blank => "Seleccionar cliente", class: "form-control form-group input-sm", :onchange => "window.location.replace('/?date=#{@date}+posts?&search='+$(this).val());" %>
 
-          <%= link_to "Reset filtro", root_path(date: @date), :class => "btn-sm btn-danger form-group" %>
+          <%= link_to "Inicio", root_path(date: @date), :class => "btn-xs btn-warning form-group" %>
 
           <% end %>
         </div>
