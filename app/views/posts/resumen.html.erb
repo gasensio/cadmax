@@ -43,9 +43,9 @@
       <div class="row" id="<%= user.id %>">
   <div class="col-md-12">
 
-        <% data = [{name: "Horas Ordinarias Facturadas", data: user.posts.map{|t| [t.alta, t.horasof] }},
-  {name: "Horas Extras", data: user.posts.map{|t| [t.alta, t.extra] }},
-  {name: "Horas Nocturnas", data: user.posts.map{|t| [t.alta, t.nocturnas] }}
+        <% data = [{name: "Horas Ordinarias Facturadas", data: user.posts.map{|t| [t.alta, t.horasof.to_i] }},
+  {name: "Horas Extras", data: user.posts.map{|t| [t.alta, t.extra.to_i] }},
+  {name: "Horas Nocturnas", data: user.posts.map{|t| [t.alta, t.nocturnas.to_i] }}
   ] %>
 
 
