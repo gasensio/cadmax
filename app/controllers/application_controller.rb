@@ -9,6 +9,5 @@ class ApplicationController < ActionController::Base
  def set_timezone
    Time.zone = 'Madrid'
  end
-
   
 end

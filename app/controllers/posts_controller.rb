@@ -24,6 +24,7 @@ class PostsController < ApplicationController
     @clientes = Cliente.all
     respond_to do |format|
         format.html
+        format.json
         format.csv { send_data @posts.to_csv }
         format.xls # { send_data @posts.to_csv(col_sep: "\t") }
         format.pdf do
@@ -58,12 +59,17 @@ class PostsController < ApplicationController
   end
 
   def resumen
-    @users = User.all
+    @posts = Post.all.search(params[:search])
+    @posts = @posts.group_by(&:alta)
+    @posts_by_date = Post.search(params[:search])
+    @users = User.all.includes(:posts)
     @date = params[:date] ? Date.parse(params[:date]) : Date.today
     @proyecto = Proyecto.new
     @proyectos = Proyecto.all
+   
 
   end
+
 
   def foro
     @foros = Foro.all

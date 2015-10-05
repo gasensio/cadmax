@@ -1,10 +1,12 @@
 
 
 <%= render "header" %>
-<div class="container-fluid">
-<div class="row">
-    
+
+
 <% if current_user.admin? %>
+<div class="container-fluid">
+
+  <div class="row">
     <div class="col-md-2">
       <div class="panel panel-info">
         <div class="panel-heading">
@@ -21,666 +23,109 @@
         </div>
       </div>
 
-        <%= form_for(@proyecto) do |f| %>
-        <div class="modal fade" id="newproyecto" tabindex="-1" role="dialog" aria-labelledby="myModelLabel" aria-hidden="true" data-target="newproyecto">
+      <%= form_for(@proyecto) do |f| %>
+      <div class="modal fade" id="newproyecto" tabindex="-1" role="dialog" aria-labelledby="myModelLabel" aria-hidden="true" data-target="newproyecto">
 
-          <div class="modal-dialog">
-            <div class="modal-content">
-              <div class="modal-header">
-                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-                <h4 class="modal-title" id="myModalLabel">Crear Nuevo proyecto</h4>
-              </div>
-              <div class="modal-body">
-                <div class="row">
-                  <div class="col-md-12">
-                    <%= f.text_field :proyecto, class: "form-control post_title", label: false, :autofocus => 'true', placeholder: "Proyecto", rows: 1 %>
-                  </div>
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+              <h4 class="modal-title" id="myModalLabel">Crear Nuevo proyecto</h4>
+            </div>
+            <div class="modal-body">
+              <div class="row">
+                <div class="col-md-12">
+                  <%= f.text_field :proyecto, class: "form-control post_title", label: false, :autofocus => 'true', placeholder: "Proyecto", rows: 1 %>
                 </div>
+              </div>
 
-              </div>
-              <div class="modal-footer">
-                <button type="button" class="btn btn-default" data-dismiss="modal" id="mynewpostclose">Cerrar</button>
-                <%= submit_tag "Crear", class: "btn btn-primary" %>
-              </div>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-default" data-dismiss="modal" id="mynewpostclose">Cerrar</button>
+              <%= submit_tag "Crear", class: "btn btn-primary" %>
             </div>
           </div>
         </div>
-        <% end %>
-
-        
-        <div class="modal fade" id="editproyecto" tabindex="-1" role="dialog" aria-labelledby="myModelLabel" aria-hidden="true" data-target="editproyecto">
-
-          <div class="modal-dialog">
-            <div class="modal-content">
-              <div class="modal-header">
-                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-                <h4 class="modal-title" id="myModalLabel">Editar proyectos</h4>
-              </div>
+      </div>
+      <% end %>
 
 
-              <div class="modal-body">
-                <div class="row">
+      <div class="modal fade" id="editproyecto" tabindex="-1" role="dialog" aria-labelledby="myModelLabel" aria-hidden="true" data-target="editproyecto">
+
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+              <h4 class="modal-title" id="myModalLabel">Editar proyectos</h4>
+            </div>
+
+
+            <div class="modal-body">
+              <div class="row">
                 <div class="col-md-12">
 
-                      <% @proyectos.each do |proyecto| %>
-                      <%= form_for(proyecto, :method => :put, remote: true, html: {:class => 'form-inline'}) do |f| %> 
-                        <div class="form-group col-md-12 marginbot">
-                          <div class="row">
-                          <div class="col-md-8">
+                  <% @proyectos.each do |proyecto| %>
+                  <%= form_for(proyecto, :method => :put, remote: true, html: {:class => 'form-inline'}) do |f| %> 
+                  <div class="form-group col-md-12 marginbot">
+                    <div class="row">
+                      <div class="col-md-8">
                         <%= f.text_field :proyecto, class: "form-control post_title fullwidth", label: false, autofocus: "true", placeholder: "Titulo", rows: 1 %></div>
                         <div class="col-md-4">
-                        <%= submit_tag "Actualizar", class: "btn btn-primary btn-md" %>
-                      </div>
-                        </div></div><br>
-                        <% end %>
-
-                        
+                          <%= submit_tag "Actualizar", class: "btn btn-primary btn-md" %>
+                        </div>
+                      </div></div><br>
                       <% end %>
 
-                </div>
-                </div>
 
-              </div>
-              <div class="modal-footer">
-                <button type="button" class="btn btn-default" data-dismiss="modal" id="mynewpostclose">Close</button>
+                      <% end %>
+
+                    </div>
+                  </div>
+
+                </div>
+                <div class="modal-footer">
+                  <button type="button" class="btn btn-default" data-dismiss="modal" id="mynewpostclose">Close</button>
+                </div>
               </div>
             </div>
           </div>
-        </div>
         </div>
 
         <div class="col-md-2">
-        <div class="panel panel-info">
-          <div class="panel-heading">
-          <h3 class="panel-title">Clientes</h3>
-        </div>
-        <div class="panel-body">
+          <div class="panel panel-info">
+            <div class="panel-heading">
+              <h3 class="panel-title">Clientes</h3>
+            </div>
+            <div class="panel-body">
 
-                    <div class="btn-group" role="group" aria-label="...">
-            <%= link_to "Nuevo", new_cliente_path, :class => "btn btn-primary btn-group btn-sm", :type => "button", data: {toggle: "modal", target: "#newcliente"} %>
-            <%= link_to "Editar", clientes_path, :class => "btn btn-primary btn-group btn-sm", :type => "button", data: {toggle: "modal", target: "#editcliente"} %>
+              <div class="btn-group" role="group" aria-label="...">
+                <%= link_to "Nuevo", new_cliente_path, :class => "btn btn-primary btn-group btn-sm", :type => "button", data: {toggle: "modal", target: "#newcliente"} %>
+                <%= link_to "Editar", clientes_path, :class => "btn btn-primary btn-group btn-sm", :type => "button", data: {toggle: "modal", target: "#editcliente"} %>
+              </div>
+
+            </div>
+
+
           </div>
 
-        </div>
+          <%= form_for(@cliente) do |f| %>
+          <div class="modal fade" id="newcliente" tabindex="-1" role="dialog" aria-labelledby="myModelLabel" aria-hidden="true" data-target="newcliente">
 
-
-        </div>
-
-        <%= form_for(@cliente) do |f| %>
-        <div class="modal fade" id="newcliente" tabindex="-1" role="dialog" aria-labelledby="myModelLabel" aria-hidden="true" data-target="newcliente">
-
-          <div class="modal-dialog">
-            <div class="modal-content">
-              <div class="modal-header">
-                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-                <h4 class="modal-title" id="myModalLabel">Crear Nuevo Cliente</h4>
-              </div>
-              <div class="modal-body">
-                <div class="row">
-                  <div class="col-md-12">
-                    <%= f.text_field :name, class: "form-control post_title", label: false, :autofocus => 'true', placeholder: "Cliente", rows: 1 %>
-                  </div>
+            <div class="modal-dialog">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                  <h4 class="modal-title" id="myModalLabel">Crear Nuevo Cliente</h4>
                 </div>
-
-              </div>
-              <div class="modal-footer">
-                <button type="button" class="btn btn-default" data-dismiss="modal" id="mynewpostclose">Cerrar</button>
-                <%= submit_tag "Crear", class: "btn btn-primary" %>
-              </div>
-            </div>
-          </div>
-        </div>
-        <% end %>
-
-        
-        <div class="modal fade" id="editcliente" tabindex="-1" role="dialog" aria-labelledby="myModelLabel" aria-hidden="true" data-target="editcliente">
-
-          <div class="modal-dialog">
-            <div class="modal-content">
-              <div class="modal-header">
-                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-                <h4 class="modal-title" id="myModalLabel">Editar clientes</h4>
-              </div>
-
-
-              <div class="modal-body">
-                <div class="row">
-                <div class="col-md-12">
-
-                      <% @clientes.each do |cliente| %>
-                      <%= form_for(cliente, :method => :put, remote: true, html: {:class => 'form-inline'}) do |f| %> 
-                        <div class="form-group col-md-12 marginbot">
-                          <div class="row">
-                          <div class="col-md-8">
-                        <%= f.text_field :name, class: "form-control post_title fullwidth", label: false, autofocus: "true", placeholder: "Cliente", rows: 1 %></div>
-                        <div class="col-md-4">
-                        <%= submit_tag "Actualizar", class: "btn btn-primary btn-md" %>
-                      </div>
-                        </div></div><br>
-                        <% end %>
-
-                        
-                      <% end %>
-
-                </div>
-                </div>
-
-              </div>
-              <div class="modal-footer">
-                <button type="button" class="btn btn-default" data-dismiss="modal" id="mynewpostclose">Cerrar</button>
-              </div>
-            </div>
-          </div>
-        </div>
-
-
-
-
-    </div> <!-- End col-md-3 -->
-
-    <div class="col-md-2">
-      <div class="panel panel-info">
-        <div class="panel-heading">
-          <h3 class="panel-title">Descargar Excel</h3>
-        </div>
-        <div class="panel-body">
-          <div class="btn-group" role="group" aria-label="...">
-            <%= link_to "CSV", posts_path(format: "csv"), :class => "btn btn-primary btn-group btn-sm", :type => "button" %>
-            <%= link_to "Excel", posts_path(format: "xls"), :class => "btn btn-primary btn-group btn-sm", :type => "button" %>
-          </div>
-
-
-        </div>
-      </div>
-    </div>
-    <div class="col-md-3">
-      <div class="panel panel-info">
-        <div class="panel-heading">
-          <h3 class="panel-title">Filtrar resultados</h3>
-        </div>
-        <div class="panel-body form-inline">
-          <div class"col-md-4">
-          <%= form_tag posts_path, method: "get", class: "form-group" do %>
-          <%= select_tag 'search', options_for_select(@users.collect{ |u| [ u.name, u.id ]}, params[:search]), :include_blank => "Seleccionar usuario", class: "form-control form-group input-sm", :onchange => "window.location.replace('/?date=#{@date}+posts?&search='+$(this).val());" %>
-
-
-          <%= link_to "Inicio", root_path(date: @date), :class => "btn-xs btn-warning form-group" %>
-
-          <% end %>
-        </div>
-        <br>
-          <div class"col-md-4">
-          <%= form_tag posts_path, method: "get", class: "form-group" do %>
-          <%= select_tag 'search', options_for_select(@proyectos.collect{ |u| [ u.proyecto ]}, params[:search]), :include_blank => "Seleccionar proyecto", class: "form-control form-group input-sm", :onchange => "window.location.replace('/?date=#{@date}+posts?&search='+$(this).val());" %>
-
-          <%= link_to "Inicio", root_path(date: @date), :class => "btn-xs btn-warning form-group" %>
-
-          <% end %>
-        </div>
-        <br>
-        <div class"col-md-4">
-          <%= form_tag posts_path, method: "get", class: "form-group" do %>
-          <%= select_tag 'search', options_for_select(@clientes.collect{ |u| [ u.name ]}, params[:search]), :include_blank => "Seleccionar cliente", class: "form-control form-group input-sm", :onchange => "window.location.replace('/?date=#{@date}+posts?&search='+$(this).val());" %>
-
-          <%= link_to "Inicio", root_path(date: @date), :class => "btn-xs btn-warning form-group" %>
-
-          <% end %>
-        </div>
-
-
-        </div>
-      </div>
-    </div>
-
-
-    <div class="col-md-3">
-      <div class="panel panel-info">
-        <div class="panel-heading"><h3 class="panel-title">Crear nuevo registro de horas</h3></div>
-          
-        <div class="panel-body">
-    
-          <button type="button" class="btn btn-primary btn-sm" data-toggle="modal" data-target="#mynewpost">
-            Nuevo registro
-          </button>
-        </div>
-      </div>
-    </div>
-<% else %>
-
-<div class="col-md-9 padleft0">
-     <div class="panel panel-info">
-      <div class="panel-heading"><h3 class="panel-title">Resumen anual de <%= current_user.name %></h3></div>
-        
-      
-
-
-        <table class="table table-bordered font12 marbot0">
-    <thead class="wspace">
-      <tr class="active">
-            <td><strong>Horas ordinarias facturadas</strong></td>
-            <td><strong>Horas no facturadas</strong></td>
-            <td><strong>Extra</strong></td>
-            <td><strong>Nocturnas</strong></td>
-            <td><strong>Vacaciones</strong></td>
-            <td><strong>Bolsa de horas generadas</strong></td>
-            <td><strong>Bolsa de horas utilizadas</strong></td>
-          </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><strong><%= Post.where(:alta => @date.beginning_of_year..@date.end_of_year, :user_id => current_user).sum(:horasof) %></strong></td>
-                <td><strong><%= Post.where(:alta => @date.beginning_of_year..@date.end_of_year, :user_id => current_user).sum(:horasnf) %></strong></td>
-                <td><strong><%= Post.where(:alta => @date.beginning_of_year..@date.end_of_year, :user_id => current_user).sum(:extra) %></strong></td>
-                <td><strong><%= Post.where(:alta => @date.beginning_of_year..@date.end_of_year, :user_id => current_user).sum(:nocturnas) %></strong></td>
-                <td><strong><%= Post.where(:alta => @date.beginning_of_year..@date.end_of_year, :user_id => current_user).sum(:vacaciones) %></strong></td>
-                <td><strong><%= Post.where(:alta => @date.beginning_of_year..@date.end_of_year, :user_id => current_user).sum(:bolsahg) %></strong></td>
-                <td><strong><%= Post.where(:alta => @date.beginning_of_year..@date.end_of_year, :user_id => current_user).sum(:bolsahu) %></strong></td>
-      </tr>
-
-    </tbody>
-  </table>
-        
-
-     
-    </div>
-    </div>
-
-
-
-    <div class="col-md-3 padright0">
-     <div class="panel panel-success">
-      <div class="panel-heading">
-        <h3 class="panel-title">Crear nuevo registro de horas</h3>
-      </div>
-      <div class="panel-body">
-        
-        <button type="button" class="btn btn-success btn" data-toggle="modal" data-target="#mynewpost">
-          Nuevo registro
-        </button>
-      </div>
-    </div>
-    </div>
-        <% end %>
-</div> <!-- end row -->
-
-
-
-
-  <div class="row">
-    <div id ="posts">
-      <h4 id="month">
-
-        <div class="btn-group block center" role="group" aria-label="...">
-          <button type="button" class="btn btn-default"><%= link_to "", {date: @date.prev_month}, class: "fa fa-chevron-left btn" %></button>
-          <button type="button" class="btn btn-default disabled"><h4 id="mes"><%= l(@date, format: "%B %Y") %></h4></button>
-          <button type="button" class="btn btn-default"><%= link_to "", {date: @date.next_month}, class: "fa fa-chevron-right btn" %></button>
-        </div>
-
-      </h4>
-      <div class="table-responsive">
-        <%= calendar @date do |date| %>
-        <%= date.day %>
-        <% if @posts_by_date[date] %>
-        <ul>
-          <% @posts_by_date[date].each do |post| %>
-
-
-
-          <li id="post_<%= post.id %>" class="<%= 'colorverde' if post.vacaciones != nil if post.vacaciones != 0 %>">
-
-            <% if current_user.admin? %>
-            <%= link_to post, data: {toggle: "modal", tooltip: "tooltip", title: "#{post.proyecto} - #{post.title}", target: "#mytable_#{post.id}"} do %>
-            <%= post.proyecto %> - <%= post.title %><br><%= post.user.name %><br> 
-            Total: <%= Post.where(:alta => date, :id => post.id).sum(:horasof) + Post.where(:alta => date, :id => post.id).sum(:horasnf) + Post.where(:alta => date, :id => post.id).sum(:extra) + Post.where(:alta => date, :id => post.id).sum(:extraf) + Post.where(:alta => date, :id => post.id).sum(:nocturnas) + Post.where(:alta => date, :id => post.id).sum(:vacaciones) + Post.where(:alta => date, :id => post.id).sum(:bolsahg) + Post.where(:alta => date, :id => post.id).sum(:bolsahu) + Post.where(:alta => date, :id => post.id).sum(:viaje) + Post.where(:alta => date, :id => post.id).sum(:espera) %> horas
-            <div class="pull-right">
-              <%= link_to '' , post, class: "fa fa-pencil", remote: :true, data: {toggle: "modal", target: "#myupdatepost_#{post.id}"} %>
-              <%= link_to '' , post, method: :delete, class: "fa fa-trash-o", remote: :true, data: {confirm: 'Are you sure?'} %>
-            </div>
-            <% end %>
-            <% else %>
-            <%= link_to post, data: {toggle: "modal", target: "#mytable_#{post.id}"} do %>
-            <%= post.proyecto %> - <%= post.title %><br>
-            Total: <%= Post.where(:alta => date, :id => post.id).sum(:horasof) + Post.where(:alta => date, :id => post.id).sum(:horasnf) + Post.where(:alta => date, :id => post.id).sum(:extra) + Post.where(:alta => date, :id => post.id).sum(:extraf) + Post.where(:alta => date, :id => post.id).sum(:nocturnas) + Post.where(:alta => date, :id => post.id).sum(:vacaciones) + Post.where(:alta => date, :id => post.id).sum(:bolsahg) + Post.where(:alta => date, :id => post.id).sum(:bolsahu) + Post.where(:alta => date, :id => post.id).sum(:viaje) + Post.where(:alta => date, :id => post.id).sum(:espera) %> horas
-            <div class="pull-right">
-              <%= link_to '' , post, class: "fa fa-pencil", remote: :true, data: {toggle: "modal", target: "#myupdatepost_#{post.id}"} %>
-              <%= link_to '' , post, method: :delete, class: "fa fa-trash-o", remote: :true, data: {confirm: 'Are you sure?'} %>
-            </div>
-            <% end %>
-
-            <% end %>
-
-
-
-
-
-
-
-            <!-- Modal - update posts -->
-            <%= form_for( post, :method => :put, remote: true) do |f| %> 
-            <div class="modal fade" id="myupdatepost_<%= post.id %>" tabindex="-1" role="dialog" aria-labelledby="myModelLabel" aria-hidden="true" data-target="myupdatepost_<%= post.id %>">
-
-              <div class="modal-dialog">
-                <div class="modal-content">
-                  <div class="modal-header">
-                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-                    <h4 class="modal-title" id="myModalLabel">Editar registro</h4>
-                  </div>
-                  <div class="modal-body">
-                    <div class="row">
-                      <div class="col-md-6">
-                        <%= f.select :proyecto, options_for_select(@proyectos.collect{ |u| [u.proyecto] }, :selected => f.object.proyecto), {:include_blank => "Seleccionar proyecto", :required => true}, {:class => 'form-control'}  %>
-                      </div>
-                      <div class="col-md-6">
-                        <%= f.select :cliente, options_for_select(@clientes.collect{ |u| [u.name] }, :selected => f.object.cliente), {:include_blank => "Seleccionar cliente", :required => true}, {:class => 'form-control'} %> <br>
-                      </div>
-                      <div class="col-md-6">
-                        <%= f.text_area :title, class: "form-control post_title", label: false, autofocus: "true", placeholder: "Recurso", rows: 1 %><br>
-                      </div>
-
-                      <div class="col-md-6">
-                        <%= f.text_area :content, class: "form-control post_content col-md-6", label: false, placeholder: "Comentario", rows: 1 %><br>
-                      </div>
-                    </div>
-                    <div class="row">
-                      <div class="col-md-6">
-                        <div class="input-group date">
-                          <%= f.text_field :alta, class: "form-control post_content datepicker", :data => {:provide => 'datepicker'}, label: false, placeholder: "Alta", rows: 1 %><span class="input-group-addon" id="basic-addon1" >
-                          <span class="fa fa-calendar" aria-hidden="true"></span>
-                        </span></div> <br>
-                      </div>
-                      <div class="col-md-6">
-                        <%= f.text_area :pedido, class: "form-control post_content", label: false, placeholder: "Pedido", rows: 1 %><br>
-                      </div>
-                    </div>
-                    <div class="row">
-                      <div class="col-md-6">
-                        <%= f.number_field :horasof, class: "form-control post_content", label: false, placeholder: "Horas ordinarias facturadas", rows: 1, step: 0.5 %><br>
-                      </div>
-                      <div class="col-md-6">
-                        <%= f.number_field :horasnf, class: "form-control post_content", label: false, placeholder: "Horas no facturadas", rows: 1, step: 0.5 %><br>
-                      </div>
-                    </div>
-                    <div class="row">
-                      <div class="col-md-6">
-                        <%= f.number_field :extra, class: "form-control post_content", label: false, placeholder: "Extra", rows: 1, step: 0.5 %><br>
-                      </div>
-                      <div class="col-md-6">
-                        <%= f.number_field :extraf, class: "form-control post_content", label: false, placeholder: "Extra facturadas", rows: 1, step: 0.5 %><br>
-                      </div>
-                    </div>
-                    <div class="row">
-                      <div class="col-md-6">
-                        <%= f.number_field :nocturnas, class: "form-control post_content", label: false, placeholder: "Nocturnas/Efectivas", rows: 1, step: 0.5 %><br>
-                      </div>
-                      <div class="col-md-6">
-                        <%= f.number_field :vacaciones, class: "form-control post_content", label: false, placeholder: "Vacaciones", rows: 1, step: 0.5 %><br>
-                      </div>
-                    </div>
-                    <div class="row">
-                      <div class="col-md-6">
-                        <%= f.number_field :viaje, class: "form-control post_content", label: false, placeholder: "Tiempo de Viaje", rows: 1, step: 0.5 %><br>
-                      </div>
-                      <div class="col-md-6">
-                        <%= f.number_field :espera, class: "form-control post_content", label: false, placeholder: "Tiempo de Espera", rows: 1, step: 0.5 %><br>
-                      </div>
-                    </div>
-                    <div class="row">
-                      <div class="col-md-6">
-                        <%= f.number_field :bolsahg, class: "form-control post_content", label: false, placeholder: "Bolsa de horas generadas", rows: 1, step: 0.5 %><br>
-                      </div>
-                      <div class="col-md-6">
-                        <%= f.number_field :bolsahu, class: "form-control post_content", label: false, placeholder: "Bolsa de horas utilizadas", rows: 1, step: 0.5 %><br>
-                      </div>
-                    </div>
-
-
-                    <div class="row">
-                      <div class="col-md-6 form-inline">
-                        <div class="row">
-                          <div class="col-md-12">
-                            <h5 class="text-center">Horario</h5><hr>
-                          </div>
-                        </div>
-                        <div class="row">
-                          <div class="col-md-3">
-                            <h5>Inicio</h5>
-                          </div>
-                          <div class="col-md-9">
-                            <%= f.time_select :inicio,{prompt: {hour: 'Hora', minute: 'Minuto'},:ignore_date => true},{ class: "form-control form-group"} %>
-                          </div></div><br>
-                          <div class="row">
-                            <div class="col-md-3">
-                              <h5>Fin</h5></div>
-                              <div class="col-md-9">
-                                <%= f.time_select :fin, {prompt: {hour: 'Hora', minute: 'Minuto'}, :ignore_date => true}, {class: "form-control form-group"} %>
-                              </div>
-                            </div>
-                          </div>
-
-                          <% if current_user.admin? %>
-
-                          <div class="col-md-6">
-                            <h5 class="text-center">Usuario</h5>
-                            <hr>
-                            <%= f.select :user_id, options_for_select(@users.collect{ |u| [u.name, u.id] }, :selected => f.object.user_id), {},  {class: "form-control"} %>
-                          </div>
-
-                          <% end %>
-                        </div>
-
-
-                      </div>
-                      <div class="modal-footer">
-                        <button type="button" id="myupdatebutton" class="btn btn-default" data-dismiss="modal">Cerrar</button>
-                        <%= submit_tag "Actualizar", class: "btn btn-primary" %>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <% end %>
-                <!-- Modal -->
-
-                <!-- Modal - viev posts -->
-
-                <div class="modal fade" id="mytable_<%= post.id %>" tabindex="-1" role="dialog" aria-labelledby="myModelLabel" aria-hidden="true" data-target="mytable_<%= post.id %>">
-
-                  <div class="modal-dialog autowidth">
-                    <div class="modal-content">
-                      <div class="modal-header">
-                        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-                        <h4 class="modal-title" id="myModalLabel">Registro de <%= post.user.name %> - <%= post.proyecto %> <%= post.title %> el <%= post.alta %></h4>
-                      </div>
-                      <div class="modal-body">
-                        <table class="table table-bordered table-condensed" id="tabla_view">
-                          <thead class="bg-info">
-                            <tr>
-                              <th>Proyecto</th>
-                              <th>Recurso</th>
-                              <th>Comentario</th>
-                              <th>Cliente</th>
-                              <th>Fecha</th>
-                              <th>Pedido</th>
-                              <th>Horas ordinarias facturadas</th>
-                              <th>Horas no facturadas</th>
-                              <th>Extra</th>
-                              <th>Extra facturadas</th>
-                              <th>Nocturnas/Efectivas</th>
-                              <th>Vacaciones</th>
-                              <th>Viaje</th>
-                              <th>Espera</th>
-                              <th>Bolsa de horas generadas</th>
-                              <th>Bolsa de horas utilizadas</th>
-
-                            </tr>
-                          </thead>
-                          <tbody>
-                            <tr>
-                              <th><%= post.proyecto %></th>
-                              <th><%= post.title %></th>
-                              <th><%= post.content %></th>
-                              <th><%= post.cliente %></th>
-                              <th class="wspace"><%= post.alta %></th>
-                              <th><%= post.pedido %></th>
-                              <th><%= post.horasof %></th>
-                              <th><%= post.horasnf %></th>
-                              <th><%= post.extra %></th>
-                              <th><%= post.extraf %></th>
-                              <th><%= post.nocturnas %></th>
-                              <th id="vacaciones"><%= post.vacaciones %></th>
-                              <th><%= post.viaje %></th>
-                              <th><%= post.espera %></th>
-                              <th><%= post.bolsahg %></th>
-                              <th><%= post.bolsahu %></th>
-
-                            </tr>
-                          </tbody>
-                        </table>
-                        <p><%= link_to "Parte de trabajo diario (PDF)", post_path(@post.id, id: post.id, format: "pdf") %></p>
-
-                      </div>
-
-
-
-
+                <div class="modal-body">
+                  <div class="row">
+                    <div class="col-md-12">
+                      <%= f.text_field :name, class: "form-control post_title", label: false, :autofocus => 'true', placeholder: "Cliente", rows: 1 %>
                     </div>
                   </div>
 
                 </div>
-
-
-                <!--End  Modal - viev posts -->
-
-
-              </li>
-            </div>
-          </div>
-          <% end %>
-        </ul>
-        <% end %>
-        <% end %>
-
-
-
-
-        <!--  Modal create action -->
-        <%= form_for(@post, remote: true) do |f| %>
-        <div class="modal fade" id="mynewpost" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
-          <div class="modal-dialog">
-            <div class="modal-content">
-
-              <div class="modal-header">
-                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-                <h4 class="modal-title" id="myModalLabel">Nuevo registro</h4>
-              </div>
-              <div class="modal-body">
-                <div class="row">
-                  <div class="col-md-6">
-                    <%= f.select :proyecto, options_for_select(@proyectos.collect{ |u| [u.proyecto] },params[:user_id] ), {:include_blank => "Seleccionar proyecto"}, { :required => true, class: "form-control"} %>
-                  </div>
-                  <div class="col-md-6">
-                    <%= f.select :cliente, options_for_select(@clientes.collect{ |u| [u.name] },params[:user_id] ), {:include_blank => "Seleccionar cliente", :required => true}, {class: "form-control"} %><br>
-                  </div>
-                  <div class="col-md-6">
-                    <%= f.text_area :title, class: "form-control post_title", label: false, autofocus: "true", placeholder: "Recurso", rows: 1 %><br>
-                  </div>
-
-                  <div class="col-md-6">
-                    <%= f.text_area :content, class: "form-control post_content", label: false, placeholder: "Comentario", rows: 1 %><br>
-                  </div>
-                </div>
-                <div class="row">
-                  <div class="col-md-6">
-                    <div class="input-group">
-                      <%= f.text_field :alta, class: "form-control post_content datepicker", :data => {:provide => 'datepicker'}, label: false, placeholder: "Alta", rows: 1 %><span class="input-group-addon" id="basic-addon1" >
-                      <span class="fa fa-calendar" aria-hidden="true"></span>
-                    </span></div> <br>
-                  </div>
-                  <div class="col-md-6">
-                    <%= f.text_area :pedido, class: "form-control post_content", label: false, placeholder: "Pedido", rows: 1 %><br>
-                  </div>
-                </div>
-                <div class="row">
-                  <div class="col-md-6">
-                    <%= f.number_field :horasof, class: "form-control post_content", label: false, placeholder: "Horas ordinarias facturadas", rows: 1, step: 0.5 %><br>
-                  </div>
-                  <div class="col-md-6">
-                    <%= f.number_field :horasnf, class: "form-control post_content", label: false, placeholder: "Horas no facturadas", rows: 1, step: 0.5 %><br>
-                  </div>
-                </div>
-                <div class="row">
-                  <div class="col-md-6">
-                    <%= f.number_field :extra, class: "form-control post_content", label: false, placeholder: "Extra", rows: 1, step: 0.5 %><br>
-                  </div>
-                  <div class="col-md-6">
-                    <%= f.number_field :extraf, class: "form-control post_content", label: false, placeholder: "Extra facturadas", rows: 1, step: 0.5 %><br>
-                  </div>
-                </div>
-                <div class="row">
-                  <div class="col-md-6">
-                    <%= f.number_field :nocturnas, class: "form-control post_content", label: false, placeholder: "Nocturnas/Efectivas", rows: 1, step: 0.5 %><br>
-                  </div>
-                  <div class="col-md-6">
-                    <%= f.number_field :vacaciones, class: "form-control post_content", label: false, placeholder: "Vacaciones", rows: 1, step: 0.5 %><br>
-                  </div>
-                </div>
-                <div class="row">
-                  <div class="col-md-6">
-                    <%= f.number_field :viaje, class: "form-control post_content", label: false, placeholder: "Tiempo de Viaje", rows: 1, step: 0.5 %><br>
-                  </div>
-                  <div class="col-md-6">
-                    <%= f.number_field :espera, class: "form-control post_content", label: false, placeholder: "Tiempo de Espera", rows: 1, step: 0.5 %><br>
-                  </div>
-                </div>
-                <div class="row">
-                  <div class="col-md-6">
-                    <%= f.number_field :bolsahg, class: "form-control post_content", label: false, placeholder: "Bolsa de horas generadas", rows: 1, step: 0.5 %><br>
-                  </div>
-                  <div class="col-md-6">
-                    <%= f.number_field :bolsahu, class: "form-control post_content", label: false, placeholder: "Bolsa de horas utilizadas", rows: 1, step: 0.5 %><br>
-                  </div>
-                </div>
-
-
-                <div class="row">
-                  <div class="col-md-6 form-inline">
-                    <div class="row">
-                      <div class="col-md-12">
-                        <h5 class="text-center">Horario</h5><hr>
-                      </div>
-                    </div>
-                    <div class="row">
-                      <div class="col-md-3">
-                        <h5>Inicio</h5>
-                      </div>
-                      <div class="col-md-9">
-                        <%= f.time_select :inicio,{prompt: {hour: 'Hora', minute: 'Minuto'},:ignore_date => true},{ class: "form-control form-group"} %>
-                      </div></div><br>
-                      <div class="row">
-                        <div class="col-md-3">
-                          <h5>Fin</h5></div>
-                          <div class="col-md-9">
-                            <%= f.time_select :fin, {prompt: {hour: 'Hora', minute: 'Minuto'}, :ignore_date => true}, {class: "form-control form-group"} %>
-                          </div>
-                        </div>
-                      </div>
-
-
-                      <% if current_user.admin? %>
-
-                      <div class="col-md-6">
-                       <h5 class="text-center">Usuario</h5>
-                       <hr>
-                       <%= f.select :user_id, options_for_select(@users.collect{ |u| [u.name, u.id] } ), {}, {class: "form-control"} %>
-                     </div>
-
-                     <% end %>
-                   </div>
-
-
-
-                 </div>
-
-                 <div class="modal-footer">
+                <div class="modal-footer">
                   <button type="button" class="btn btn-default" data-dismiss="modal" id="mynewpostclose">Cerrar</button>
                   <%= submit_tag "Crear", class: "btn btn-primary" %>
                 </div>
@@ -690,91 +135,675 @@
           <% end %>
 
 
+          <div class="modal fade" id="editcliente" tabindex="-1" role="dialog" aria-labelledby="myModelLabel" aria-hidden="true" data-target="editcliente">
+
+            <div class="modal-dialog">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                  <h4 class="modal-title" id="myModalLabel">Editar clientes</h4>
+                </div>
+
+
+                <div class="modal-body">
+                  <div class="row">
+                    <div class="col-md-12">
+
+                      <% @clientes.each do |cliente| %>
+                      <%= form_for(cliente, :method => :put, remote: true, html: {:class => 'form-inline'}) do |f| %> 
+                      <div class="form-group col-md-12 marginbot">
+                        <div class="row">
+                          <div class="col-md-8">
+                            <%= f.text_field :name, class: "form-control post_title fullwidth", label: false, autofocus: "true", placeholder: "Cliente", rows: 1 %></div>
+                            <div class="col-md-4">
+                              <%= submit_tag "Actualizar", class: "btn btn-primary btn-md" %>
+                            </div>
+                          </div></div><br>
+                          <% end %>
+
+
+                          <% end %>
+
+                        </div>
+                      </div>
+
+                    </div>
+                    <div class="modal-footer">
+                      <button type="button" class="btn btn-default" data-dismiss="modal" id="mynewpostclose">Cerrar</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+
+
+
+            </div> <!-- End col-md-3 -->
+
+            <div class="col-md-2">
+              <div class="panel panel-info">
+                <div class="panel-heading">
+                  <h3 class="panel-title">Descargar Excel</h3>
+                </div>
+                <div class="panel-body">
+                  <div class="btn-group" role="group" aria-label="...">
+                    <%= link_to "CSV", posts_path(format: "csv"), :class => "btn btn-primary btn-group btn-sm", :type => "button" %>
+                    <%= link_to "Excel", posts_path(format: "xls"), :class => "btn btn-primary btn-group btn-sm", :type => "button" %>
+                  </div>
+
+
+                </div>
+              </div>
+            </div>
+            <div class="col-md-3">
+              <div class="panel panel-info">
+                <div class="panel-heading">
+                  <h3 class="panel-title">Filtrar resultados</h3>
+                </div>
+                <div class="panel-body form-inline">
+                  <div class"col-md-4">
+                    <%= form_tag posts_path, method: "get", class: "form-group" do %>
+                    <%= select_tag 'search', options_for_select(@users.collect{ |u| [ u.name, u.id ]}, params[:search]), :include_blank => "Seleccionar usuario", class: "form-control form-group input-sm", :onchange => "window.location.replace('/?date=#{@date}+posts?&search='+$(this).val());" %>
+
+
+                    <%= link_to "Inicio", root_path(date: @date), :class => "btn-xs btn-warning form-group" %>
+
+                    <% end %>
+                  </div>
+                  <br>
+                  <div class"col-md-4">
+                    <%= form_tag posts_path, method: "get", class: "form-group" do %>
+                    <%= select_tag 'search', options_for_select(@proyectos.collect{ |u| [ u.proyecto ]}, params[:search]), :include_blank => "Seleccionar proyecto", class: "form-control form-group input-sm", :onchange => "window.location.replace('/?date=#{@date}+posts?&search='+$(this).val());" %>
+
+                    <%= link_to "Inicio", root_path(date: @date), :class => "btn-xs btn-warning form-group" %>
+
+                    <% end %>
+                  </div>
+                  <br>
+                  <div class"col-md-4">
+                    <%= form_tag posts_path, method: "get", class: "form-group" do %>
+                    <%= select_tag 'search', options_for_select(@clientes.collect{ |u| [ u.name ]}, params[:search]), :include_blank => "Seleccionar cliente", class: "form-control form-group input-sm", :onchange => "window.location.replace('/?date=#{@date}+posts?&search='+$(this).val());" %>
+
+                    <%= link_to "Inicio", root_path(date: @date), :class => "btn-xs btn-warning form-group" %>
+
+                    <% end %>
+                  </div>
+
+
+                </div>
+              </div>
+            </div>
+
+
+            <div class="col-md-3">
+              <div class="panel panel-info">
+                <div class="panel-heading"><h3 class="panel-title">Crear nuevo registro de horas</h3></div>
+
+                <div class="panel-body">
+
+                  <button type="button" class="btn btn-primary btn-sm" data-toggle="modal" data-target="#mynewpost">
+                    Nuevo registro
+                  </button>
+                </div>
+              </div>
+            
+
+ 
+
+          </div>
+           </div>
+
+
+
+
+
+        <% else %>
+
+        <div class="container-fluid">
+          <div class="row">
+            <div class="col-md-9">
+             <div class="panel panel-info">
+              <div class="panel-heading"><h3 class="panel-title">Resumen anual de <%= current_user.name %></h3></div>
+
+
+
+
+              <table class="table table-bordered font12 marbot0">
+                <thead class="wspace">
+                  <tr class="active">
+                    <td><strong>Horas ordinarias facturadas</strong></td>
+                    <td><strong>Horas no facturadas</strong></td>
+                    <td><strong>Extra</strong></td>
+                    <td><strong>Nocturnas</strong></td>
+                    <td><strong>Vacaciones</strong></td>
+                    <td><strong>Viaje</strong></td>
+                    <td><strong>Espera</strong></td>
+                    <td><strong>Bolsa de horas generadas</strong></td>
+                    <td><strong>Bolsa de horas utilizadas</strong></td>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><strong><%= Post.where(:alta => @date.beginning_of_year..@date.end_of_year, :user_id => current_user).sum(:horasof) %></strong></td>
+                    <td><strong><%= Post.where(:alta => @date.beginning_of_year..@date.end_of_year, :user_id => current_user).sum(:horasnf) %></strong></td>
+                    <td><strong><%= Post.where(:alta => @date.beginning_of_year..@date.end_of_year, :user_id => current_user).sum(:extra) %></strong></td>
+                    <td><strong><%= Post.where(:alta => @date.beginning_of_year..@date.end_of_year, :user_id => current_user).sum(:nocturnas) %></strong></td>
+                    <td><strong><%= Post.where(:alta => @date.beginning_of_year..@date.end_of_year, :user_id => current_user).sum(:vacaciones) %></strong></td>
+                    <td><strong><%= Post.where(:alta => @date.beginning_of_year..@date.end_of_year, :user_id => current_user).sum(:viaje) %></strong></td>
+                    <td><strong><%= Post.where(:alta => @date.beginning_of_year..@date.end_of_year, :user_id => current_user).sum(:espera) %></strong></td>
+                    <td><strong><%= Post.where(:alta => @date.beginning_of_year..@date.end_of_year, :user_id => current_user).sum(:bolsahg) %></strong></td>
+                    <td><strong><%= Post.where(:alta => @date.beginning_of_year..@date.end_of_year, :user_id => current_user).sum(:bolsahu) %></strong></td>
+                  </tr>
+
+                </tbody>
+              </table>
+
+
+
+            </div>
+          </div>
+
+
+
+
+
+          <div class="col-md-3">
+           <div class="panel panel-success">
+            <div class="panel-heading">
+              <h3 class="panel-title">Crear nuevo registro de horas</h3>
+            </div>
+            <div class="panel-body">
+
+              <button type="button" class="btn btn-success btn" data-toggle="modal" data-target="#mynewpost">
+                Nuevo registro
+              </button>
+            </div>
+          </div>
         </div>
       </div>
 
 
- <% if current_user.admin != true %>
-  <div> <!-- Resumen -->
 
-  
-
-  
+      <% end %>
 
 
 
 
+      <div class="container-fluid">
+
+        <div class="row">
+          <div id ="posts">
+            <h4 id="month">
+
+              <div class="btn-group block center" role="group" aria-label="...">
+                <button type="button" class="btn btn-default"><%= link_to "", {date: @date.prev_month}, class: "fa fa-chevron-left btn" %></button>
+                <button type="button" class="btn btn-default disabled"><h4 id="mes"><%= l(@date, format: "%B %Y") %></h4></button>
+                <button type="button" class="btn btn-default"><%= link_to "", {date: @date.next_month}, class: "fa fa-chevron-right btn" %></button>
+              </div>
+
+            </h4>
+            <div class="table-responsive">
+              <%= calendar @date do |date| %>
+              <%= date.day %>
+              <% if @posts_by_date[date] %>
+              <ul>
+                <% @posts_by_date[date].each do |post| %>
 
 
 
-      <div class="panel panel-info">
-      <div class="panel-heading"><h3 class="panel-title text-center">Resumen mensual de <%= l(@date, format: "%B %Y") %> de <%= current_user.name %></h3></div>
+                <li id="post_<%= post.id %>" class="<%= 'colorverde' if post.vacaciones != nil if post.vacaciones != 0 %>">
 
-      <table class="table table-bordered font12 text-center">
-        <thead>
-          <tr class="active">
-            <td><strong>Fecha</strong></td>
-            <td><strong>Proyecto</strong></td>
-            <td><strong>Recurso</strong></td>
-            <td><strong>Comentario</strong></td>
-            <td><strong>Pedido</strong></td>
-            <td><strong>Horas ordinarias facturadas</strong></td>
-            <td><strong>Horas no facturadas</strong></td>
-            <td><strong>Extra</strong></td>
-            <td><strong>Nocturnas</strong></td>
-            <td><strong>Vacaciones</strong></td>
-            <td><strong>Viaje</strong></td>
-            <td><strong>Espera</strong></td>
-            <td><strong>Bolsa de horas generadas</strong></td>
-            <td><strong>Bolsa de horas utilizadas</strong></td>
-          </tr>
-        </thead>
-        <tbody>
+                  <% if current_user.admin? %>
 
-          <tr>
-            <% Post.where(:alta => @date.beginning_of_month..@date.end_of_month, :user_id => current_user).order(alta: :asc).each do |post| %>
-                <td class="wspace"><h6><%= post.alta %></h6></td>
-                <td class="wspace"><h6><%= post.proyecto %></h6></td>
-                <td class="wspace"><h6><%= post.title %></h6></td>
-                <td><h6><%= post.content %></h6></td>
-                <td><h6><%= post.pedido %></h6></td>
-                <td><h6><%= post.horasof %></h6></td>
-                <td><h6><%= post.horasnf %></h6></td>
-                <td><h6><%= post.extra %></h6></td>
-                <td><h6><%= post.nocturnas %></h6></td>
-                <td><h6><%= post.vacaciones %></h6></td>
-                <td><h6><%= post.viaje %></h6></td>
-                <td><h6><%= post.espera %></h6></td>
-                <td><h6><%= post.bolsahg %></h6></td>
-                <td><h6><%= post.bolsahu %></h6></td>
-                
-              </tr>
+                  <%= link_to post, data: {toggle: "modal", tooltip: "tooltip", title: "#{post.proyecto} - #{post.title}", target: "#mytable_#{post.id}"} do %>
+                  <%= post.proyecto %> - <%= post.title %><br><%= post.user.name %> - 
+                  Total: <%= Post.where(:alta => date, :id => post.id).sum(:horasof) + Post.where(:alta => date, :id => post.id).sum(:horasnf) + Post.where(:alta => date, :id => post.id).sum(:extra) + Post.where(:alta => date, :id => post.id).sum(:extraf) + Post.where(:alta => date, :id => post.id).sum(:nocturnas) + Post.where(:alta => date, :id => post.id).sum(:vacaciones) + Post.where(:alta => date, :id => post.id).sum(:bolsahg) + Post.where(:alta => date, :id => post.id).sum(:bolsahu) + Post.where(:alta => date, :id => post.id).sum(:viaje) + Post.where(:alta => date, :id => post.id).sum(:espera) %> horas
+                  <div class="pull-right">
+                    <%= link_to '' , post, class: "fa fa-pencil", remote: :true, data: {toggle: "modal", target: "#myupdatepost_#{post.id}"} %>
+                    <%= link_to '' , post, method: :delete, class: "fa fa-trash-o", remote: :true, data: {confirm: 'Are you sure?'} %>
+                  </div>
+                  <% end %>
+
+                  <% else %>
+                  <%= link_to post, data: {toggle: "modal", target: "#mytable_#{post.id}"} do %>
+                  <%= post.proyecto %> - <%= post.title %><br>
+                  Total: <%= Post.where(:alta => date, :id => post.id).sum(:horasof) + Post.where(:alta => date, :id => post.id).sum(:horasnf) + Post.where(:alta => date, :id => post.id).sum(:extra) + Post.where(:alta => date, :id => post.id).sum(:extraf) + Post.where(:alta => date, :id => post.id).sum(:nocturnas) + Post.where(:alta => date, :id => post.id).sum(:vacaciones) + Post.where(:alta => date, :id => post.id).sum(:bolsahg) + Post.where(:alta => date, :id => post.id).sum(:bolsahu) + Post.where(:alta => date, :id => post.id).sum(:viaje) + Post.where(:alta => date, :id => post.id).sum(:espera) %> horas
+                  <div class="pull-right">
+                    <%= link_to '' , post, class: "fa fa-pencil", remote: :true, data: {toggle: "modal", target: "#myupdatepost_#{post.id}"} %>
+                    <%= link_to '' , post, method: :delete, class: "fa fa-trash-o", remote: :true, data: {confirm: 'Are you sure?'} %>
+                  </div>
+                  <% end %>
+
+                  <% end %>
+
+
+
+
+
+
+
+                  <!-- Modal - update posts -->
+                  <%= form_for( post, :method => :put, remote: true) do |f| %> 
+                  <div class="modal fade" id="myupdatepost_<%= post.id %>" tabindex="-1" role="dialog" aria-labelledby="myModelLabel" aria-hidden="true" data-target="myupdatepost_<%= post.id %>">
+
+                    <div class="modal-dialog">
+                      <div class="modal-content">
+                        <div class="modal-header">
+                          <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                          <h4 class="modal-title" id="myModalLabel">Editar registro</h4>
+                        </div>
+                        <div class="modal-body">
+                          <div class="row">
+                            <div class="col-md-6">
+                              <%= f.select :proyecto, options_for_select(@proyectos.collect{ |u| [u.proyecto] }, :selected => f.object.proyecto), {:include_blank => "Seleccionar proyecto", :required => true}, {:class => 'form-control'}  %>
+                            </div>
+                            <div class="col-md-6">
+                              <%= f.select :cliente, options_for_select(@clientes.collect{ |u| [u.name] }, :selected => f.object.cliente), {:include_blank => "Seleccionar cliente", :required => true}, {:class => 'form-control'} %> <br>
+                            </div>
+                            <div class="col-md-6">
+                              <%= f.text_area :title, class: "form-control post_title", label: false, autofocus: "true", placeholder: "Recurso", rows: 1 %><br>
+                            </div>
+
+                            <div class="col-md-6">
+                              <%= f.text_area :content, class: "form-control post_content col-md-6", label: false, placeholder: "Comentario", rows: 1 %><br>
+                            </div>
+                          </div>
+                          <div class="row">
+                            <div class="col-md-6">
+                              <div class="input-group date">
+                                <%= f.text_field :alta, class: "form-control post_content datepicker", :data => {:provide => 'datepicker'}, label: false, placeholder: "Alta", rows: 1 %><span class="input-group-addon" id="basic-addon1" >
+                                <span class="fa fa-calendar" aria-hidden="true"></span>
+                              </span></div> <br>
+                            </div>
+                            <div class="col-md-6">
+                              <%= f.text_area :pedido, class: "form-control post_content", label: false, placeholder: "Pedido", rows: 1 %><br>
+                            </div>
+                          </div>
+                          <div class="row">
+                            <div class="col-md-6">
+                              <%= f.number_field :horasof, class: "form-control post_content", label: false, placeholder: "Horas ordinarias facturadas", rows: 1, step: 0.5 %><br>
+                            </div>
+                            <div class="col-md-6">
+                              <%= f.number_field :horasnf, class: "form-control post_content", label: false, placeholder: "Horas no facturadas", rows: 1, step: 0.5 %><br>
+                            </div>
+                          </div>
+                          <div class="row">
+                            <div class="col-md-6">
+                              <%= f.number_field :extra, class: "form-control post_content", label: false, placeholder: "Extra", rows: 1, step: 0.5 %><br>
+                            </div>
+                            <div class="col-md-6">
+                              <%= f.number_field :extraf, class: "form-control post_content", label: false, placeholder: "Extra facturadas", rows: 1, step: 0.5 %><br>
+                            </div>
+                          </div>
+                          <div class="row">
+                            <div class="col-md-6">
+                              <%= f.number_field :nocturnas, class: "form-control post_content", label: false, placeholder: "Nocturnas/Efectivas", rows: 1, step: 0.5 %><br>
+                            </div>
+                            <div class="col-md-6">
+                              <%= f.number_field :vacaciones, class: "form-control post_content", label: false, placeholder: "Vacaciones", rows: 1, step: 0.5 %><br>
+                            </div>
+                          </div>
+                          <div class="row">
+                            <div class="col-md-6">
+                              <%= f.number_field :viaje, class: "form-control post_content", label: false, placeholder: "Tiempo de Viaje", rows: 1, step: 0.5 %><br>
+                            </div>
+                            <div class="col-md-6">
+                              <%= f.number_field :espera, class: "form-control post_content", label: false, placeholder: "Tiempo de Espera", rows: 1, step: 0.5 %><br>
+                            </div>
+                          </div>
+                          <div class="row">
+                            <div class="col-md-6">
+                              <%= f.number_field :bolsahg, class: "form-control post_content", label: false, placeholder: "Bolsa de horas generadas", rows: 1, step: 0.5 %><br>
+                            </div>
+                            <div class="col-md-6">
+                              <%= f.number_field :bolsahu, class: "form-control post_content", label: false, placeholder: "Bolsa de horas utilizadas", rows: 1, step: 0.5 %><br>
+                            </div>
+                          </div>
+
+
+                          <div class="row">
+                            <div class="col-md-6 form-inline">
+                              <div class="row">
+                                <div class="col-md-12">
+                                  <h5 class="text-center">Horario</h5><hr>
+                                </div>
+                              </div>
+                              <div class="row">
+                                <div class="col-md-3">
+                                  <h5>Inicio</h5>
+                                </div>
+                                <div class="col-md-9">
+                                  <%= f.time_select :inicio,{prompt: {hour: 'Hora', minute: 'Minuto'},:ignore_date => true},{ class: "form-control form-group"} %>
+                                </div></div><br>
+                                <div class="row">
+                                  <div class="col-md-3">
+                                    <h5>Fin</h5></div>
+                                    <div class="col-md-9">
+                                      <%= f.time_select :fin, {prompt: {hour: 'Hora', minute: 'Minuto'}, :ignore_date => true}, {class: "form-control form-group"} %>
+                                    </div>
+                                  </div>
+                                </div>
+
+                                <% if current_user.admin? %>
+
+                                <div class="col-md-6">
+                                  <h5 class="text-center">Usuario</h5>
+                                  <hr>
+                                  <%= f.select :user_id, options_for_select(@users.collect{ |u| [u.name, u.id] }, :selected => f.object.user_id), {},  {class: "form-control"} %>
+                                </div>
+
+                                <% end %>
+                              </div>
+
+
+                            </div>
+                            <div class="modal-footer">
+                              <button type="button" id="myupdatebutton" class="btn btn-default" data-dismiss="modal">Cerrar</button>
+                              <%= submit_tag "Actualizar", class: "btn btn-primary" %>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <% end %>
+                      <!-- Modal -->
+
+                      <!-- Modal - viev posts -->
+
+                      <div class="modal fade" id="mytable_<%= post.id %>" tabindex="-1" role="dialog" aria-labelledby="myModelLabel" aria-hidden="true" data-target="mytable_<%= post.id %>">
+
+                        <div class="modal-dialog autowidth">
+                          <div class="modal-content">
+                            <div class="modal-header">
+                              <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                              <h4 class="modal-title" id="myModalLabel">Registro de <%= post.user.name %> - <%= post.proyecto %> <%= post.title %> el <%= post.alta %></h4>
+                            </div>
+                            <div class="modal-body">
+                              <table class="table table-bordered table-condensed" id="tabla_view">
+                                <thead class="bg-info">
+                                  <tr>
+                                    <th>Proyecto</th>
+                                    <th>Recurso</th>
+                                    <th>Comentario</th>
+                                    <th>Cliente</th>
+                                    <th>Fecha</th>
+                                    <th>Pedido</th>
+                                    <th>Horas ordinarias facturadas</th>
+                                    <th>Horas no facturadas</th>
+                                    <th>Extra</th>
+                                    <th>Extra facturadas</th>
+                                    <th>Nocturnas/Efectivas</th>
+                                    <th>Vacaciones</th>
+                                    <th>Viaje</th>
+                                    <th>Espera</th>
+                                    <th>Bolsa de horas generadas</th>
+                                    <th>Bolsa de horas utilizadas</th>
+
+                                  </tr>
+                                </thead>
+                                <tbody>
+                                  <tr>
+                                    <th><%= post.proyecto %></th>
+                                    <th><%= post.title %></th>
+                                    <th><%= post.content %></th>
+                                    <th><%= post.cliente %></th>
+                                    <th class="wspace"><%= post.alta %></th>
+                                    <th><%= post.pedido %></th>
+                                    <th><%= post.horasof %></th>
+                                    <th><%= post.horasnf %></th>
+                                    <th><%= post.extra %></th>
+                                    <th><%= post.extraf %></th>
+                                    <th><%= post.nocturnas %></th>
+                                    <th id="vacaciones"><%= post.vacaciones %></th>
+                                    <th><%= post.viaje %></th>
+                                    <th><%= post.espera %></th>
+                                    <th><%= post.bolsahg %></th>
+                                    <th><%= post.bolsahu %></th>
+
+                                  </tr>
+                                </tbody>
+                              </table>
+                              <p><%= link_to "Parte de trabajo diario (PDF)", post_path(@post.id, id: post.id, format: "pdf") %></p>
+
+                            </div>
+
+
+
+
+                          </div>
+                        </div>
+
+                      </div>
+
+
+                      <!--End  Modal - viev posts -->
+
+
+                    </li>
+                  </div>
+                </div>
+                <% end %>
+              </ul>
               <% end %>
-               <tr class="active">
-                <td colspan = "5" class="text-right"><strong>Total <%= l(@date, format: "%B %Y") %></strong></td>
-                <td><strong><%= Post.where(:alta => @date.beginning_of_month..@date.end_of_month, :user_id => current_user).sum(:horasof) %></strong></td>
-                <td><strong><%= Post.where(:alta => @date.beginning_of_month..@date.end_of_month, :user_id => current_user).sum(:horasnf) %></strong></td>
-                <td><strong><%= Post.where(:alta => @date.beginning_of_month..@date.end_of_month, :user_id => current_user).sum(:extra) %></strong></td>
-                <td><strong><%= Post.where(:alta => @date.beginning_of_month..@date.end_of_month, :user_id => current_user).sum(:nocturnas) %></strong></td>
-                <td><strong><%= Post.where(:alta => @date.beginning_of_month..@date.end_of_month, :user_id => current_user).sum(:vacaciones) %></strong></td>
-                <td><strong><%= Post.where(:alta => @date.beginning_of_month..@date.end_of_month, :user_id => current_user).sum(:viaje) %></strong></td>
-                <td><strong><%= Post.where(:alta => @date.beginning_of_month..@date.end_of_month, :user_id => current_user).sum(:espera) %></strong></td>
-                <td><strong><%= Post.where(:alta => @date.beginning_of_month..@date.end_of_month, :user_id => current_user).sum(:bolsahg) %></strong></td>
-                <td><strong><%= Post.where(:alta => @date.beginning_of_month..@date.end_of_month, :user_id => current_user).sum(:bolsahu) %></strong></td>
-               </tr>
-
-        </tbody>
-      </table>
-      </div>
+              <% end %>
 
 
 
 
+              <!--  Modal create action -->
+              <%= form_for(@post, remote: true) do |f| %>
+              <div class="modal fade" id="mynewpost" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+                <div class="modal-dialog">
+                  <div class="modal-content">
+
+                    <div class="modal-header">
+                      <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                      <h4 class="modal-title" id="myModalLabel">Nuevo registro</h4>
+                    </div>
+                    <div class="modal-body">
+                      <div class="row">
+                        <div class="col-md-6">
+                          <%= f.select :proyecto, options_for_select(@proyectos.collect{ |u| [u.proyecto] },params[:user_id] ), {:include_blank => "Seleccionar proyecto"}, { :required => true, class: "form-control"} %>
+                        </div>
+                        <div class="col-md-6">
+                          <%= f.select :cliente, options_for_select(@clientes.collect{ |u| [u.name] },params[:user_id] ), {:include_blank => "Seleccionar cliente", :required => true}, {class: "form-control"} %><br>
+                        </div>
+                        <div class="col-md-6">
+                          <%= f.text_area :title, class: "form-control post_title", label: false, autofocus: "true", placeholder: "Recurso", rows: 1 %><br>
+                        </div>
+
+                        <div class="col-md-6">
+                          <%= f.text_area :content, class: "form-control post_content", label: false, placeholder: "Comentario", rows: 1 %><br>
+                        </div>
+                      </div>
+                      <div class="row">
+                        <div class="col-md-6">
+                          <div class="input-group">
+                            <%= f.text_field :alta, class: "form-control post_content datepicker", :data => {:provide => 'datepicker'}, label: false, placeholder: "Alta", rows: 1 %><span class="input-group-addon" id="basic-addon1" >
+                            <span class="fa fa-calendar" aria-hidden="true"></span>
+                          </span></div> <br>
+                        </div>
+                        <div class="col-md-6">
+                          <%= f.text_area :pedido, class: "form-control post_content", label: false, placeholder: "Pedido", rows: 1 %><br>
+                        </div>
+                      </div>
+                      <div class="row">
+                        <div class="col-md-6">
+                          <%= f.number_field :horasof, class: "form-control post_content", label: false, placeholder: "Horas ordinarias facturadas", rows: 1, step: 0.5 %><br>
+                        </div>
+                        <div class="col-md-6">
+                          <%= f.number_field :horasnf, class: "form-control post_content", label: false, placeholder: "Horas no facturadas", rows: 1, step: 0.5 %><br>
+                        </div>
+                      </div>
+                      <div class="row">
+                        <div class="col-md-6">
+                          <%= f.number_field :extra, class: "form-control post_content", label: false, placeholder: "Extra", rows: 1, step: 0.5 %><br>
+                        </div>
+                        <div class="col-md-6">
+                          <%= f.number_field :extraf, class: "form-control post_content", label: false, placeholder: "Extra facturadas", rows: 1, step: 0.5 %><br>
+                        </div>
+                      </div>
+                      <div class="row">
+                        <div class="col-md-6">
+                          <%= f.number_field :nocturnas, class: "form-control post_content", label: false, placeholder: "Nocturnas/Efectivas", rows: 1, step: 0.5 %><br>
+                        </div>
+                        <div class="col-md-6">
+                          <%= f.number_field :vacaciones, class: "form-control post_content", label: false, placeholder: "Vacaciones", rows: 1, step: 0.5 %><br>
+                        </div>
+                      </div>
+                      <div class="row">
+                        <div class="col-md-6">
+                          <%= f.number_field :viaje, class: "form-control post_content", label: false, placeholder: "Tiempo de Viaje", rows: 1, step: 0.5 %><br>
+                        </div>
+                        <div class="col-md-6">
+                          <%= f.number_field :espera, class: "form-control post_content", label: false, placeholder: "Tiempo de Espera", rows: 1, step: 0.5 %><br>
+                        </div>
+                      </div>
+                      <div class="row">
+                        <div class="col-md-6">
+                          <%= f.number_field :bolsahg, class: "form-control post_content", label: false, placeholder: "Bolsa de horas generadas", rows: 1, step: 0.5 %><br>
+                        </div>
+                        <div class="col-md-6">
+                          <%= f.number_field :bolsahu, class: "form-control post_content", label: false, placeholder: "Bolsa de horas utilizadas", rows: 1, step: 0.5 %><br>
+                        </div>
+                      </div>
 
 
-  </div>
-  <% end %>
-<br> 
+                      <div class="row">
+                        <div class="col-md-6 form-inline">
+                          <div class="row">
+                            <div class="col-md-12">
+                              <h5 class="text-center">Horario</h5><hr>
+                            </div>
+                          </div>
+                          <div class="row">
+                            <div class="col-md-3">
+                              <h5>Inicio</h5>
+                            </div>
+                            <div class="col-md-9">
+                              <%= f.time_select :inicio,{prompt: {hour: 'Hora', minute: 'Minuto'},:ignore_date => true},{ class: "form-control form-group"} %>
+                            </div></div><br>
+                            <div class="row">
+                              <div class="col-md-3">
+                                <h5>Fin</h5></div>
+                                <div class="col-md-9">
+                                  <%= f.time_select :fin, {prompt: {hour: 'Hora', minute: 'Minuto'}, :ignore_date => true}, {class: "form-control form-group"} %>
+                                </div>
+                              </div>
+                            </div>
 
-<%= render 'footer' %>
+
+                            <% if current_user.admin? %>
+
+                            <div class="col-md-6">
+                             <h5 class="text-center">Usuario</h5>
+                             <hr>
+                             <%= f.select :user_id, options_for_select(@users.collect{ |u| [u.name, u.id] } ), {}, {class: "form-control"} %>
+                           </div>
+
+                           <% end %>
+                         </div>
+
+
+
+                       </div>
+
+                       <div class="modal-footer">
+                        <button type="button" class="btn btn-default" data-dismiss="modal" id="mynewpostclose">Cerrar</button>
+                        <%= submit_tag "Crear", class: "btn btn-primary" %>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <% end %>
+
+
+              </div>
+            </div>
+
+
+            <% if current_user.admin != true %>
+            <div> <!-- Resumen -->
+
+
+
+
+
+
+
+
+
+
+
+              <div class="panel panel-info">
+                <div class="panel-heading"><h3 class="panel-title text-center">Resumen mensual de <%= l(@date, format: "%B %Y") %> de <%= current_user.name %></h3></div>
+
+                <table class="table table-bordered font12 text-center">
+                  <thead>
+                    <tr class="active">
+                      <td><strong>Fecha</strong></td>
+                      <td><strong>Proyecto</strong></td>
+                      <td><strong>Recurso</strong></td>
+                      <td><strong>Comentario</strong></td>
+                      <td><strong>Pedido</strong></td>
+                      <td><strong>Horas ordinarias facturadas</strong></td>
+                      <td><strong>Horas no facturadas</strong></td>
+                      <td><strong>Extra</strong></td>
+                      <td><strong>Nocturnas</strong></td>
+                      <td><strong>Vacaciones</strong></td>
+                      <td><strong>Viaje</strong></td>
+                      <td><strong>Espera</strong></td>
+                      <td><strong>Bolsa de horas generadas</strong></td>
+                      <td><strong>Bolsa de horas utilizadas</strong></td>
+                    </tr>
+                  </thead>
+                  <tbody>
+
+                    <tr>
+                      <% Post.where(:alta => @date.beginning_of_month..@date.end_of_month, :user_id => current_user).order(alta: :asc).each do |post| %>
+                      <td class="wspace"><h6><%= post.alta %></h6></td>
+                      <td class="wspace"><h6><%= post.proyecto %></h6></td>
+                      <td class="wspace"><h6><%= post.title %></h6></td>
+                      <td><h6><%= post.content %></h6></td>
+                      <td><h6><%= post.pedido %></h6></td>
+                      <td><h6><%= post.horasof %></h6></td>
+                      <td><h6><%= post.horasnf %></h6></td>
+                      <td><h6><%= post.extra %></h6></td>
+                      <td><h6><%= post.nocturnas %></h6></td>
+                      <td><h6><%= post.vacaciones %></h6></td>
+                      <td><h6><%= post.viaje %></h6></td>
+                      <td><h6><%= post.espera %></h6></td>
+                      <td><h6><%= post.bolsahg %></h6></td>
+                      <td><h6><%= post.bolsahu %></h6></td>
+
+                    </tr>
+                    <% end %>
+                    <tr class="active">
+                      <td colspan = "5" class="text-right"><strong>Total <%= l(@date, format: "%B %Y") %></strong></td>
+                      <td><strong><%= Post.where(:alta => @date.beginning_of_month..@date.end_of_month, :user_id => current_user).sum(:horasof) %></strong></td>
+                      <td><strong><%= Post.where(:alta => @date.beginning_of_month..@date.end_of_month, :user_id => current_user).sum(:horasnf) %></strong></td>
+                      <td><strong><%= Post.where(:alta => @date.beginning_of_month..@date.end_of_month, :user_id => current_user).sum(:extra) %></strong></td>
+                      <td><strong><%= Post.where(:alta => @date.beginning_of_month..@date.end_of_month, :user_id => current_user).sum(:nocturnas) %></strong></td>
+                      <td><strong><%= Post.where(:alta => @date.beginning_of_month..@date.end_of_month, :user_id => current_user).sum(:vacaciones) %></strong></td>
+                      <td><strong><%= Post.where(:alta => @date.beginning_of_month..@date.end_of_month, :user_id => current_user).sum(:viaje) %></strong></td>
+                      <td><strong><%= Post.where(:alta => @date.beginning_of_month..@date.end_of_month, :user_id => current_user).sum(:espera) %></strong></td>
+                      <td><strong><%= Post.where(:alta => @date.beginning_of_month..@date.end_of_month, :user_id => current_user).sum(:bolsahg) %></strong></td>
+                      <td><strong><%= Post.where(:alta => @date.beginning_of_month..@date.end_of_month, :user_id => current_user).sum(:bolsahu) %></strong></td>
+                    </tr>
+
+                  </tbody>
+                </table>
+              </div>
+
+
+
+
+
+
+            </div>
+            <% end %>
+            <br> 
+
+            <%= render 'footer' %>
+
+          </div>
 

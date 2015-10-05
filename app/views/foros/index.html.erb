@@ -1,6 +1,6 @@
 <%= render 'posts/header' %>
 
-
+<div class="container">
 <div class="row">
 <%= select_tag 'proyectos', options_for_select(@proyectos.collect{ |u| [u.proyecto, u.id] },params[:search]), :include_blank => "Seleccionar proyecto" ,autofocus: "true", class: "form-control form-group input-sm", :onchange => "window.location.replace('/foros/index?&search='+$(this).val());" %>
   
@@ -71,3 +71,4 @@
               <% end %>
 
               <% end %>
+              </div>

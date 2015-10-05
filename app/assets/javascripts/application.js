@@ -13,26 +13,26 @@
 //= require jquery
 //= require jquery_ujs
 //= require twitter/bootstrap
+//= require jquery.turbolinks
 //= require turbolinks
 //= require bootstrap-datepicker/core
 //= require bootstrap-datepicker/locales/bootstrap-datepicker.es.js
 //= require_tree .
 
-$(document).ready(function(){
-    $('.datepicker').datepicker({
-    	autoclose: 'true',
-    	language: 'es',
-    	orientation: 'top auto',
-    	dateFormat: 'dd-mm-yyyy',
-    	todayHighlight: true,
-    	todayBtn: true
-    });
-  });
 
-$('#mesestab a').click(function (e) {
-  e.preventDefault()
-  $(this).tab('show')
-});
+$(document).ready(function () {
+    $('.datepicker').datepicker({
+      autoclose: 'true',
+      language: 'es',
+      orientation: 'top auto',
+      dateFormat: 'dd-mm-yyyy',
+      todayHighlight: true,
+      todayBtn: true
+    });
+    });
+
+
+
 
 $('.collapse').collapse({ collapsible: true, active: false });
 $(function () {
@@ -50,13 +50,28 @@ window.setTimeout(function() {
 });
 
 
-$(document).ready(function(){
-$( "#tabs li:first" ).addClass( "active" );
+
+
+
+
+$(document).ready(function() {
+    if(location.hash) {
+        $('a[href=' + location.hash + ']').tab('show');
+    }
+    $(document.body).on("click", "a[data-toggle]", function(event) {
+        location.hash = this.getAttribute("href");
+    });
 });
-$(window).load(function(){
-$( ".tab-pane " ).first().addClass( "active" );
+$(window).on('popstate', function() {
+    var anchor = location.hash || $("a[data-toggle=tab]").first().attr("href");
+    $('a[href=' + anchor + ']').tab('show');
 });
 
+$(document).ready(function(){
+$('a[data-toggle="tab"]').on('shown.bs.tab', function (e) {
+  location.reload();
+});
+});
 
 
 
