@@ -58,6 +58,7 @@ class PostsController < ApplicationController
     @post = Post.new
   end
 
+
   def resumen
     @posts = Post.all.search(params[:search])
     @posts = @posts.group_by(&:alta)
@@ -144,6 +145,6 @@ class PostsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def post_params
-      params.require(:post).permit(:title, :content, :pedido, :horasof, :horasnf, :extra, :extraf, :nocturnas, :vacaciones, :bolsahg, :bolsahu, :alta, :search, :status, :proyecto, :cliente, :user_id, :inicio, :fin, :name, :viaje, :espera )
+      params.require(:post).permit(:title, :content, :pedido, :horasof, :horasnf, :extra, :extraf, :nocturnas, :vacaciones, :bolsahg, :bolsahu, :alta, :search, :status, :proyecto, :cliente, :user_id, :inicio, :fin, :name, :viaje, :espera, :total )
     end
 end

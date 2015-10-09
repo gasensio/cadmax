@@ -73,3 +73,5 @@ end
   gem 'groupdate'
 
   gem 'jquery-turbolinks'
+
+  gem 'lazy_high_charts'

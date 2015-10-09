@@ -18,6 +18,7 @@
 //= require bootstrap-datepicker/core
 //= require bootstrap-datepicker/locales/bootstrap-datepicker.es.js
 //= require_tree .
+//= require highcharts/highstock
 
 
 $(document).ready(function () {

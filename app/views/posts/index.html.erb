@@ -358,6 +358,9 @@
                   <%= link_to post, data: {toggle: "modal", tooltip: "tooltip", title: "#{post.proyecto} - #{post.title}", target: "#mytable_#{post.id}"} do %>
                   <%= post.proyecto %> - <%= post.title %><br><%= post.user.name %> - 
                    <%= Post.where(:alta => date, :id => post.id).sum(:horasof) + Post.where(:alta => date, :id => post.id).sum(:horasnf) + Post.where(:alta => date, :id => post.id).sum(:extra) + Post.where(:alta => date, :id => post.id).sum(:extraf) + Post.where(:alta => date, :id => post.id).sum(:nocturnas) + Post.where(:alta => date, :id => post.id).sum(:vacaciones) + Post.where(:alta => date, :id => post.id).sum(:bolsahg) + Post.where(:alta => date, :id => post.id).sum(:bolsahu) + Post.where(:alta => date, :id => post.id).sum(:viaje) + Post.where(:alta => date, :id => post.id).sum(:espera) %> h
+                   <%= @total
+                   %>
+
                   <div class="pull-right">
                     <%= link_to '' , post, class: "fa fa-pencil", remote: :true, data: {toggle: "modal", target: "#myupdatepost_#{post.id}"} %>
                     <%= link_to '' , post, method: :delete, class: "fa fa-trash-o", remote: :true, data: {confirm: 'Are you sure?'} %>

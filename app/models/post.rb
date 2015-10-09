@@ -12,6 +12,16 @@ class Post < ActiveRecord::Base
   		all
   	end
   end
+  
+  def self.horasof_on(date)
+  where("date(alta) = ?", date).sum(:horasof)
+  end
+  def self.horasnf_on(date)
+  where("date(alta) = ?", date).sum(:horasnf)
+  end
+  def self.nocturnas_on(date)
+  where("date(alta) = ?", date).sum(:nocturnas)
+  end
 
 
   def self.to_csv(options = {})

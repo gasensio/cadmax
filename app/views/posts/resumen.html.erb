@@ -42,15 +42,62 @@
 
       <div class="row" id="<%= user.id %>">
   <div class="col-md-12">
-
-        <% data = [{name: "Horas Ordinarias Facturadas", data: user.posts.map{|t| [t.alta, t.horasof.to_i] }},
-  {name: "Horas Extras", data: user.posts.map{|t| [t.alta, t.extra.to_i] }},
-  {name: "Horas Nocturnas", data: user.posts.map{|t| [t.alta, t.nocturnas.to_i] }}
-  ] %>
-
-
-    <%= line_chart data , id: "#{user.id}-chart", library: { }%>
-
+	
+	<script type="text/javascript" chartset="utf-8" >
+	$(function(){
+		new Highcharts.Chart({
+			chart: {
+				type: 'spline',
+				renderTo: "post_chart<%= user.id %>"
+			},
+			title: {
+				text: "Resumen horas de <%= l(@date, format: "%B %Y") %>"
+			},
+			xAxis: {
+				type: "datetime"
+			},
+			yAxis: {
+				title:{
+					text: "Horas"
+				},
+				min: 0
+			},
+			tooltip: {
+			           formatter: function() {
+				return Highcharts.dateFormat("%d-%b-%Y", this.x) + '- '  + Highcharts.numberFormat(this.y, 2) + " Horas";
+			}
+			        },
+			
+			series: [{
+				name: "Horas ordinarias facturadas",
+				pointInterval: <%= 1.day * 1000 %>,
+				pointStart: <%= @date.beginning_of_month.strftime('%Q') %>,
+				pointEnd: <%= @date.end_of_month.strftime('%Q') %>,
+				data: <%= (@date.beginning_of_month..@date.end_of_month).map { |date| user.posts.horasof_on(date).to_f }.inspect %>
+			},
+			{
+				name: "Horas no facturadas",
+				pointInterval: <%= 1.day * 1000 %>,
+				pointStart: <%= @date.beginning_of_month.strftime('%Q') %>,
+				pointEnd: <%= @date.end_of_month.strftime('%Q') %>,
+				data: <%= (@date.beginning_of_month..@date.end_of_month).map { |date| user.posts.horasnf_on(date).to_f }.inspect %>
+			},
+			{
+				name: "Nocturnas",
+				pointInterval: <%= 1.day * 1000 %>,
+				pointStart: <%= @date.beginning_of_month.strftime('%Q') %>,
+				pointStart: <%= @date.beginning_of_month.strftime('%Q') %>,
+				data: <%= (@date.beginning_of_month..@date.end_of_month).map { |date| user.posts.nocturnas_on(date).to_f }.inspect %>
+			}]
+			
+		});
+	});	
+	</script>
+	
+	<div class="row">
+	<div id="post_chart<%= user.id %>"></div>
+	</div>
+<br>
 </div>
 </div>
 
