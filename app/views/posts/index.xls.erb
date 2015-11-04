@@ -12,12 +12,15 @@
         <Cell><Data ss:Type="String">Titulo</Data></Cell>
         <Cell><Data ss:Type="String">Comentario</Data></Cell>
         <Cell><Data ss:Type="String">Pedido</Data></Cell>
+        <Cell><Data ss:Type="String">Horario</Data></Cell>
         <Cell><Data ss:Type="String">Horas ordinarias facturadas</Data></Cell>
         <Cell><Data ss:Type="String">Horas ordinarias no facturadas</Data></Cell>
         <Cell><Data ss:Type="String">Extras</Data></Cell>
         <Cell><Data ss:Type="String">Extras festivas</Data></Cell>
         <Cell><Data ss:Type="String">Nocturnas</Data></Cell>
         <Cell><Data ss:Type="String">Vacaciones</Data></Cell>
+        <Cell><Data ss:Type="String">Viaje</Data></Cell>
+        <Cell><Data ss:Type="String">Espera</Data></Cell>
         <Cell><Data ss:Type="String">Bolsa de horas generadas</Data></Cell>
         <Cell><Data ss:Type="String">Bolsa de horas utilizadas</Data></Cell>
 
@@ -29,12 +32,15 @@
         <Cell><Data ss:Type="String"><%= post.title %></Data></Cell>
         <Cell><Data ss:Type="String"><%= post.content %></Data></Cell>
         <Cell><Data ss:Type="String"><%= post.pedido %></Data></Cell>
+        <Cell><Data ss:Type="String"><%= post.inicio.try(:strftime, "%H:%M") %> - <%= post.fin.try(:strftime, "%H:%M") %></Data></Cell>
         <Cell><Data ss:Type="Number"><%= post.horasof %></Data></Cell>
         <Cell><Data ss:Type="Number"><%= post.horasnf %></Data></Cell>
         <Cell><Data ss:Type="Number"><%= post.extra %></Data></Cell>
         <Cell><Data ss:Type="Number"><%= post.extraf %></Data></Cell>
         <Cell><Data ss:Type="Number"><%= post.nocturnas %></Data></Cell>
         <Cell><Data ss:Type="Number"><%= post.vacaciones %></Data></Cell>
+        <Cell><Data ss:Type="Number"><%= post.viaje %></Data></Cell>
+        <Cell><Data ss:Type="Number"><%= post.espera %></Data></Cell>
         <Cell><Data ss:Type="Number"><%= post.bolsahg %></Data></Cell>
         <Cell><Data ss:Type="Number"><%= post.bolsahu %></Data></Cell>
       </Row>

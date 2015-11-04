@@ -11,7 +11,10 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150930225814) do
+ActiveRecord::Schema.define(version: 20151103192339) do
+
+  # These are extensions that must be enabled in order to support this database
+  enable_extension "plpgsql"
 
   create_table "clientes", force: :cascade do |t|
     t.string   "name"
@@ -19,7 +22,7 @@ ActiveRecord::Schema.define(version: 20150930225814) do
     t.datetime "updated_at", null: false
   end
 
-  add_index "clientes", ["name"], name: "index_clientes_on_name"
+  add_index "clientes", ["name"], name: "index_clientes_on_name", using: :btree
 
   create_table "foros", force: :cascade do |t|
     t.string   "titulo"
@@ -53,11 +56,12 @@ ActiveRecord::Schema.define(version: 20150930225814) do
     t.time     "fin"
     t.decimal  "viaje"
     t.decimal  "espera"
+    t.string   "recurso"
   end
 
-  add_index "posts", ["alta"], name: "index_posts_on_alta"
-  add_index "posts", ["proyecto"], name: "index_posts_on_proyecto"
-  add_index "posts", ["user_id"], name: "index_posts_on_user_id"
+  add_index "posts", ["alta"], name: "index_posts_on_alta", using: :btree
+  add_index "posts", ["proyecto"], name: "index_posts_on_proyecto", using: :btree
+  add_index "posts", ["user_id"], name: "index_posts_on_user_id", using: :btree
 
   create_table "proyectos", force: :cascade do |t|
     t.string   "proyecto"
@@ -65,7 +69,13 @@ ActiveRecord::Schema.define(version: 20150930225814) do
     t.datetime "updated_at", null: false
   end
 
-  add_index "proyectos", ["proyecto"], name: "index_proyectos_on_proyecto"
+  add_index "proyectos", ["proyecto"], name: "index_proyectos_on_proyecto", using: :btree
+
+  create_table "recursos", force: :cascade do |t|
+    t.string   "name"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
 
   create_table "users", force: :cascade do |t|
     t.string   "name"
@@ -84,7 +94,7 @@ ActiveRecord::Schema.define(version: 20150930225814) do
     t.datetime "updated_at",                          null: false
   end
 
-  add_index "users", ["email"], name: "index_users_on_email", unique: true
-  add_index "users", ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
+  add_index "users", ["email"], name: "index_users_on_email", unique: true, using: :btree
+  add_index "users", ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true, using: :btree
 
 end

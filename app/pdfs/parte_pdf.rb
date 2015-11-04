@@ -1,8 +1,9 @@
 class PartePdf < Prawn::Document
 
-	def initialize(post)
+	def initialize(post, view)
 		super(top_margin: 40)
 		@post = post
+		@view = view
 		logo
 		cliente
 		proyecto
@@ -12,6 +13,7 @@ class PartePdf < Prawn::Document
 		tecnico
 		horario
 		footer
+
 
 	end
 
@@ -50,7 +52,7 @@ class PartePdf < Prawn::Document
 	end
 	def tecnico
 		move_down 10
-		data = [[" Tecnico #{@post.user.name}", "Cliente #{@post.cliente}"]]
+		data = [[" Tecnico #{@view.current_user.name}", "Cliente #{@post.cliente}"]]
 		table(data, :column_widths => [270, 270], :cell_style => {:padding => 10, :height => 150,:size => 8, :border_color => "999999"})
 	end
 	def horario
@@ -66,6 +68,10 @@ class PartePdf < Prawn::Document
 		text_box "CADMAX INGENIERIA S.L
 		AVENIDA DE CASTILLA, Nº 1, 1ª PLANTA, OFICINA 12A. 28830 SAN FERNANDO DE HENARES. MADRID", align: :center, size: 8, :at => [0, 20]
 	end
+
+
+
+
 	
 
 	

@@ -185,7 +185,7 @@
         </thead>
         <tbody>
 
-          <tr>
+
 
                <tr>
                 <td><strong>Total anual</strong></td>
@@ -199,6 +199,7 @@
                 <td><strong><%= Post.where(:alta => @date.beginning_of_year..@date.end_of_year, :user_id => user).sum(:bolsahg) %></strong></td>
                 <td><strong><%= Post.where(:alta => @date.beginning_of_year..@date.end_of_year, :user_id => user).sum(:bolsahu) %></strong></td>
                </tr>
+
 
         </tbody>
       </table>

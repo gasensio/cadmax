@@ -1,0 +1,2802 @@
+2015-10-18 02:28:21[WARN] user: gabase
+http://localhost:3000/posts/resumen
+Unused Eager Loading detected
+  User => [:posts]
+  Remove from your finder: :includes => [:posts]
+
+2015-10-18 02:28:26[WARN] user: gabase
+http://localhost:3000/posts/resumen
+Unused Eager Loading detected
+  User => [:posts]
+  Remove from your finder: :includes => [:posts]
+
+2015-10-18 02:28:43[WARN] user: gabase
+http://localhost:3000/posts/resumen?date=18-09-2015
+Unused Eager Loading detected
+  User => [:posts]
+  Remove from your finder: :includes => [:posts]
+
+2015-10-18 02:28:47[WARN] user: gabase
+http://localhost:3000/posts/resumen?date=18-09-2015
+Unused Eager Loading detected
+  User => [:posts]
+  Remove from your finder: :includes => [:posts]
+
+2015-10-18 02:34:53[WARN] user: gabase
+http://localhost:3000/posts/resumen
+Unused Eager Loading detected
+  User => [:posts]
+  Remove from your finder: :includes => [:posts]
+
+2015-10-18 02:36:53[WARN] user: gabase
+http://localhost:3000/posts/resumen
+Unused Eager Loading detected
+  User => [:posts]
+  Remove from your finder: :includes => [:posts]
+
+2015-10-18 02:38:38[WARN] user: gabase
+http://localhost:3000/posts/resumen
+Unused Eager Loading detected
+  User => [:posts]
+  Remove from your finder: :includes => [:posts]
+
+2015-10-18 02:38:41[WARN] user: gabase
+http://localhost:3000/posts/resumen
+Unused Eager Loading detected
+  User => [:posts]
+  Remove from your finder: :includes => [:posts]
+
+2015-10-18 02:38:43[WARN] user: gabase
+http://localhost:3000/posts/resumen
+Unused Eager Loading detected
+  User => [:posts]
+  Remove from your finder: :includes => [:posts]
+
+2015-10-18 02:38:47[WARN] user: gabase
+http://localhost:3000/posts/resumen
+Unused Eager Loading detected
+  User => [:posts]
+  Remove from your finder: :includes => [:posts]
+
+2015-10-18 02:38:49[WARN] user: gabase
+http://localhost:3000/posts/resumen
+Unused Eager Loading detected
+  User => [:posts]
+  Remove from your finder: :includes => [:posts]
+
+2015-10-18 02:38:54[WARN] user: gabase
+http://localhost:3000/posts/resumen
+Unused Eager Loading detected
+  User => [:posts]
+  Remove from your finder: :includes => [:posts]
+
+2015-10-18 02:41:36[WARN] user: gabase
+http://localhost:3000/posts/resumen
+Unused Eager Loading detected
+  User => [:posts]
+  Remove from your finder: :includes => [:posts]
+
+2015-10-18 02:45:22[WARN] user: gabase
+http://localhost:3000/posts/resumen
+Unused Eager Loading detected
+  User => [:posts]
+  Remove from your finder: :includes => [:posts]
+
+2015-10-18 02:45:27[WARN] user: gabase
+http://localhost:3000/posts/resumen
+Unused Eager Loading detected
+  User => [:posts]
+  Remove from your finder: :includes => [:posts]
+
+2015-10-18 02:45:38[WARN] user: gabase
+http://localhost:3000/posts/resumen
+Unused Eager Loading detected
+  User => [:posts]
+  Remove from your finder: :includes => [:posts]
+
+2015-10-18 02:45:44[WARN] user: gabase
+http://localhost:3000/posts/resumen
+Unused Eager Loading detected
+  User => [:posts]
+  Remove from your finder: :includes => [:posts]
+
+2015-10-18 02:45:50[WARN] user: gabase
+http://localhost:3000/posts/resumen
+Unused Eager Loading detected
+  User => [:posts]
+  Remove from your finder: :includes => [:posts]
+
+2015-10-18 02:45:54[WARN] user: gabase
+http://localhost:3000/posts/resumen
+Unused Eager Loading detected
+  User => [:posts]
+  Remove from your finder: :includes => [:posts]
+
+2015-10-18 02:45:56[WARN] user: gabase
+http://localhost:3000/posts/resumen
+Unused Eager Loading detected
+  User => [:posts]
+  Remove from your finder: :includes => [:posts]
+
+2015-10-18 02:45:59[WARN] user: gabase
+http://localhost:3000/posts/resumen
+Unused Eager Loading detected
+  User => [:posts]
+  Remove from your finder: :includes => [:posts]
+
+2015-10-18 02:46:02[WARN] user: gabase
+http://localhost:3000/posts/resumen
+Unused Eager Loading detected
+  User => [:posts]
+  Remove from your finder: :includes => [:posts]
+
+2015-10-18 02:46:06[WARN] user: gabase
+http://localhost:3000/posts/resumen
+Unused Eager Loading detected
+  User => [:posts]
+  Remove from your finder: :includes => [:posts]
+
+2015-10-18 02:46:17[WARN] user: gabase
+http://localhost:3000/posts/resumen
+Unused Eager Loading detected
+  User => [:posts]
+  Remove from your finder: :includes => [:posts]
+
+2015-10-18 02:46:21[WARN] user: gabase
+http://localhost:3000/posts/resumen
+Unused Eager Loading detected
+  User => [:posts]
+  Remove from your finder: :includes => [:posts]
+
+2015-10-18 02:48:37[WARN] user: gabase
+http://localhost:3000/posts/resumen
+Unused Eager Loading detected
+  User => [:posts]
+  Remove from your finder: :includes => [:posts]
+
+2015-10-18 02:48:40[WARN] user: gabase
+http://localhost:3000/posts/resumen
+Unused Eager Loading detected
+  User => [:posts]
+  Remove from your finder: :includes => [:posts]
+
+2015-10-18 02:50:40[WARN] user: gabase
+http://localhost:3000/posts/resumen
+Unused Eager Loading detected
+  User => [:posts]
+  Remove from your finder: :includes => [:posts]
+
+2015-10-18 02:50:44[WARN] user: gabase
+http://localhost:3000/posts/resumen
+Unused Eager Loading detected
+  User => [:posts]
+  Remove from your finder: :includes => [:posts]
+
+2015-10-18 02:51:41[WARN] user: gabase
+http://localhost:3000/posts/resumen
+Unused Eager Loading detected
+  User => [:posts]
+  Remove from your finder: :includes => [:posts]
+
+2015-10-18 02:52:26[WARN] user: gabase
+http://localhost:3000/posts/resumen
+Unused Eager Loading detected
+  User => [:posts]
+  Remove from your finder: :includes => [:posts]
+
+2015-10-18 02:52:30[WARN] user: gabase
+http://localhost:3000/posts/resumen
+Unused Eager Loading detected
+  User => [:posts]
+  Remove from your finder: :includes => [:posts]
+
+2015-10-18 02:52:45[WARN] user: gabase
+http://localhost:3000/?date=18-07-2015
+Unused Eager Loading detected
+  Post => [:user]
+  Remove from your finder: :includes => [:user]
+
+2015-10-18 02:52:48[WARN] user: gabase
+http://localhost:3000/?date=18-06-2015
+Unused Eager Loading detected
+  Post => [:user]
+  Remove from your finder: :includes => [:user]
+
+2015-10-18 02:52:51[WARN] user: gabase
+http://localhost:3000/?date=18-05-2015
+Unused Eager Loading detected
+  Post => [:user]
+  Remove from your finder: :includes => [:user]
+
+2015-10-18 02:52:53[WARN] user: gabase
+http://localhost:3000/?date=18-06-2015
+Unused Eager Loading detected
+  Post => [:user]
+  Remove from your finder: :includes => [:user]
+
+2015-10-18 02:52:55[WARN] user: gabase
+http://localhost:3000/?date=18-07-2015
+Unused Eager Loading detected
+  Post => [:user]
+  Remove from your finder: :includes => [:user]
+
+2015-10-18 02:53:03[WARN] user: gabase
+http://localhost:3000/posts/resumen
+Unused Eager Loading detected
+  User => [:posts]
+  Remove from your finder: :includes => [:posts]
+
+2015-10-18 02:53:07[WARN] user: gabase
+http://localhost:3000/posts/resumen
+Unused Eager Loading detected
+  User => [:posts]
+  Remove from your finder: :includes => [:posts]
+
+2015-10-18 02:54:24[WARN] user: gabase
+http://localhost:3000/posts/resumen
+Unused Eager Loading detected
+  User => [:posts]
+  Remove from your finder: :includes => [:posts]
+
+2015-10-18 02:54:28[WARN] user: gabase
+http://localhost:3000/posts/resumen
+Unused Eager Loading detected
+  User => [:posts]
+  Remove from your finder: :includes => [:posts]
+
+2015-10-18 02:54:43[WARN] user: gabase
+http://localhost:3000/posts/resumen
+Unused Eager Loading detected
+  User => [:posts]
+  Remove from your finder: :includes => [:posts]
+
+2015-10-18 02:54:52[WARN] user: gabase
+http://localhost:3000/posts/resumen
+Unused Eager Loading detected
+  User => [:posts]
+  Remove from your finder: :includes => [:posts]
+
+2015-10-18 02:54:55[WARN] user: gabase
+http://localhost:3000/posts/resumen
+Unused Eager Loading detected
+  User => [:posts]
+  Remove from your finder: :includes => [:posts]
+
+2015-10-18 02:55:13[WARN] user: gabase
+http://localhost:3000/posts/resumen
+Unused Eager Loading detected
+  User => [:posts]
+  Remove from your finder: :includes => [:posts]
+
+2015-10-18 02:56:14[WARN] user: gabase
+http://localhost:3000/posts/resumen
+Unused Eager Loading detected
+  User => [:posts]
+  Remove from your finder: :includes => [:posts]
+
+2015-10-18 02:56:32[WARN] user: gabase
+http://localhost:3000/posts/resumen
+Unused Eager Loading detected
+  User => [:posts]
+  Remove from your finder: :includes => [:posts]
+
+2015-10-18 02:57:29[WARN] user: gabase
+http://localhost:3000/posts/resumen
+Unused Eager Loading detected
+  User => [:posts]
+  Remove from your finder: :includes => [:posts]
+
+2015-10-18 02:57:46[WARN] user: gabase
+http://localhost:3000/posts/resumen
+Unused Eager Loading detected
+  User => [:posts]
+  Remove from your finder: :includes => [:posts]
+
+2015-10-18 02:58:00[WARN] user: gabase
+http://localhost:3000/posts/resumen
+Unused Eager Loading detected
+  User => [:posts]
+  Remove from your finder: :includes => [:posts]
+
+2015-10-18 02:58:18[WARN] user: gabase
+http://localhost:3000/posts/resumen
+Unused Eager Loading detected
+  User => [:posts]
+  Remove from your finder: :includes => [:posts]
+
+2015-10-18 02:58:44[WARN] user: gabase
+http://localhost:3000/posts/resumen
+Unused Eager Loading detected
+  User => [:posts]
+  Remove from your finder: :includes => [:posts]
+
+2015-10-18 02:58:58[WARN] user: gabase
+http://localhost:3000/posts/resumen
+Unused Eager Loading detected
+  User => [:posts]
+  Remove from your finder: :includes => [:posts]
+
+2015-10-18 02:59:36[WARN] user: gabase
+http://localhost:3000/posts/resumen
+Unused Eager Loading detected
+  User => [:posts]
+  Remove from your finder: :includes => [:posts]
+
+2015-10-18 03:00:15[WARN] user: gabase
+http://localhost:3000/posts/resumen
+Unused Eager Loading detected
+  User => [:posts]
+  Remove from your finder: :includes => [:posts]
+
+2015-10-18 03:00:29[WARN] user: gabase
+http://localhost:3000/posts/resumen
+Unused Eager Loading detected
+  User => [:posts]
+  Remove from your finder: :includes => [:posts]
+
+2015-10-18 03:00:33[WARN] user: gabase
+http://localhost:3000/posts/resumen
+Unused Eager Loading detected
+  User => [:posts]
+  Remove from your finder: :includes => [:posts]
+
+2015-10-18 03:01:16[WARN] user: gabase
+http://localhost:3000/posts/resumen
+Unused Eager Loading detected
+  User => [:posts]
+  Remove from your finder: :includes => [:posts]
+
+2015-10-18 03:01:19[WARN] user: gabase
+http://localhost:3000/posts/resumen
+Unused Eager Loading detected
+  User => [:posts]
+  Remove from your finder: :includes => [:posts]
+
+2015-10-18 03:03:50[WARN] user: gabase
+http://localhost:3000/posts/resumen
+Unused Eager Loading detected
+  User => [:posts]
+  Remove from your finder: :includes => [:posts]
+
+2015-10-18 03:03:54[WARN] user: gabase
+http://localhost:3000/posts/resumen
+Unused Eager Loading detected
+  User => [:posts]
+  Remove from your finder: :includes => [:posts]
+
+2015-10-18 03:11:44[WARN] user: gabase
+http://localhost:3000/posts/resumen
+Unused Eager Loading detected
+  User => [:posts]
+  Remove from your finder: :includes => [:posts]
+
+2015-10-18 03:11:52[WARN] user: gabase
+http://localhost:3000/posts/resumen
+Unused Eager Loading detected
+  User => [:posts]
+  Remove from your finder: :includes => [:posts]
+
+2015-10-18 03:11:55[WARN] user: gabase
+http://localhost:3000/posts/resumen
+Unused Eager Loading detected
+  User => [:posts]
+  Remove from your finder: :includes => [:posts]
+
+2015-10-18 03:13:59[WARN] user: gabase
+http://localhost:3000/?date=18-08-2015
+Unused Eager Loading detected
+  Post => [:user]
+  Remove from your finder: :includes => [:user]
+
+2015-10-18 22:52:56[WARN] user: gabase
+http://localhost:3000/admin/post?_pjax=%5Bdata-pjax-container%5D
+Unused Eager Loading detected
+  Post => [:user]
+  Remove from your finder: :includes => [:user]
+
+2015-10-18 22:53:20[WARN] user: gabase
+http://localhost:3000/admin/post?_pjax=%5Bdata-pjax-container%5D
+Unused Eager Loading detected
+  Post => [:user]
+  Remove from your finder: :includes => [:user]
+
+2015-10-18 22:53:55[WARN] user: gabase
+http://localhost:3000/admin/post?_pjax=%5Bdata-pjax-container%5D
+Unused Eager Loading detected
+  Post => [:user]
+  Remove from your finder: :includes => [:user]
+
+2015-10-18 23:01:12[WARN] user: gabase
+http://localhost:3000/posts/resumen
+Unused Eager Loading detected
+  User => [:posts]
+  Remove from your finder: :includes => [:posts]
+
+2015-10-18 23:01:16[WARN] user: gabase
+http://localhost:3000/posts/resumen
+Unused Eager Loading detected
+  User => [:posts]
+  Remove from your finder: :includes => [:posts]
+
+2015-10-18 23:34:35[WARN] user: gabase
+http://localhost:3000/posts/resumen
+Unused Eager Loading detected
+  User => [:posts]
+  Remove from your finder: :includes => [:posts]
+
+2015-10-18 23:34:42[WARN] user: gabase
+http://localhost:3000/posts/resumen
+Unused Eager Loading detected
+  User => [:posts]
+  Remove from your finder: :includes => [:posts]
+
+2015-10-23 20:10:27[WARN] user: gabase
+http://localhost:3000/?date=23-08-2015
+Unused Eager Loading detected
+  Post => [:user]
+  Remove from your finder: :includes => [:user]
+
+2015-10-24 15:02:31[WARN] user: gabase
+http://localhost:3000/posts/21.pdf
+N+1 Query detected
+  Post => [:user]
+  Add to your finder: :includes => [:user]
+N+1 Query method call stack
+  /Users/gabase/work/cadmax/app/pdfs/parte_pdf.rb:76:in `block in nuevo'
+  /Users/gabase/work/cadmax/app/pdfs/parte_pdf.rb:74:in `nuevo'
+  /Users/gabase/work/cadmax/app/pdfs/parte_pdf.rb:15:in `initialize'
+  /Users/gabase/work/cadmax/app/controllers/posts_controller.rb:48:in `new'
+  /Users/gabase/work/cadmax/app/controllers/posts_controller.rb:48:in `block (2 levels) in show'
+  /Users/gabase/work/cadmax/app/controllers/posts_controller.rb:43:in `show'
+
+/Users/gabase/work/cadmax/app/pdfs/parte_pdf.rb:76:in `block in nuevo'
+/Users/gabase/work/cadmax/app/pdfs/parte_pdf.rb:74:in `nuevo'
+/Users/gabase/work/cadmax/app/pdfs/parte_pdf.rb:15:in `initialize'
+/Users/gabase/work/cadmax/app/controllers/posts_controller.rb:48:in `new'
+/Users/gabase/work/cadmax/app/controllers/posts_controller.rb:48:in `block (2 levels) in show'
+/Users/gabase/work/cadmax/app/controllers/posts_controller.rb:43:in `show'2015-10-24 16:08:43[WARN] user: gabase
+http://localhost:3000/posts/17.pdf
+N+1 Query detected
+  Post => [:user]
+  Add to your finder: :includes => [:user]
+N+1 Query method call stack
+  /Users/gabase/work/cadmax/app/pdfs/parte_pdf.rb:78:in `block in nuevo'
+  /Users/gabase/work/cadmax/app/pdfs/parte_pdf.rb:75:in `nuevo'
+  /Users/gabase/work/cadmax/app/pdfs/parte_pdf.rb:15:in `initialize'
+  /Users/gabase/work/cadmax/app/controllers/posts_controller.rb:48:in `new'
+  /Users/gabase/work/cadmax/app/controllers/posts_controller.rb:48:in `block (2 levels) in show'
+  /Users/gabase/work/cadmax/app/controllers/posts_controller.rb:43:in `show'
+
+/Users/gabase/work/cadmax/app/pdfs/parte_pdf.rb:78:in `block in nuevo'
+/Users/gabase/work/cadmax/app/pdfs/parte_pdf.rb:75:in `nuevo'
+/Users/gabase/work/cadmax/app/pdfs/parte_pdf.rb:15:in `initialize'
+/Users/gabase/work/cadmax/app/controllers/posts_controller.rb:48:in `new'
+/Users/gabase/work/cadmax/app/controllers/posts_controller.rb:48:in `block (2 levels) in show'
+/Users/gabase/work/cadmax/app/controllers/posts_controller.rb:43:in `show'2015-10-24 16:13:18[WARN] user: gabase
+http://localhost:3000/posts/17.pdf
+N+1 Query detected
+  Post => [:user]
+  Add to your finder: :includes => [:user]
+N+1 Query method call stack
+  /Users/gabase/work/cadmax/app/pdfs/parte_pdf.rb:78:in `block in nuevo'
+  /Users/gabase/work/cadmax/app/pdfs/parte_pdf.rb:75:in `nuevo'
+  /Users/gabase/work/cadmax/app/pdfs/parte_pdf.rb:15:in `initialize'
+  /Users/gabase/work/cadmax/app/controllers/posts_controller.rb:48:in `new'
+  /Users/gabase/work/cadmax/app/controllers/posts_controller.rb:48:in `block (2 levels) in show'
+  /Users/gabase/work/cadmax/app/controllers/posts_controller.rb:43:in `show'
+
+/Users/gabase/work/cadmax/app/pdfs/parte_pdf.rb:78:in `block in nuevo'
+/Users/gabase/work/cadmax/app/pdfs/parte_pdf.rb:75:in `nuevo'
+/Users/gabase/work/cadmax/app/pdfs/parte_pdf.rb:15:in `initialize'
+/Users/gabase/work/cadmax/app/controllers/posts_controller.rb:48:in `new'
+/Users/gabase/work/cadmax/app/controllers/posts_controller.rb:48:in `block (2 levels) in show'
+/Users/gabase/work/cadmax/app/controllers/posts_controller.rb:43:in `show'2015-10-24 16:18:47[WARN] user: gabase
+http://localhost:3000/posts/17.pdf
+N+1 Query detected
+  Post => [:user]
+  Add to your finder: :includes => [:user]
+N+1 Query method call stack
+  /Users/gabase/work/cadmax/app/pdfs/parte_pdf.rb:78:in `block in nuevo'
+  /Users/gabase/work/cadmax/app/pdfs/parte_pdf.rb:75:in `nuevo'
+  /Users/gabase/work/cadmax/app/pdfs/parte_pdf.rb:15:in `initialize'
+  /Users/gabase/work/cadmax/app/controllers/posts_controller.rb:48:in `new'
+  /Users/gabase/work/cadmax/app/controllers/posts_controller.rb:48:in `block (2 levels) in show'
+  /Users/gabase/work/cadmax/app/controllers/posts_controller.rb:43:in `show'
+
+/Users/gabase/work/cadmax/app/pdfs/parte_pdf.rb:78:in `block in nuevo'
+/Users/gabase/work/cadmax/app/pdfs/parte_pdf.rb:75:in `nuevo'
+/Users/gabase/work/cadmax/app/pdfs/parte_pdf.rb:15:in `initialize'
+/Users/gabase/work/cadmax/app/controllers/posts_controller.rb:48:in `new'
+/Users/gabase/work/cadmax/app/controllers/posts_controller.rb:48:in `block (2 levels) in show'
+/Users/gabase/work/cadmax/app/controllers/posts_controller.rb:43:in `show'2015-10-24 20:58:24[WARN] user: gabase
+http://localhost:3000/posts/17.pdf
+N+1 Query detected
+  Post => [:user]
+  Add to your finder: :includes => [:user]
+N+1 Query method call stack
+  /Users/gabase/work/cadmax/app/pdfs/parte_pdf.rb:78:in `block in nuevo'
+  /Users/gabase/work/cadmax/app/pdfs/parte_pdf.rb:75:in `nuevo'
+  /Users/gabase/work/cadmax/app/pdfs/parte_pdf.rb:15:in `initialize'
+  /Users/gabase/work/cadmax/app/controllers/posts_controller.rb:48:in `new'
+  /Users/gabase/work/cadmax/app/controllers/posts_controller.rb:48:in `block (2 levels) in show'
+  /Users/gabase/work/cadmax/app/controllers/posts_controller.rb:43:in `show'
+
+/Users/gabase/work/cadmax/app/pdfs/parte_pdf.rb:78:in `block in nuevo'
+/Users/gabase/work/cadmax/app/pdfs/parte_pdf.rb:75:in `nuevo'
+/Users/gabase/work/cadmax/app/pdfs/parte_pdf.rb:15:in `initialize'
+/Users/gabase/work/cadmax/app/controllers/posts_controller.rb:48:in `new'
+/Users/gabase/work/cadmax/app/controllers/posts_controller.rb:48:in `block (2 levels) in show'
+/Users/gabase/work/cadmax/app/controllers/posts_controller.rb:43:in `show'2015-10-24 21:22:53[WARN] user: gabase
+http://localhost:3000/posts/17.pdf
+N+1 Query detected
+  Post => [:user]
+  Add to your finder: :includes => [:user]
+N+1 Query method call stack
+  /Users/gabase/work/cadmax/app/pdfs/parte_pdf.rb:78:in `block in nuevo'
+  /Users/gabase/work/cadmax/app/pdfs/parte_pdf.rb:75:in `nuevo'
+  /Users/gabase/work/cadmax/app/pdfs/parte_pdf.rb:15:in `initialize'
+  /Users/gabase/work/cadmax/app/controllers/posts_controller.rb:47:in `new'
+  /Users/gabase/work/cadmax/app/controllers/posts_controller.rb:47:in `block (2 levels) in show'
+  /Users/gabase/work/cadmax/app/controllers/posts_controller.rb:42:in `show'
+
+/Users/gabase/work/cadmax/app/pdfs/parte_pdf.rb:78:in `block in nuevo'
+/Users/gabase/work/cadmax/app/pdfs/parte_pdf.rb:75:in `nuevo'
+/Users/gabase/work/cadmax/app/pdfs/parte_pdf.rb:15:in `initialize'
+/Users/gabase/work/cadmax/app/controllers/posts_controller.rb:47:in `new'
+/Users/gabase/work/cadmax/app/controllers/posts_controller.rb:47:in `block (2 levels) in show'
+/Users/gabase/work/cadmax/app/controllers/posts_controller.rb:42:in `show'2015-10-24 21:24:12[WARN] user: gabase
+http://localhost:3000/posts/17.pdf
+N+1 Query detected
+  Post => [:user]
+  Add to your finder: :includes => [:user]
+N+1 Query method call stack
+  /Users/gabase/work/cadmax/app/pdfs/parte_pdf.rb:78:in `block in nuevo'
+  /Users/gabase/work/cadmax/app/pdfs/parte_pdf.rb:75:in `nuevo'
+  /Users/gabase/work/cadmax/app/pdfs/parte_pdf.rb:15:in `initialize'
+  /Users/gabase/work/cadmax/app/controllers/posts_controller.rb:47:in `new'
+  /Users/gabase/work/cadmax/app/controllers/posts_controller.rb:47:in `block (2 levels) in show'
+  /Users/gabase/work/cadmax/app/controllers/posts_controller.rb:42:in `show'
+
+/Users/gabase/work/cadmax/app/pdfs/parte_pdf.rb:78:in `block in nuevo'
+/Users/gabase/work/cadmax/app/pdfs/parte_pdf.rb:75:in `nuevo'
+/Users/gabase/work/cadmax/app/pdfs/parte_pdf.rb:15:in `initialize'
+/Users/gabase/work/cadmax/app/controllers/posts_controller.rb:47:in `new'
+/Users/gabase/work/cadmax/app/controllers/posts_controller.rb:47:in `block (2 levels) in show'
+/Users/gabase/work/cadmax/app/controllers/posts_controller.rb:42:in `show'2015-10-24 21:29:19[WARN] user: gabase
+http://localhost:3000/posts/17.pdf
+N+1 Query detected
+  Post => [:user]
+  Add to your finder: :includes => [:user]
+N+1 Query method call stack
+  /Users/gabase/work/cadmax/app/pdfs/parte_pdf.rb:78:in `block in nuevo'
+  /Users/gabase/work/cadmax/app/pdfs/parte_pdf.rb:75:in `nuevo'
+  /Users/gabase/work/cadmax/app/pdfs/parte_pdf.rb:15:in `initialize'
+  /Users/gabase/work/cadmax/app/controllers/posts_controller.rb:47:in `new'
+  /Users/gabase/work/cadmax/app/controllers/posts_controller.rb:47:in `block (2 levels) in show'
+  /Users/gabase/work/cadmax/app/controllers/posts_controller.rb:42:in `show'
+
+/Users/gabase/work/cadmax/app/pdfs/parte_pdf.rb:78:in `block in nuevo'
+/Users/gabase/work/cadmax/app/pdfs/parte_pdf.rb:75:in `nuevo'
+/Users/gabase/work/cadmax/app/pdfs/parte_pdf.rb:15:in `initialize'
+/Users/gabase/work/cadmax/app/controllers/posts_controller.rb:47:in `new'
+/Users/gabase/work/cadmax/app/controllers/posts_controller.rb:47:in `block (2 levels) in show'
+/Users/gabase/work/cadmax/app/controllers/posts_controller.rb:42:in `show'2015-10-24 21:32:00[WARN] user: gabase
+http://localhost:3000/posts/17.pdf
+N+1 Query detected
+  Post => [:user]
+  Add to your finder: :includes => [:user]
+N+1 Query method call stack
+  /Users/gabase/work/cadmax/app/pdfs/parte_pdf.rb:79:in `block in nuevo'
+  /Users/gabase/work/cadmax/app/pdfs/parte_pdf.rb:76:in `nuevo'
+  /Users/gabase/work/cadmax/app/pdfs/parte_pdf.rb:16:in `initialize'
+  /Users/gabase/work/cadmax/app/controllers/posts_controller.rb:47:in `new'
+  /Users/gabase/work/cadmax/app/controllers/posts_controller.rb:47:in `block (2 levels) in show'
+  /Users/gabase/work/cadmax/app/controllers/posts_controller.rb:42:in `show'
+
+/Users/gabase/work/cadmax/app/pdfs/parte_pdf.rb:79:in `block in nuevo'
+/Users/gabase/work/cadmax/app/pdfs/parte_pdf.rb:76:in `nuevo'
+/Users/gabase/work/cadmax/app/pdfs/parte_pdf.rb:16:in `initialize'
+/Users/gabase/work/cadmax/app/controllers/posts_controller.rb:47:in `new'
+/Users/gabase/work/cadmax/app/controllers/posts_controller.rb:47:in `block (2 levels) in show'
+/Users/gabase/work/cadmax/app/controllers/posts_controller.rb:42:in `show'2015-10-24 21:37:19[WARN] user: gabase
+http://localhost:3000/?date=24-08-2015
+Unused Eager Loading detected
+  Post => [:user]
+  Remove from your finder: :includes => [:user]
+
+2015-10-24 21:37:22[WARN] user: gabase
+http://localhost:3000/?date=24-07-2015
+Unused Eager Loading detected
+  Post => [:user]
+  Remove from your finder: :includes => [:user]
+
+2015-10-24 21:37:24[WARN] user: gabase
+http://localhost:3000/?date=24-08-2015
+Unused Eager Loading detected
+  Post => [:user]
+  Remove from your finder: :includes => [:user]
+
+2015-10-24 21:37:30[WARN] user: gabase
+http://localhost:3000/?date=24-12-2015
+Unused Eager Loading detected
+  Post => [:user]
+  Remove from your finder: :includes => [:user]
+
+2015-10-24 21:37:33[WARN] user: gabase
+http://localhost:3000/?date=24-01-2016
+Unused Eager Loading detected
+  Post => [:user]
+  Remove from your finder: :includes => [:user]
+
+2015-10-24 21:37:37[WARN] user: gabase
+http://localhost:3000/?date=24-12-2015
+Unused Eager Loading detected
+  Post => [:user]
+  Remove from your finder: :includes => [:user]
+
+2015-10-24 21:44:46[WARN] user: gabase
+http://localhost:3000/posts/17.pdf
+N+1 Query detected
+  Post => [:user]
+  Add to your finder: :includes => [:user]
+N+1 Query method call stack
+  /Users/gabase/work/cadmax/app/pdfs/parte_pdf.rb:79:in `block in nuevo'
+  /Users/gabase/work/cadmax/app/pdfs/parte_pdf.rb:76:in `nuevo'
+  /Users/gabase/work/cadmax/app/pdfs/parte_pdf.rb:16:in `initialize'
+  /Users/gabase/work/cadmax/app/controllers/posts_controller.rb:47:in `new'
+  /Users/gabase/work/cadmax/app/controllers/posts_controller.rb:47:in `block (2 levels) in show'
+  /Users/gabase/work/cadmax/app/controllers/posts_controller.rb:42:in `show'
+
+/Users/gabase/work/cadmax/app/pdfs/parte_pdf.rb:79:in `block in nuevo'
+/Users/gabase/work/cadmax/app/pdfs/parte_pdf.rb:76:in `nuevo'
+/Users/gabase/work/cadmax/app/pdfs/parte_pdf.rb:16:in `initialize'
+/Users/gabase/work/cadmax/app/controllers/posts_controller.rb:47:in `new'
+/Users/gabase/work/cadmax/app/controllers/posts_controller.rb:47:in `block (2 levels) in show'
+/Users/gabase/work/cadmax/app/controllers/posts_controller.rb:42:in `show'2015-10-25 14:00:47[WARN] user: gabase
+http://localhost:3000/.pdf
+Unused Eager Loading detected
+  Post => [:user]
+  Remove from your finder: :includes => [:user]
+
+2015-10-25 14:01:09[WARN] user: gabase
+http://localhost:3000/.pdf
+Unused Eager Loading detected
+  Post => [:user]
+  Remove from your finder: :includes => [:user]
+
+2015-10-25 14:01:26[WARN] user: gabase
+http://localhost:3000/.pdf
+Unused Eager Loading detected
+  Post => [:user]
+  Remove from your finder: :includes => [:user]
+
+2015-10-25 14:01:39[WARN] user: gabase
+http://localhost:3000/.pdf
+Unused Eager Loading detected
+  Post => [:user]
+  Remove from your finder: :includes => [:user]
+
+2015-10-25 14:16:06[WARN] user: gabase
+http://localhost:3000/.pdf
+Unused Eager Loading detected
+  Post => [:user]
+  Remove from your finder: :includes => [:user]
+
+2015-10-25 18:24:50[WARN] user: gabase
+http://localhost:3000/.pdf
+Unused Eager Loading detected
+  Post => [:user]
+  Remove from your finder: :includes => [:user]
+
+2015-10-25 18:26:55[WARN] user: gabase
+http://localhost:3000/.pdf
+Unused Eager Loading detected
+  Post => [:user]
+  Remove from your finder: :includes => [:user]
+
+2015-10-25 18:27:20[WARN] user: gabase
+http://localhost:3000/.pdf
+Unused Eager Loading detected
+  Post => [:user]
+  Remove from your finder: :includes => [:user]
+
+2015-10-25 18:27:36[WARN] user: gabase
+http://localhost:3000/.pdf
+Unused Eager Loading detected
+  Post => [:user]
+  Remove from your finder: :includes => [:user]
+
+2015-10-25 18:27:47[WARN] user: gabase
+http://localhost:3000/.pdf
+Unused Eager Loading detected
+  Post => [:user]
+  Remove from your finder: :includes => [:user]
+
+2015-10-25 18:29:33[WARN] user: gabase
+http://localhost:3000/.pdf
+Unused Eager Loading detected
+  Post => [:user]
+  Remove from your finder: :includes => [:user]
+
+2015-10-25 18:30:05[WARN] user: gabase
+http://localhost:3000/?date=25-08-2015
+Unused Eager Loading detected
+  Post => [:user]
+  Remove from your finder: :includes => [:user]
+
+2015-10-25 18:30:09[WARN] user: gabase
+http://localhost:3000/.pdf
+Unused Eager Loading detected
+  Post => [:user]
+  Remove from your finder: :includes => [:user]
+
+2015-10-25 18:30:13[WARN] user: gabase
+http://localhost:3000/?date=25-08-2015
+Unused Eager Loading detected
+  Post => [:user]
+  Remove from your finder: :includes => [:user]
+
+2015-10-25 18:31:18[WARN] user: gabase
+http://localhost:3000/.pdf
+Unused Eager Loading detected
+  Post => [:user]
+  Remove from your finder: :includes => [:user]
+
+2015-10-25 18:31:47[WARN] user: gabase
+http://localhost:3000/.pdf
+Unused Eager Loading detected
+  Post => [:user]
+  Remove from your finder: :includes => [:user]
+
+2015-10-25 18:32:48[WARN] user: gabase
+http://localhost:3000/.pdf
+Unused Eager Loading detected
+  Post => [:user]
+  Remove from your finder: :includes => [:user]
+
+2015-10-25 18:33:07[WARN] user: gabase
+http://localhost:3000/.pdf
+Unused Eager Loading detected
+  Post => [:user]
+  Remove from your finder: :includes => [:user]
+
+2015-10-25 18:34:18[WARN] user: gabase
+http://localhost:3000/.pdf
+Unused Eager Loading detected
+  Post => [:user]
+  Remove from your finder: :includes => [:user]
+
+2015-10-25 18:34:22[WARN] user: gabase
+http://localhost:3000/.pdf
+Unused Eager Loading detected
+  Post => [:user]
+  Remove from your finder: :includes => [:user]
+
+2015-10-25 18:34:29[WARN] user: gabase
+http://localhost:3000/.pdf
+Unused Eager Loading detected
+  Post => [:user]
+  Remove from your finder: :includes => [:user]
+
+2015-10-25 18:37:07[WARN] user: gabase
+http://localhost:3000/posts/resumen
+Unused Eager Loading detected
+  User => [:posts]
+  Remove from your finder: :includes => [:posts]
+
+2015-10-25 18:37:08[WARN] user: gabase
+http://localhost:3000/posts/resumen
+Unused Eager Loading detected
+  User => [:posts]
+  Remove from your finder: :includes => [:posts]
+
+2015-10-25 18:37:35[WARN] user: gabase
+http://localhost:3000/admin/post?_pjax=%5Bdata-pjax-container%5D
+Unused Eager Loading detected
+  Post => [:user]
+  Remove from your finder: :includes => [:user]
+
+2015-10-25 18:39:10[WARN] user: gabase
+http://localhost:3000/.pdf
+Unused Eager Loading detected
+  Post => [:user]
+  Remove from your finder: :includes => [:user]
+
+2015-10-25 18:47:49[WARN] user: gabase
+http://localhost:3000/.pdf
+Unused Eager Loading detected
+  Post => [:user]
+  Remove from your finder: :includes => [:user]
+
+2015-10-25 18:47:57[WARN] user: gabase
+http://localhost:3000/.pdf
+Unused Eager Loading detected
+  Post => [:user]
+  Remove from your finder: :includes => [:user]
+
+2015-10-25 19:11:18[WARN] user: gabase
+http://localhost:3000/.pdf
+Unused Eager Loading detected
+  Post => [:user]
+  Remove from your finder: :includes => [:user]
+
+2015-10-25 19:11:28[WARN] user: gabase
+http://localhost:3000/.pdf
+Unused Eager Loading detected
+  Post => [:user]
+  Remove from your finder: :includes => [:user]
+
+2015-10-25 19:11:55[WARN] user: gabase
+http://localhost:3000/.pdf
+Unused Eager Loading detected
+  Post => [:user]
+  Remove from your finder: :includes => [:user]
+
+2015-10-25 19:45:09[WARN] user: gabase
+http://localhost:3000/.pdf?date=25-09-2015
+Unused Eager Loading detected
+  Post => [:user]
+  Remove from your finder: :includes => [:user]
+
+2015-10-25 19:46:09[WARN] user: gabase
+http://localhost:3000/.pdf?date=10
+Unused Eager Loading detected
+  Post => [:user]
+  Remove from your finder: :includes => [:user]
+
+2015-10-25 19:46:33[WARN] user: gabase
+http://localhost:3000/.pdf?date=10
+Unused Eager Loading detected
+  Post => [:user]
+  Remove from your finder: :includes => [:user]
+
+2015-10-25 19:56:19[WARN] user: gabase
+http://localhost:3000/.pdf?date=Septiembre+2015
+Unused Eager Loading detected
+  Post => [:user]
+  Remove from your finder: :includes => [:user]
+
+2015-10-25 19:56:42[WARN] user: gabase
+http://localhost:3000/?date=25-08-2015
+Unused Eager Loading detected
+  Post => [:user]
+  Remove from your finder: :includes => [:user]
+
+2015-10-25 19:56:48[WARN] user: gabase
+http://localhost:3000/?date=25-08-2015
+Unused Eager Loading detected
+  Post => [:user]
+  Remove from your finder: :includes => [:user]
+
+2015-10-25 19:56:54[WARN] user: gabase
+http://localhost:3000/.pdf?date=Septiembre+2015
+Unused Eager Loading detected
+  Post => [:user]
+  Remove from your finder: :includes => [:user]
+
+2015-10-25 19:57:04[WARN] user: gabase
+http://localhost:3000/.pdf?date=Octubre+2015
+Unused Eager Loading detected
+  Post => [:user]
+  Remove from your finder: :includes => [:user]
+
+2015-10-25 20:00:28[WARN] user: gabase
+http://localhost:3000/?date=25-12-2015
+Unused Eager Loading detected
+  Post => [:user]
+  Remove from your finder: :includes => [:user]
+
+2015-10-25 20:00:33[WARN] user: gabase
+http://localhost:3000/.pdf?date=Octubre+2015
+Unused Eager Loading detected
+  Post => [:user]
+  Remove from your finder: :includes => [:user]
+
+2015-10-25 20:01:39[WARN] user: gabase
+http://localhost:3000/.pdf?date=Octubre+2015
+Unused Eager Loading detected
+  Post => [:user]
+  Remove from your finder: :includes => [:user]
+
+2015-10-25 20:02:51[WARN] user: gabase
+http://localhost:3000/.pdf?date=Octubre+2015
+Unused Eager Loading detected
+  Post => [:user]
+  Remove from your finder: :includes => [:user]
+
+2015-10-25 20:23:36[WARN] user: gabase
+http://localhost:3000/.pdf?date=Octubre+2015
+Unused Eager Loading detected
+  Post => [:user]
+  Remove from your finder: :includes => [:user]
+
+2015-10-25 20:27:22[WARN] user: gabase
+http://localhost:3000/.pdf?date=Octubre+2015
+Unused Eager Loading detected
+  Post => [:user]
+  Remove from your finder: :includes => [:user]
+
+2015-10-25 20:27:57[WARN] user: gabase
+http://localhost:3000/.pdf?date=Octubre+2015
+Unused Eager Loading detected
+  Post => [:user]
+  Remove from your finder: :includes => [:user]
+
+2015-10-25 20:28:39[WARN] user: gabase
+http://localhost:3000/.pdf?date=Octubre+2015
+Unused Eager Loading detected
+  Post => [:user]
+  Remove from your finder: :includes => [:user]
+
+2015-10-25 20:34:05[WARN] user: gabase
+http://localhost:3000/.pdf?date=Octubre+2015
+Unused Eager Loading detected
+  Post => [:user]
+  Remove from your finder: :includes => [:user]
+
+2015-10-25 20:34:13[WARN] user: gabase
+http://localhost:3000/?date=25-08-2015
+Unused Eager Loading detected
+  Post => [:user]
+  Remove from your finder: :includes => [:user]
+
+2015-10-25 20:34:16[WARN] user: gabase
+http://localhost:3000/?date=25-07-2015
+Unused Eager Loading detected
+  Post => [:user]
+  Remove from your finder: :includes => [:user]
+
+2015-10-25 20:34:19[WARN] user: gabase
+http://localhost:3000/?date=25-08-2015
+Unused Eager Loading detected
+  Post => [:user]
+  Remove from your finder: :includes => [:user]
+
+2015-10-25 20:35:11[WARN] user: gabase
+http://localhost:3000/.pdf?date=Octubre+2015
+Unused Eager Loading detected
+  Post => [:user]
+  Remove from your finder: :includes => [:user]
+
+2015-10-25 20:43:15[WARN] user: gabase
+http://localhost:3000/.pdf?date=Octubre+2015
+Unused Eager Loading detected
+  Post => [:user]
+  Remove from your finder: :includes => [:user]
+
+2015-10-25 20:44:02[WARN] user: gabase
+http://localhost:3000/.pdf?date=Octubre+2015
+Unused Eager Loading detected
+  Post => [:user]
+  Remove from your finder: :includes => [:user]
+
+2015-10-25 20:44:30[WARN] user: gabase
+http://localhost:3000/.pdf?date=Octubre+2015
+Unused Eager Loading detected
+  Post => [:user]
+  Remove from your finder: :includes => [:user]
+
+2015-10-25 20:44:43[WARN] user: gabase
+http://localhost:3000/.pdf?date=Octubre+2015
+Unused Eager Loading detected
+  Post => [:user]
+  Remove from your finder: :includes => [:user]
+
+2015-10-25 20:45:23[WARN] user: gabase
+http://localhost:3000/.pdf?date=Octubre+2015
+Unused Eager Loading detected
+  Post => [:user]
+  Remove from your finder: :includes => [:user]
+
+2015-10-25 20:45:39[WARN] user: gabase
+http://localhost:3000/.pdf?date=Octubre+2015
+Unused Eager Loading detected
+  Post => [:user]
+  Remove from your finder: :includes => [:user]
+
+2015-10-25 20:45:53[WARN] user: gabase
+http://localhost:3000/.pdf?date=Octubre+2015
+Unused Eager Loading detected
+  Post => [:user]
+  Remove from your finder: :includes => [:user]
+
+2015-10-25 20:46:11[WARN] user: gabase
+http://localhost:3000/.pdf?date=Octubre+2015
+Unused Eager Loading detected
+  Post => [:user]
+  Remove from your finder: :includes => [:user]
+
+2015-10-25 20:46:22[WARN] user: gabase
+http://localhost:3000/.pdf?date=Octubre+2015
+Unused Eager Loading detected
+  Post => [:user]
+  Remove from your finder: :includes => [:user]
+
+2015-10-25 20:46:32[WARN] user: gabase
+http://localhost:3000/.pdf?date=Octubre+2015
+Unused Eager Loading detected
+  Post => [:user]
+  Remove from your finder: :includes => [:user]
+
+2015-10-25 20:46:44[WARN] user: gabase
+http://localhost:3000/.pdf?date=Octubre+2015
+Unused Eager Loading detected
+  Post => [:user]
+  Remove from your finder: :includes => [:user]
+
+2015-10-25 20:46:58[WARN] user: gabase
+http://localhost:3000/.pdf?date=Octubre+2015
+Unused Eager Loading detected
+  Post => [:user]
+  Remove from your finder: :includes => [:user]
+
+2015-10-25 20:47:19[WARN] user: gabase
+http://localhost:3000/.pdf?date=Octubre+2015
+Unused Eager Loading detected
+  Post => [:user]
+  Remove from your finder: :includes => [:user]
+
+2015-10-25 20:47:58[WARN] user: gabase
+http://localhost:3000/.pdf?date=Octubre+2015
+Unused Eager Loading detected
+  Post => [:user]
+  Remove from your finder: :includes => [:user]
+
+2015-10-25 20:48:06[WARN] user: gabase
+http://localhost:3000/.pdf?date=Octubre+2015
+Unused Eager Loading detected
+  Post => [:user]
+  Remove from your finder: :includes => [:user]
+
+2015-10-25 20:48:08[WARN] user: gabase
+http://localhost:3000/.pdf?date=Octubre+2015
+Unused Eager Loading detected
+  Post => [:user]
+  Remove from your finder: :includes => [:user]
+
+2015-10-25 20:49:07[WARN] user: gabase
+http://localhost:3000/.pdf?date=Octubre+2015
+Unused Eager Loading detected
+  Post => [:user]
+  Remove from your finder: :includes => [:user]
+
+2015-10-25 20:49:27[WARN] user: gabase
+http://localhost:3000/.pdf?date=Octubre+2015
+Unused Eager Loading detected
+  Post => [:user]
+  Remove from your finder: :includes => [:user]
+
+2015-10-25 20:50:24[WARN] user: gabase
+http://localhost:3000/.pdf?date=Octubre+2015
+Unused Eager Loading detected
+  Post => [:user]
+  Remove from your finder: :includes => [:user]
+
+2015-10-25 20:50:33[WARN] user: gabase
+http://localhost:3000/.pdf?date=Octubre+2015
+Unused Eager Loading detected
+  Post => [:user]
+  Remove from your finder: :includes => [:user]
+
+2015-10-25 20:50:42[WARN] user: gabase
+http://localhost:3000/.pdf?date=Octubre+2015
+Unused Eager Loading detected
+  Post => [:user]
+  Remove from your finder: :includes => [:user]
+
+2015-10-25 20:50:49[WARN] user: gabase
+http://localhost:3000/.pdf?date=Octubre+2015
+Unused Eager Loading detected
+  Post => [:user]
+  Remove from your finder: :includes => [:user]
+
+2015-10-25 20:50:57[WARN] user: gabase
+http://localhost:3000/.pdf?date=Octubre+2015
+Unused Eager Loading detected
+  Post => [:user]
+  Remove from your finder: :includes => [:user]
+
+2015-10-25 20:51:04[WARN] user: gabase
+http://localhost:3000/.pdf?date=Octubre+2015
+Unused Eager Loading detected
+  Post => [:user]
+  Remove from your finder: :includes => [:user]
+
+2015-10-25 20:51:12[WARN] user: gabase
+http://localhost:3000/.pdf?date=Octubre+2015
+Unused Eager Loading detected
+  Post => [:user]
+  Remove from your finder: :includes => [:user]
+
+2015-10-25 20:51:22[WARN] user: gabase
+http://localhost:3000/.pdf?date=Octubre+2015
+Unused Eager Loading detected
+  Post => [:user]
+  Remove from your finder: :includes => [:user]
+
+2015-10-25 20:51:35[WARN] user: gabase
+http://localhost:3000/.pdf?date=Octubre+2015
+Unused Eager Loading detected
+  Post => [:user]
+  Remove from your finder: :includes => [:user]
+
+2015-10-25 20:51:44[WARN] user: gabase
+http://localhost:3000/.pdf?date=Octubre+2015
+Unused Eager Loading detected
+  Post => [:user]
+  Remove from your finder: :includes => [:user]
+
+2015-10-25 20:52:29[WARN] user: gabase
+http://localhost:3000/.pdf?date=Octubre+2015
+Unused Eager Loading detected
+  Post => [:user]
+  Remove from your finder: :includes => [:user]
+
+2015-10-25 20:52:48[WARN] user: gabase
+http://localhost:3000/.pdf?date=Octubre+2015
+Unused Eager Loading detected
+  Post => [:user]
+  Remove from your finder: :includes => [:user]
+
+2015-10-25 20:52:57[WARN] user: gabase
+http://localhost:3000/.pdf?date=Octubre+2015
+Unused Eager Loading detected
+  Post => [:user]
+  Remove from your finder: :includes => [:user]
+
+2015-10-25 20:53:17[WARN] user: gabase
+http://localhost:3000/.pdf?date=Octubre+2015
+Unused Eager Loading detected
+  Post => [:user]
+  Remove from your finder: :includes => [:user]
+
+2015-10-25 20:53:29[WARN] user: gabase
+http://localhost:3000/.pdf?date=Octubre+2015
+Unused Eager Loading detected
+  Post => [:user]
+  Remove from your finder: :includes => [:user]
+
+2015-10-25 20:53:40[WARN] user: gabase
+http://localhost:3000/.pdf?date=Octubre+2015
+Unused Eager Loading detected
+  Post => [:user]
+  Remove from your finder: :includes => [:user]
+
+2015-10-25 20:55:19[WARN] user: gabase
+http://localhost:3000/.pdf?date=Octubre+2015
+Unused Eager Loading detected
+  Post => [:user]
+  Remove from your finder: :includes => [:user]
+
+2015-10-25 20:55:27[WARN] user: gabase
+http://localhost:3000/.pdf?date=Octubre+2015
+Unused Eager Loading detected
+  Post => [:user]
+  Remove from your finder: :includes => [:user]
+
+2015-10-25 20:55:47[WARN] user: gabase
+http://localhost:3000/.pdf?date=Octubre+2015
+Unused Eager Loading detected
+  Post => [:user]
+  Remove from your finder: :includes => [:user]
+
+2015-10-26 02:48:42[WARN] user: gabase
+http://localhost:3000/.pdf?date=Octubre+2015
+Unused Eager Loading detected
+  Post => [:user]
+  Remove from your finder: :includes => [:user]
+
+2015-10-26 02:50:03[WARN] user: gabase
+http://localhost:3000/.pdf?date=Octubre+2015
+Unused Eager Loading detected
+  Post => [:user]
+  Remove from your finder: :includes => [:user]
+
+2015-10-26 02:50:14[WARN] user: gabase
+http://localhost:3000/.pdf?date=Octubre+2015
+Unused Eager Loading detected
+  Post => [:user]
+  Remove from your finder: :includes => [:user]
+
+2015-10-26 02:50:46[WARN] user: gabase
+http://localhost:3000/.pdf?date=Octubre+2015
+Unused Eager Loading detected
+  Post => [:user]
+  Remove from your finder: :includes => [:user]
+
+2015-10-26 02:51:36[WARN] user: gabase
+http://localhost:3000/.pdf?date=Octubre+2015
+Unused Eager Loading detected
+  Post => [:user]
+  Remove from your finder: :includes => [:user]
+
+2015-10-26 02:54:52[WARN] user: gabase
+http://localhost:3000/.pdf?date=Octubre+2015
+Unused Eager Loading detected
+  Post => [:user]
+  Remove from your finder: :includes => [:user]
+
+2015-10-26 02:56:22[WARN] user: gabase
+http://localhost:3000/.pdf?date=Octubre+2015
+Unused Eager Loading detected
+  Post => [:user]
+  Remove from your finder: :includes => [:user]
+
+2015-10-26 02:57:16[WARN] user: gabase
+http://localhost:3000/.pdf?date=Octubre+2015
+Unused Eager Loading detected
+  Post => [:user]
+  Remove from your finder: :includes => [:user]
+
+2015-10-26 02:57:47[WARN] user: gabase
+http://localhost:3000/.pdf?date=Octubre+2015
+Unused Eager Loading detected
+  Post => [:user]
+  Remove from your finder: :includes => [:user]
+
+2015-10-26 02:58:09[WARN] user: gabase
+http://localhost:3000/.pdf?date=Octubre+2015
+Unused Eager Loading detected
+  Post => [:user]
+  Remove from your finder: :includes => [:user]
+
+2015-10-26 02:58:19[WARN] user: gabase
+http://localhost:3000/.pdf?date=Octubre+2015
+Unused Eager Loading detected
+  Post => [:user]
+  Remove from your finder: :includes => [:user]
+
+2015-10-26 02:58:37[WARN] user: gabase
+http://localhost:3000/.pdf?date=Octubre+2015
+Unused Eager Loading detected
+  Post => [:user]
+  Remove from your finder: :includes => [:user]
+
+2015-10-26 02:58:44[WARN] user: gabase
+http://localhost:3000/.pdf?date=Octubre+2015
+Unused Eager Loading detected
+  Post => [:user]
+  Remove from your finder: :includes => [:user]
+
+2015-10-26 03:00:51[WARN] user: gabase
+http://localhost:3000/.pdf?date=Octubre+2015
+Unused Eager Loading detected
+  Post => [:user]
+  Remove from your finder: :includes => [:user]
+
+2015-10-26 03:01:34[WARN] user: gabase
+http://localhost:3000/.pdf?date=Octubre+2015
+Unused Eager Loading detected
+  Post => [:user]
+  Remove from your finder: :includes => [:user]
+
+2015-10-26 03:01:41[WARN] user: gabase
+http://localhost:3000/.pdf?date=Octubre+2015
+Unused Eager Loading detected
+  Post => [:user]
+  Remove from your finder: :includes => [:user]
+
+2015-10-26 03:01:48[WARN] user: gabase
+http://localhost:3000/.pdf?date=Octubre+2015
+Unused Eager Loading detected
+  Post => [:user]
+  Remove from your finder: :includes => [:user]
+
+2015-10-26 03:01:55[WARN] user: gabase
+http://localhost:3000/.pdf?date=Octubre+2015
+Unused Eager Loading detected
+  Post => [:user]
+  Remove from your finder: :includes => [:user]
+
+2015-10-26 03:02:02[WARN] user: gabase
+http://localhost:3000/.pdf?date=Octubre+2015
+Unused Eager Loading detected
+  Post => [:user]
+  Remove from your finder: :includes => [:user]
+
+2015-10-26 03:02:10[WARN] user: gabase
+http://localhost:3000/.pdf?date=Octubre+2015
+Unused Eager Loading detected
+  Post => [:user]
+  Remove from your finder: :includes => [:user]
+
+2015-10-26 03:02:19[WARN] user: gabase
+http://localhost:3000/.pdf?date=Octubre+2015
+Unused Eager Loading detected
+  Post => [:user]
+  Remove from your finder: :includes => [:user]
+
+2015-10-26 03:02:27[WARN] user: gabase
+http://localhost:3000/.pdf?date=Octubre+2015
+Unused Eager Loading detected
+  Post => [:user]
+  Remove from your finder: :includes => [:user]
+
+2015-10-26 03:02:43[WARN] user: gabase
+http://localhost:3000/.pdf?date=Octubre+2015
+Unused Eager Loading detected
+  Post => [:user]
+  Remove from your finder: :includes => [:user]
+
+2015-10-26 03:02:50[WARN] user: gabase
+http://localhost:3000/.pdf?date=Octubre+2015
+Unused Eager Loading detected
+  Post => [:user]
+  Remove from your finder: :includes => [:user]
+
+2015-10-26 03:03:07[WARN] user: gabase
+http://localhost:3000/.pdf?date=Octubre+2015
+Unused Eager Loading detected
+  Post => [:user]
+  Remove from your finder: :includes => [:user]
+
+2015-10-26 03:04:01[WARN] user: gabase
+http://localhost:3000/.pdf?date=Octubre+2015
+Unused Eager Loading detected
+  Post => [:user]
+  Remove from your finder: :includes => [:user]
+
+2015-10-26 03:04:26[WARN] user: gabase
+http://localhost:3000/.pdf?date=Octubre+2015
+Unused Eager Loading detected
+  Post => [:user]
+  Remove from your finder: :includes => [:user]
+
+2015-10-26 03:04:42[WARN] user: gabase
+http://localhost:3000/.pdf?date=Octubre+2015
+Unused Eager Loading detected
+  Post => [:user]
+  Remove from your finder: :includes => [:user]
+
+2015-10-26 03:05:10[WARN] user: gabase
+http://localhost:3000/.pdf?date=Octubre+2015
+Unused Eager Loading detected
+  Post => [:user]
+  Remove from your finder: :includes => [:user]
+
+2015-10-26 03:05:24[WARN] user: gabase
+http://localhost:3000/.pdf?date=Octubre+2015
+Unused Eager Loading detected
+  Post => [:user]
+  Remove from your finder: :includes => [:user]
+
+2015-10-26 03:05:43[WARN] user: gabase
+http://localhost:3000/.pdf?date=Octubre+2015
+Unused Eager Loading detected
+  Post => [:user]
+  Remove from your finder: :includes => [:user]
+
+2015-10-26 03:06:10[WARN] user: gabase
+http://localhost:3000/.pdf?date=Octubre+2015
+Unused Eager Loading detected
+  Post => [:user]
+  Remove from your finder: :includes => [:user]
+
+2015-10-26 03:06:40[WARN] user: gabase
+http://localhost:3000/.pdf?date=Octubre+2015
+Unused Eager Loading detected
+  Post => [:user]
+  Remove from your finder: :includes => [:user]
+
+2015-10-26 03:07:26[WARN] user: gabase
+http://localhost:3000/.pdf?date=Octubre+2015
+Unused Eager Loading detected
+  Post => [:user]
+  Remove from your finder: :includes => [:user]
+
+2015-10-26 03:07:57[WARN] user: gabase
+http://localhost:3000/.pdf?date=Octubre+2015
+Unused Eager Loading detected
+  Post => [:user]
+  Remove from your finder: :includes => [:user]
+
+2015-10-26 03:08:05[WARN] user: gabase
+http://localhost:3000/.pdf?date=Octubre+2015
+Unused Eager Loading detected
+  Post => [:user]
+  Remove from your finder: :includes => [:user]
+
+2015-10-26 03:09:40[WARN] user: gabase
+http://localhost:3000/.pdf?date=Octubre+2015
+Unused Eager Loading detected
+  Post => [:user]
+  Remove from your finder: :includes => [:user]
+
+2015-10-26 03:10:13[WARN] user: gabase
+http://localhost:3000/.pdf?date=Octubre+2015
+Unused Eager Loading detected
+  Post => [:user]
+  Remove from your finder: :includes => [:user]
+
+2015-10-26 03:14:24[WARN] user: gabase
+http://localhost:3000/.pdf?date=Octubre+2015
+Unused Eager Loading detected
+  Post => [:user]
+  Remove from your finder: :includes => [:user]
+
+2015-10-26 03:14:46[WARN] user: gabase
+http://localhost:3000/.pdf?date=Octubre+2015
+Unused Eager Loading detected
+  Post => [:user]
+  Remove from your finder: :includes => [:user]
+
+2015-10-26 03:14:56[WARN] user: gabase
+http://localhost:3000/.pdf?date=Octubre+2015
+Unused Eager Loading detected
+  Post => [:user]
+  Remove from your finder: :includes => [:user]
+
+2015-10-26 03:15:08[WARN] user: gabase
+http://localhost:3000/.pdf?date=Octubre+2015
+Unused Eager Loading detected
+  Post => [:user]
+  Remove from your finder: :includes => [:user]
+
+2015-10-26 03:15:35[WARN] user: gabase
+http://localhost:3000/.pdf?date=Octubre+2015
+Unused Eager Loading detected
+  Post => [:user]
+  Remove from your finder: :includes => [:user]
+
+2015-10-26 03:16:04[WARN] user: gabase
+http://localhost:3000/.pdf?date=Octubre+2015
+Unused Eager Loading detected
+  Post => [:user]
+  Remove from your finder: :includes => [:user]
+
+2015-10-26 03:16:24[WARN] user: gabase
+http://localhost:3000/.pdf?date=Octubre+2015
+Unused Eager Loading detected
+  Post => [:user]
+  Remove from your finder: :includes => [:user]
+
+2015-10-26 03:17:28[WARN] user: gabase
+http://localhost:3000/.pdf?date=Octubre+2015
+Unused Eager Loading detected
+  Post => [:user]
+  Remove from your finder: :includes => [:user]
+
+2015-10-26 03:18:40[WARN] user: gabase
+http://localhost:3000/.pdf?date=Octubre+2015
+Unused Eager Loading detected
+  Post => [:user]
+  Remove from your finder: :includes => [:user]
+
+2015-10-26 03:19:09[WARN] user: gabase
+http://localhost:3000/.pdf?date=Octubre+2015
+Unused Eager Loading detected
+  Post => [:user]
+  Remove from your finder: :includes => [:user]
+
+2015-10-26 03:19:16[WARN] user: gabase
+http://localhost:3000/.pdf?date=Octubre+2015
+Unused Eager Loading detected
+  Post => [:user]
+  Remove from your finder: :includes => [:user]
+
+2015-10-26 03:19:26[WARN] user: gabase
+http://localhost:3000/.pdf?date=Octubre+2015
+Unused Eager Loading detected
+  Post => [:user]
+  Remove from your finder: :includes => [:user]
+
+2015-10-26 03:19:42[WARN] user: gabase
+http://localhost:3000/.pdf?date=Octubre+2015
+Unused Eager Loading detected
+  Post => [:user]
+  Remove from your finder: :includes => [:user]
+
+2015-10-26 03:19:49[WARN] user: gabase
+http://localhost:3000/.pdf?date=Octubre+2015
+Unused Eager Loading detected
+  Post => [:user]
+  Remove from your finder: :includes => [:user]
+
+2015-10-26 03:20:10[WARN] user: gabase
+http://localhost:3000/.pdf?date=Octubre+2015
+Unused Eager Loading detected
+  Post => [:user]
+  Remove from your finder: :includes => [:user]
+
+2015-10-26 03:20:24[WARN] user: gabase
+http://localhost:3000/.pdf?date=Octubre+2015
+Unused Eager Loading detected
+  Post => [:user]
+  Remove from your finder: :includes => [:user]
+
+2015-10-26 03:20:37[WARN] user: gabase
+http://localhost:3000/.pdf?date=Octubre+2015
+Unused Eager Loading detected
+  Post => [:user]
+  Remove from your finder: :includes => [:user]
+
+2015-10-26 03:21:30[WARN] user: gabase
+http://localhost:3000/.pdf?date=Octubre+2015
+Unused Eager Loading detected
+  Post => [:user]
+  Remove from your finder: :includes => [:user]
+
+2015-10-26 03:21:43[WARN] user: gabase
+http://localhost:3000/.pdf?date=Octubre+2015
+Unused Eager Loading detected
+  Post => [:user]
+  Remove from your finder: :includes => [:user]
+
+2015-10-26 03:21:53[WARN] user: gabase
+http://localhost:3000/.pdf?date=Octubre+2015
+Unused Eager Loading detected
+  Post => [:user]
+  Remove from your finder: :includes => [:user]
+
+2015-10-26 03:22:04[WARN] user: gabase
+http://localhost:3000/.pdf?date=Octubre+2015
+Unused Eager Loading detected
+  Post => [:user]
+  Remove from your finder: :includes => [:user]
+
+2015-10-26 03:22:33[WARN] user: gabase
+http://localhost:3000/.pdf?date=Octubre+2015
+Unused Eager Loading detected
+  Post => [:user]
+  Remove from your finder: :includes => [:user]
+
+2015-10-26 03:22:39[WARN] user: gabase
+http://localhost:3000/.pdf?date=Octubre+2015
+Unused Eager Loading detected
+  Post => [:user]
+  Remove from your finder: :includes => [:user]
+
+2015-10-26 03:22:48[WARN] user: gabase
+http://localhost:3000/.pdf?date=Octubre+2015
+Unused Eager Loading detected
+  Post => [:user]
+  Remove from your finder: :includes => [:user]
+
+2015-10-26 03:23:08[WARN] user: gabase
+http://localhost:3000/.pdf?date=Octubre+2015
+Unused Eager Loading detected
+  Post => [:user]
+  Remove from your finder: :includes => [:user]
+
+2015-10-26 03:23:18[WARN] user: gabase
+http://localhost:3000/.pdf?date=Octubre+2015
+Unused Eager Loading detected
+  Post => [:user]
+  Remove from your finder: :includes => [:user]
+
+2015-10-26 03:23:29[WARN] user: gabase
+http://localhost:3000/.pdf?date=Octubre+2015
+Unused Eager Loading detected
+  Post => [:user]
+  Remove from your finder: :includes => [:user]
+
+2015-10-26 03:23:45[WARN] user: gabase
+http://localhost:3000/.pdf?date=Octubre+2015
+Unused Eager Loading detected
+  Post => [:user]
+  Remove from your finder: :includes => [:user]
+
+2015-10-26 03:25:37[WARN] user: gabase
+http://localhost:3000/.pdf?date=Octubre+2015
+Unused Eager Loading detected
+  Post => [:user]
+  Remove from your finder: :includes => [:user]
+
+2015-10-26 03:26:24[WARN] user: gabase
+http://localhost:3000/.pdf?date=Octubre+2015
+Unused Eager Loading detected
+  Post => [:user]
+  Remove from your finder: :includes => [:user]
+
+2015-10-26 03:27:00[WARN] user: gabase
+http://localhost:3000/.pdf?date=Octubre+2015
+Unused Eager Loading detected
+  Post => [:user]
+  Remove from your finder: :includes => [:user]
+
+2015-10-26 03:27:23[WARN] user: gabase
+http://localhost:3000/.pdf?date=Octubre+2015
+Unused Eager Loading detected
+  Post => [:user]
+  Remove from your finder: :includes => [:user]
+
+2015-10-26 03:28:15[WARN] user: gabase
+http://localhost:3000/.pdf?date=Octubre+2015
+Unused Eager Loading detected
+  Post => [:user]
+  Remove from your finder: :includes => [:user]
+
+2015-10-26 03:36:49[WARN] user: gabase
+http://localhost:3000/.pdf?date=Octubre+2015
+Unused Eager Loading detected
+  Post => [:user]
+  Remove from your finder: :includes => [:user]
+
+2015-10-26 03:38:59[WARN] user: gabase
+http://localhost:3000/.pdf?date=Octubre+2015
+Unused Eager Loading detected
+  Post => [:user]
+  Remove from your finder: :includes => [:user]
+
+2015-10-26 03:39:39[WARN] user: gabase
+http://localhost:3000/.pdf?date=Octubre+2015
+Unused Eager Loading detected
+  Post => [:user]
+  Remove from your finder: :includes => [:user]
+
+2015-10-26 03:45:02[WARN] user: gabase
+http://localhost:3000/.pdf?date=Octubre+2015
+Unused Eager Loading detected
+  Post => [:user]
+  Remove from your finder: :includes => [:user]
+
+2015-10-26 03:45:44[WARN] user: gabase
+http://localhost:3000/.pdf?date=Octubre+2015
+Unused Eager Loading detected
+  Post => [:user]
+  Remove from your finder: :includes => [:user]
+
+2015-10-26 03:46:03[WARN] user: gabase
+http://localhost:3000/.pdf?date=Octubre+2015
+Unused Eager Loading detected
+  Post => [:user]
+  Remove from your finder: :includes => [:user]
+
+2015-10-26 03:46:17[WARN] user: gabase
+http://localhost:3000/.pdf?date=Octubre+2015
+Unused Eager Loading detected
+  Post => [:user]
+  Remove from your finder: :includes => [:user]
+
+2015-10-26 03:48:50[WARN] user: gabase
+http://localhost:3000/.pdf?date=Octubre+2015
+Unused Eager Loading detected
+  Post => [:user]
+  Remove from your finder: :includes => [:user]
+
+2015-10-26 03:49:28[WARN] user: gabase
+http://localhost:3000/.pdf?date=Octubre+2015
+Unused Eager Loading detected
+  Post => [:user]
+  Remove from your finder: :includes => [:user]
+
+2015-10-26 03:49:43[WARN] user: gabase
+http://localhost:3000/.pdf?date=Octubre+2015
+Unused Eager Loading detected
+  Post => [:user]
+  Remove from your finder: :includes => [:user]
+
+2015-10-26 03:50:05[WARN] user: gabase
+http://localhost:3000/.pdf?date=Octubre+2015
+Unused Eager Loading detected
+  Post => [:user]
+  Remove from your finder: :includes => [:user]
+
+2015-10-26 03:50:33[WARN] user: gabase
+http://localhost:3000/.pdf?date=Octubre+2015
+Unused Eager Loading detected
+  Post => [:user]
+  Remove from your finder: :includes => [:user]
+
+2015-10-26 03:50:40[WARN] user: gabase
+http://localhost:3000/.pdf?date=Octubre+2015
+Unused Eager Loading detected
+  Post => [:user]
+  Remove from your finder: :includes => [:user]
+
+2015-10-26 03:53:58[WARN] user: gabase
+http://localhost:3000/.pdf?date=Octubre+2015
+Unused Eager Loading detected
+  Post => [:user]
+  Remove from your finder: :includes => [:user]
+
+2015-10-26 03:54:32[WARN] user: gabase
+http://localhost:3000/.pdf?date=Octubre+2015
+Unused Eager Loading detected
+  Post => [:user]
+  Remove from your finder: :includes => [:user]
+
+2015-10-26 03:54:43[WARN] user: gabase
+http://localhost:3000/.pdf?date=Octubre+2015
+Unused Eager Loading detected
+  Post => [:user]
+  Remove from your finder: :includes => [:user]
+
+2015-10-26 03:54:58[WARN] user: gabase
+http://localhost:3000/.pdf?date=Octubre+2015
+Unused Eager Loading detected
+  Post => [:user]
+  Remove from your finder: :includes => [:user]
+
+2015-10-26 03:55:06[WARN] user: gabase
+http://localhost:3000/.pdf?date=Octubre+2015
+Unused Eager Loading detected
+  Post => [:user]
+  Remove from your finder: :includes => [:user]
+
+2015-10-26 03:55:35[WARN] user: gabase
+http://localhost:3000/.pdf?date=Octubre+2015
+Unused Eager Loading detected
+  Post => [:user]
+  Remove from your finder: :includes => [:user]
+
+2015-10-26 03:55:46[WARN] user: gabase
+http://localhost:3000/.pdf?date=Octubre+2015
+Unused Eager Loading detected
+  Post => [:user]
+  Remove from your finder: :includes => [:user]
+
+2015-10-26 03:55:56[WARN] user: gabase
+http://localhost:3000/.pdf?date=Octubre+2015
+Unused Eager Loading detected
+  Post => [:user]
+  Remove from your finder: :includes => [:user]
+
+2015-10-26 03:57:19[WARN] user: gabase
+http://localhost:3000/.pdf?date=Octubre+2015
+Unused Eager Loading detected
+  Post => [:user]
+  Remove from your finder: :includes => [:user]
+
+2015-10-26 03:57:59[WARN] user: gabase
+http://localhost:3000/.pdf?date=Octubre+2015
+Unused Eager Loading detected
+  Post => [:user]
+  Remove from your finder: :includes => [:user]
+
+2015-10-26 04:05:15[WARN] user: gabase
+http://localhost:3000/.pdf?date=Octubre+2015
+Unused Eager Loading detected
+  Post => [:user]
+  Remove from your finder: :includes => [:user]
+
+2015-10-26 04:07:17[WARN] user: gabase
+http://localhost:3000/.pdf?date=Octubre+2015
+Unused Eager Loading detected
+  Post => [:user]
+  Remove from your finder: :includes => [:user]
+
+2015-10-26 04:08:58[WARN] user: gabase
+http://localhost:3000/.pdf?date=Octubre+2015
+Unused Eager Loading detected
+  Post => [:user]
+  Remove from your finder: :includes => [:user]
+
+2015-10-26 04:09:54[WARN] user: gabase
+http://localhost:3000/.pdf?date=Octubre+2015
+Unused Eager Loading detected
+  Post => [:user]
+  Remove from your finder: :includes => [:user]
+
+2015-10-26 04:13:30[WARN] user: gabase
+http://localhost:3000/.pdf?date=Octubre+2015
+Unused Eager Loading detected
+  Post => [:user]
+  Remove from your finder: :includes => [:user]
+
+2015-10-26 04:14:28[WARN] user: gabase
+http://localhost:3000/.pdf?date=Octubre+2015
+Unused Eager Loading detected
+  Post => [:user]
+  Remove from your finder: :includes => [:user]
+
+2015-10-26 04:14:57[WARN] user: gabase
+http://localhost:3000/.pdf?date=Octubre+2015
+Unused Eager Loading detected
+  Post => [:user]
+  Remove from your finder: :includes => [:user]
+
+2015-10-26 04:15:12[WARN] user: gabase
+http://localhost:3000/.pdf?date=Octubre+2015
+Unused Eager Loading detected
+  Post => [:user]
+  Remove from your finder: :includes => [:user]
+
+2015-10-26 04:16:52[WARN] user: gabase
+http://localhost:3000/.pdf?date=Octubre+2015
+Unused Eager Loading detected
+  Post => [:user]
+  Remove from your finder: :includes => [:user]
+
+2015-10-26 21:06:11[WARN] user: gabase
+http://localhost:3000/.pdf?date=Octubre+2015
+Unused Eager Loading detected
+  Post => [:user]
+  Remove from your finder: :includes => [:user]
+
+2015-10-26 21:08:58[WARN] user: gabase
+http://localhost:3000/.pdf?date=Octubre+2015
+Unused Eager Loading detected
+  Post => [:user]
+  Remove from your finder: :includes => [:user]
+
+2015-10-26 21:10:14[WARN] user: gabase
+http://localhost:3000/.pdf?date=Octubre+2015
+Unused Eager Loading detected
+  Post => [:user]
+  Remove from your finder: :includes => [:user]
+
+2015-10-26 21:10:43[WARN] user: gabase
+http://localhost:3000/.pdf?date=Octubre+2015
+Unused Eager Loading detected
+  Post => [:user]
+  Remove from your finder: :includes => [:user]
+
+2015-10-26 21:11:03[WARN] user: gabase
+http://localhost:3000/.pdf?date=Octubre+2015
+Unused Eager Loading detected
+  Post => [:user]
+  Remove from your finder: :includes => [:user]
+
+2015-10-26 21:11:13[WARN] user: gabase
+http://localhost:3000/.pdf?date=Octubre+2015
+Unused Eager Loading detected
+  Post => [:user]
+  Remove from your finder: :includes => [:user]
+
+2015-10-26 21:11:26[WARN] user: gabase
+http://localhost:3000/.pdf?date=Octubre+2015
+Unused Eager Loading detected
+  Post => [:user]
+  Remove from your finder: :includes => [:user]
+
+2015-10-26 21:11:39[WARN] user: gabase
+http://localhost:3000/.pdf?date=Octubre+2015
+Unused Eager Loading detected
+  Post => [:user]
+  Remove from your finder: :includes => [:user]
+
+2015-10-26 21:11:47[WARN] user: gabase
+http://localhost:3000/.pdf?date=Octubre+2015
+Unused Eager Loading detected
+  Post => [:user]
+  Remove from your finder: :includes => [:user]
+
+2015-10-26 21:12:08[WARN] user: gabase
+http://localhost:3000/.pdf?date=Octubre+2015
+Unused Eager Loading detected
+  Post => [:user]
+  Remove from your finder: :includes => [:user]
+
+2015-10-26 21:12:22[WARN] user: gabase
+http://localhost:3000/.pdf?date=Octubre+2015
+Unused Eager Loading detected
+  Post => [:user]
+  Remove from your finder: :includes => [:user]
+
+2015-10-26 21:25:40[WARN] user: gabase
+http://localhost:3000/.pdf?date=Octubre+2015
+Unused Eager Loading detected
+  Post => [:user]
+  Remove from your finder: :includes => [:user]
+
+2015-10-26 21:29:39[WARN] user: gabase
+http://localhost:3000/.pdf?date=Octubre+2015
+Unused Eager Loading detected
+  Post => [:user]
+  Remove from your finder: :includes => [:user]
+
+2015-10-26 21:30:07[WARN] user: gabase
+http://localhost:3000/.pdf?date=Octubre+2015
+Unused Eager Loading detected
+  Post => [:user]
+  Remove from your finder: :includes => [:user]
+
+2015-10-26 21:32:27[WARN] user: gabase
+http://localhost:3000/.pdf?date=Octubre+2015
+Unused Eager Loading detected
+  Post => [:user]
+  Remove from your finder: :includes => [:user]
+
+2015-10-26 21:33:51[WARN] user: gabase
+http://localhost:3000/.pdf?date=Octubre+2015
+Unused Eager Loading detected
+  Post => [:user]
+  Remove from your finder: :includes => [:user]
+
+2015-10-26 21:34:04[WARN] user: gabase
+http://localhost:3000/.pdf?date=Octubre+2015
+Unused Eager Loading detected
+  Post => [:user]
+  Remove from your finder: :includes => [:user]
+
+2015-10-26 21:34:17[WARN] user: gabase
+http://localhost:3000/.pdf?date=Octubre+2015
+Unused Eager Loading detected
+  Post => [:user]
+  Remove from your finder: :includes => [:user]
+
+2015-10-26 21:34:28[WARN] user: gabase
+http://localhost:3000/.pdf?date=Octubre+2015
+Unused Eager Loading detected
+  Post => [:user]
+  Remove from your finder: :includes => [:user]
+
+2015-10-26 21:40:44[WARN] user: gabase
+http://localhost:3000/.pdf?date=Octubre+2015
+Unused Eager Loading detected
+  Post => [:user]
+  Remove from your finder: :includes => [:user]
+
+2015-10-26 21:41:08[WARN] user: gabase
+http://localhost:3000/.pdf?date=Octubre+2015
+Unused Eager Loading detected
+  Post => [:user]
+  Remove from your finder: :includes => [:user]
+
+2015-10-26 21:41:19[WARN] user: gabase
+http://localhost:3000/.pdf?date=Octubre+2015
+Unused Eager Loading detected
+  Post => [:user]
+  Remove from your finder: :includes => [:user]
+
+2015-10-26 21:42:10[WARN] user: gabase
+http://localhost:3000/.pdf?date=Octubre+2015
+Unused Eager Loading detected
+  Post => [:user]
+  Remove from your finder: :includes => [:user]
+
+2015-10-26 21:45:55[WARN] user: gabase
+http://localhost:3000/.pdf?date=Octubre+2015
+Unused Eager Loading detected
+  Post => [:user]
+  Remove from your finder: :includes => [:user]
+
+2015-10-27 17:31:39[WARN] user: gabase
+http://localhost:3000/.pdf?date=Octubre+2015
+Unused Eager Loading detected
+  Post => [:user]
+  Remove from your finder: :includes => [:user]
+
+2015-10-27 18:39:50[WARN] user: gabase
+http://localhost:3000/.pdf?date=Octubre+2015
+Unused Eager Loading detected
+  Post => [:user]
+  Remove from your finder: :includes => [:user]
+
+2015-10-27 18:48:39[WARN] user: gabase
+http://localhost:3000/.pdf?date=Octubre+2015
+Unused Eager Loading detected
+  Post => [:user]
+  Remove from your finder: :includes => [:user]
+
+2015-10-27 18:49:33[WARN] user: gabase
+http://localhost:3000/.pdf?date=Octubre+2015
+Unused Eager Loading detected
+  Post => [:user]
+  Remove from your finder: :includes => [:user]
+
+2015-10-27 18:49:48[WARN] user: gabase
+http://localhost:3000/.pdf?date=Octubre+2015
+Unused Eager Loading detected
+  Post => [:user]
+  Remove from your finder: :includes => [:user]
+
+2015-10-27 18:50:38[WARN] user: gabase
+http://localhost:3000/.pdf?date=Octubre+2015
+Unused Eager Loading detected
+  Post => [:user]
+  Remove from your finder: :includes => [:user]
+
+2015-10-27 18:51:17[WARN] user: gabase
+http://localhost:3000/.pdf?date=Octubre+2015
+Unused Eager Loading detected
+  Post => [:user]
+  Remove from your finder: :includes => [:user]
+
+2015-10-27 19:13:01[WARN] user: gabase
+http://localhost:3000/.pdf?date=Octubre+2015
+Unused Eager Loading detected
+  Post => [:user]
+  Remove from your finder: :includes => [:user]
+
+2015-10-27 19:13:17[WARN] user: gabase
+http://localhost:3000/.pdf?date=Octubre+2015
+Unused Eager Loading detected
+  Post => [:user]
+  Remove from your finder: :includes => [:user]
+
+2015-10-27 19:20:33[WARN] user: gabase
+http://localhost:3000/.pdf?date=Octubre+2015
+Unused Eager Loading detected
+  Post => [:user]
+  Remove from your finder: :includes => [:user]
+
+2015-10-27 19:21:15[WARN] user: gabase
+http://localhost:3000/.pdf?date=Octubre+2015
+Unused Eager Loading detected
+  Post => [:user]
+  Remove from your finder: :includes => [:user]
+
+2015-10-27 19:21:18[WARN] user: gabase
+http://localhost:3000/.pdf?date=Octubre+2015
+Unused Eager Loading detected
+  Post => [:user]
+  Remove from your finder: :includes => [:user]
+
+2015-10-27 19:21:46[WARN] user: gabase
+http://localhost:3000/.pdf?date=Octubre+2015
+Unused Eager Loading detected
+  Post => [:user]
+  Remove from your finder: :includes => [:user]
+
+2015-10-27 19:22:19[WARN] user: gabase
+http://localhost:3000/.pdf?date=Octubre+2015
+Unused Eager Loading detected
+  Post => [:user]
+  Remove from your finder: :includes => [:user]
+
+2015-10-27 19:22:48[WARN] user: gabase
+http://localhost:3000/.pdf?date=Octubre+2015
+Unused Eager Loading detected
+  Post => [:user]
+  Remove from your finder: :includes => [:user]
+
+2015-10-27 19:24:53[WARN] user: gabase
+http://localhost:3000/.pdf?date=Octubre+2015
+Unused Eager Loading detected
+  Post => [:user]
+  Remove from your finder: :includes => [:user]
+
+2015-10-27 19:25:06[WARN] user: gabase
+http://localhost:3000/.pdf?date=Octubre+2015
+Unused Eager Loading detected
+  Post => [:user]
+  Remove from your finder: :includes => [:user]
+
+2015-10-27 19:27:29[WARN] user: gabase
+http://localhost:3000/.pdf?date=Octubre+2015
+Unused Eager Loading detected
+  Post => [:user]
+  Remove from your finder: :includes => [:user]
+
+2015-10-27 19:28:46[WARN] user: gabase
+http://localhost:3000/.pdf?date=Octubre+2015
+Unused Eager Loading detected
+  Post => [:user]
+  Remove from your finder: :includes => [:user]
+
+2015-10-27 19:29:44[WARN] user: gabase
+http://localhost:3000/.pdf?date=Octubre+2015
+Unused Eager Loading detected
+  Post => [:user]
+  Remove from your finder: :includes => [:user]
+
+2015-10-27 19:31:04[WARN] user: gabase
+http://localhost:3000/.pdf?date=Octubre+2015
+Unused Eager Loading detected
+  Post => [:user]
+  Remove from your finder: :includes => [:user]
+
+2015-10-27 19:32:47[WARN] user: gabase
+http://localhost:3000/.pdf?date=Octubre+2015
+Unused Eager Loading detected
+  Post => [:user]
+  Remove from your finder: :includes => [:user]
+
+2015-10-27 19:36:30[WARN] user: gabase
+http://localhost:3000/.pdf?date=Octubre+2015
+Unused Eager Loading detected
+  Post => [:user]
+  Remove from your finder: :includes => [:user]
+
+2015-10-27 19:37:20[WARN] user: gabase
+http://localhost:3000/.pdf?date=Octubre+2015
+Unused Eager Loading detected
+  Post => [:user]
+  Remove from your finder: :includes => [:user]
+
+2015-10-27 19:37:54[WARN] user: gabase
+http://localhost:3000/.pdf?date=Octubre+2015
+Unused Eager Loading detected
+  Post => [:user]
+  Remove from your finder: :includes => [:user]
+
+2015-10-27 19:38:29[WARN] user: gabase
+http://localhost:3000/.pdf?date=Octubre+2015
+Unused Eager Loading detected
+  Post => [:user]
+  Remove from your finder: :includes => [:user]
+
+2015-10-27 19:39:15[WARN] user: gabase
+http://localhost:3000/.pdf?date=Octubre+2015
+Unused Eager Loading detected
+  Post => [:user]
+  Remove from your finder: :includes => [:user]
+
+2015-10-27 19:39:43[WARN] user: gabase
+http://localhost:3000/.pdf?date=Octubre+2015
+Unused Eager Loading detected
+  Post => [:user]
+  Remove from your finder: :includes => [:user]
+
+2015-10-27 19:41:09[WARN] user: gabase
+http://localhost:3000/.pdf?date=Octubre+2015
+Unused Eager Loading detected
+  Post => [:user]
+  Remove from your finder: :includes => [:user]
+
+2015-10-27 19:41:26[WARN] user: gabase
+http://localhost:3000/.pdf?date=Octubre+2015
+Unused Eager Loading detected
+  Post => [:user]
+  Remove from your finder: :includes => [:user]
+
+2015-10-27 19:41:42[WARN] user: gabase
+http://localhost:3000/.pdf?date=Octubre+2015
+Unused Eager Loading detected
+  Post => [:user]
+  Remove from your finder: :includes => [:user]
+
+2015-10-27 19:42:00[WARN] user: gabase
+http://localhost:3000/.pdf?date=Octubre+2015
+Unused Eager Loading detected
+  Post => [:user]
+  Remove from your finder: :includes => [:user]
+
+2015-10-28 14:42:37[WARN] user: gabase
+http://localhost:3000/.pdf?date=Octubre+2015
+Unused Eager Loading detected
+  Post => [:user]
+  Remove from your finder: :includes => [:user]
+
+2015-10-28 17:37:56[WARN] user: gabase
+http://localhost:3000/.pdf?date=Octubre+2015
+Unused Eager Loading detected
+  Post => [:user]
+  Remove from your finder: :includes => [:user]
+
+2015-10-28 17:38:35[WARN] user: gabase
+http://localhost:3000/.pdf?date=Octubre+2015
+Unused Eager Loading detected
+  Post => [:user]
+  Remove from your finder: :includes => [:user]
+
+2015-10-28 17:38:58[WARN] user: gabase
+http://localhost:3000/.pdf?date=Octubre+2015
+Unused Eager Loading detected
+  Post => [:user]
+  Remove from your finder: :includes => [:user]
+
+2015-10-28 17:39:17[WARN] user: gabase
+http://localhost:3000/.pdf?date=Octubre+2015
+Unused Eager Loading detected
+  Post => [:user]
+  Remove from your finder: :includes => [:user]
+
+2015-10-28 17:48:10[WARN] user: gabase
+http://localhost:3000/.pdf?date=Octubre+2015
+Unused Eager Loading detected
+  Post => [:user]
+  Remove from your finder: :includes => [:user]
+
+2015-10-28 17:49:08[WARN] user: gabase
+http://localhost:3000/.pdf?date=Octubre+2015
+Unused Eager Loading detected
+  Post => [:user]
+  Remove from your finder: :includes => [:user]
+
+2015-10-28 17:54:05[WARN] user: gabase
+http://localhost:3000/.pdf?date=Octubre+2015
+Unused Eager Loading detected
+  Post => [:user]
+  Remove from your finder: :includes => [:user]
+
+2015-10-28 18:04:02[WARN] user: gabase
+http://localhost:3000/.pdf?date=Octubre+2015
+Unused Eager Loading detected
+  Post => [:user]
+  Remove from your finder: :includes => [:user]
+
+2015-10-28 18:04:29[WARN] user: gabase
+http://localhost:3000/.pdf?date=Octubre+2015
+Unused Eager Loading detected
+  Post => [:user]
+  Remove from your finder: :includes => [:user]
+
+2015-10-28 18:04:42[WARN] user: gabase
+http://localhost:3000/.pdf?date=Octubre+2015
+Unused Eager Loading detected
+  Post => [:user]
+  Remove from your finder: :includes => [:user]
+
+2015-10-28 18:06:06[WARN] user: gabase
+http://localhost:3000/.pdf?date=Octubre+2015
+Unused Eager Loading detected
+  Post => [:user]
+  Remove from your finder: :includes => [:user]
+
+2015-10-28 18:10:13[WARN] user: gabase
+http://localhost:3000/.pdf?date=Octubre+2015
+Unused Eager Loading detected
+  Post => [:user]
+  Remove from your finder: :includes => [:user]
+
+2015-10-28 18:11:21[WARN] user: gabase
+http://localhost:3000/.pdf?date=Octubre+2015
+Unused Eager Loading detected
+  Post => [:user]
+  Remove from your finder: :includes => [:user]
+
+2015-10-28 18:12:05[WARN] user: gabase
+http://localhost:3000/.pdf?date=Octubre+2015
+Unused Eager Loading detected
+  Post => [:user]
+  Remove from your finder: :includes => [:user]
+
+2015-10-28 18:12:19[WARN] user: gabase
+http://localhost:3000/.pdf?date=Octubre+2015
+Unused Eager Loading detected
+  Post => [:user]
+  Remove from your finder: :includes => [:user]
+
+2015-11-02 15:28:15[WARN] user: gabase
+http://localhost:3000/posts/resumen
+Unused Eager Loading detected
+  User => [:posts]
+  Remove from your finder: :includes => [:posts]
+
+2015-11-02 15:28:20[WARN] user: gabase
+http://localhost:3000/posts/resumen
+Unused Eager Loading detected
+  User => [:posts]
+  Remove from your finder: :includes => [:posts]
+
+2015-11-02 20:44:17[WARN] user: gabase
+http://localhost:3000/?date=02-12-2015
+Unused Eager Loading detected
+  Post => [:user]
+  Remove from your finder: :includes => [:user]
+
+2015-11-02 20:44:28[WARN] user: gabase
+http://localhost:3000/?date=02-01-2016
+Unused Eager Loading detected
+  Post => [:user]
+  Remove from your finder: :includes => [:user]
+
+2015-11-02 20:44:31[WARN] user: gabase
+http://localhost:3000/?date=02-12-2015
+Unused Eager Loading detected
+  Post => [:user]
+  Remove from your finder: :includes => [:user]
+
+2015-11-02 20:46:05[WARN] user: gabase
+http://localhost:3000/posts/resumen
+Unused Eager Loading detected
+  User => [:posts]
+  Remove from your finder: :includes => [:posts]
+
+2015-11-02 20:46:33[WARN] user: gabase
+http://localhost:3000/posts/resumen
+Unused Eager Loading detected
+  User => [:posts]
+  Remove from your finder: :includes => [:posts]
+
+2015-11-02 20:47:01[WARN] user: gabase
+http://localhost:3000/posts/resumen
+Unused Eager Loading detected
+  User => [:posts]
+  Remove from your finder: :includes => [:posts]
+
+2015-11-02 20:47:06[WARN] user: gabase
+http://localhost:3000/posts/resumen?date=02-10-2015
+Unused Eager Loading detected
+  User => [:posts]
+  Remove from your finder: :includes => [:posts]
+
+2015-11-02 20:47:09[WARN] user: gabase
+http://localhost:3000/posts/resumen?date=02-10-2015
+Unused Eager Loading detected
+  User => [:posts]
+  Remove from your finder: :includes => [:posts]
+
+2015-11-02 20:47:58[WARN] user: gabase
+http://localhost:3000/posts/resumen?date=02-10-2015
+Unused Eager Loading detected
+  User => [:posts]
+  Remove from your finder: :includes => [:posts]
+
+2015-11-02 21:11:00[WARN] user: gabase
+http://localhost:3000/posts/resumen
+Unused Eager Loading detected
+  User => [:posts]
+  Remove from your finder: :includes => [:posts]
+
+2015-11-02 21:11:07[WARN] user: gabase
+http://localhost:3000/posts/resumen
+Unused Eager Loading detected
+  User => [:posts]
+  Remove from your finder: :includes => [:posts]
+
+2015-11-02 21:15:22[WARN] user: gabase
+http://localhost:3000/posts/resumen
+Unused Eager Loading detected
+  User => [:posts]
+  Remove from your finder: :includes => [:posts]
+
+2015-11-02 21:16:25[WARN] user: gabase
+http://localhost:3000/posts/resumen
+Unused Eager Loading detected
+  User => [:posts]
+  Remove from your finder: :includes => [:posts]
+
+2015-11-02 21:17:20[WARN] user: gabase
+http://localhost:3000/posts/resumen
+Unused Eager Loading detected
+  User => [:posts]
+  Remove from your finder: :includes => [:posts]
+
+2015-11-02 21:17:25[WARN] user: gabase
+http://localhost:3000/posts/resumen
+Unused Eager Loading detected
+  User => [:posts]
+  Remove from your finder: :includes => [:posts]
+
+2015-11-02 21:18:17[WARN] user: gabase
+http://localhost:3000/posts/resumen
+Unused Eager Loading detected
+  User => [:posts]
+  Remove from your finder: :includes => [:posts]
+
+2015-11-02 21:18:48[WARN] user: gabase
+http://localhost:3000/posts/resumen
+Unused Eager Loading detected
+  User => [:posts]
+  Remove from your finder: :includes => [:posts]
+
+2015-11-02 21:20:30[WARN] user: gabase
+http://localhost:3000/posts/resumen
+Unused Eager Loading detected
+  User => [:posts]
+  Remove from your finder: :includes => [:posts]
+
+2015-11-02 21:20:55[WARN] user: gabase
+http://localhost:3000/posts/resumen
+Unused Eager Loading detected
+  User => [:posts]
+  Remove from your finder: :includes => [:posts]
+
+2015-11-02 21:21:44[WARN] user: gabase
+http://localhost:3000/posts/resumen
+Unused Eager Loading detected
+  User => [:posts]
+  Remove from your finder: :includes => [:posts]
+
+2015-11-02 21:22:19[WARN] user: gabase
+http://localhost:3000/posts/resumen
+Unused Eager Loading detected
+  User => [:posts]
+  Remove from your finder: :includes => [:posts]
+
+2015-11-02 23:37:41[WARN] user: gabase
+http://localhost:3000/posts/resumen
+Unused Eager Loading detected
+  User => [:posts]
+  Remove from your finder: :includes => [:posts]
+
+2015-11-02 23:39:33[WARN] user: gabase
+http://localhost:3000/posts/resumen
+Unused Eager Loading detected
+  User => [:posts]
+  Remove from your finder: :includes => [:posts]
+
+2015-11-02 23:40:08[WARN] user: gabase
+http://localhost:3000/posts/resumen
+Unused Eager Loading detected
+  User => [:posts]
+  Remove from your finder: :includes => [:posts]
+
+2015-11-02 23:40:37[WARN] user: gabase
+http://localhost:3000/posts/resumen
+Unused Eager Loading detected
+  User => [:posts]
+  Remove from your finder: :includes => [:posts]
+
+2015-11-02 23:41:47[WARN] user: gabase
+http://localhost:3000/posts/resumen
+Unused Eager Loading detected
+  User => [:posts]
+  Remove from your finder: :includes => [:posts]
+
+2015-11-02 23:42:54[WARN] user: gabase
+http://localhost:3000/posts/resumen
+Unused Eager Loading detected
+  User => [:posts]
+  Remove from your finder: :includes => [:posts]
+
+2015-11-02 23:43:17[WARN] user: gabase
+http://localhost:3000/posts/resumen
+Unused Eager Loading detected
+  User => [:posts]
+  Remove from your finder: :includes => [:posts]
+
+2015-11-02 23:44:03[WARN] user: gabase
+http://localhost:3000/posts/resumen
+Unused Eager Loading detected
+  User => [:posts]
+  Remove from your finder: :includes => [:posts]
+
+2015-11-02 23:46:33[WARN] user: gabase
+http://localhost:3000/posts/resumen
+Unused Eager Loading detected
+  User => [:posts]
+  Remove from your finder: :includes => [:posts]
+
+2015-11-02 23:47:29[WARN] user: gabase
+http://localhost:3000/posts/resumen
+Unused Eager Loading detected
+  User => [:posts]
+  Remove from your finder: :includes => [:posts]
+
+2015-11-02 23:47:55[WARN] user: gabase
+http://localhost:3000/posts/resumen
+Unused Eager Loading detected
+  User => [:posts]
+  Remove from your finder: :includes => [:posts]
+
+2015-11-02 23:49:12[WARN] user: gabase
+http://localhost:3000/posts/resumen
+Unused Eager Loading detected
+  User => [:posts]
+  Remove from your finder: :includes => [:posts]
+
+2015-11-02 23:49:26[WARN] user: gabase
+http://localhost:3000/posts/resumen
+Unused Eager Loading detected
+  User => [:posts]
+  Remove from your finder: :includes => [:posts]
+
+2015-11-02 23:50:13[WARN] user: gabase
+http://localhost:3000/posts/resumen
+Unused Eager Loading detected
+  User => [:posts]
+  Remove from your finder: :includes => [:posts]
+
+2015-11-02 23:51:29[WARN] user: gabase
+http://localhost:3000/?date=02-07-2015
+Unused Eager Loading detected
+  Post => [:user]
+  Remove from your finder: :includes => [:user]
+
+2015-11-02 23:52:01[WARN] user: gabase
+http://localhost:3000/posts/resumen
+Unused Eager Loading detected
+  User => [:posts]
+  Remove from your finder: :includes => [:posts]
+
+2015-11-02 23:52:04[WARN] user: gabase
+http://localhost:3000/posts/resumen
+Unused Eager Loading detected
+  User => [:posts]
+  Remove from your finder: :includes => [:posts]
+
+2015-11-02 23:53:17[WARN] user: gabase
+http://localhost:3000/posts/resumen
+Unused Eager Loading detected
+  User => [:posts]
+  Remove from your finder: :includes => [:posts]
+
+2015-11-02 23:54:16[WARN] user: gabase
+http://localhost:3000/posts/resumen
+Unused Eager Loading detected
+  User => [:posts]
+  Remove from your finder: :includes => [:posts]
+
+2015-11-02 23:55:42[WARN] user: gabase
+http://localhost:3000/posts/resumen
+Unused Eager Loading detected
+  User => [:posts]
+  Remove from your finder: :includes => [:posts]
+
+2015-11-02 23:56:11[WARN] user: gabase
+http://localhost:3000/posts/resumen
+Unused Eager Loading detected
+  User => [:posts]
+  Remove from your finder: :includes => [:posts]
+
+2015-11-02 23:58:21[WARN] user: gabase
+http://localhost:3000/posts/resumen
+Unused Eager Loading detected
+  User => [:posts]
+  Remove from your finder: :includes => [:posts]
+
+2015-11-02 23:58:33[WARN] user: gabase
+http://localhost:3000/posts/resumen
+Unused Eager Loading detected
+  User => [:posts]
+  Remove from your finder: :includes => [:posts]
+
+2015-11-02 23:58:43[WARN] user: gabase
+http://localhost:3000/posts/resumen
+Unused Eager Loading detected
+  User => [:posts]
+  Remove from your finder: :includes => [:posts]
+
+2015-11-02 23:59:55[WARN] user: gabase
+http://localhost:3000/posts/resumen
+Unused Eager Loading detected
+  User => [:posts]
+  Remove from your finder: :includes => [:posts]
+
+2015-11-02 23:59:59[WARN] user: gabase
+http://localhost:3000/posts/resumen
+Unused Eager Loading detected
+  User => [:posts]
+  Remove from your finder: :includes => [:posts]
+
+2015-11-03 00:00:08[WARN] user: gabase
+http://localhost:3000/posts/resumen
+Unused Eager Loading detected
+  User => [:posts]
+  Remove from your finder: :includes => [:posts]
+
+2015-11-03 00:00:31[WARN] user: gabase
+http://localhost:3000/?date=03-07-2015
+Unused Eager Loading detected
+  Post => [:user]
+  Remove from your finder: :includes => [:user]
+
+2015-11-03 00:02:34[WARN] user: gabase
+http://localhost:3000/posts/resumen
+Unused Eager Loading detected
+  User => [:posts]
+  Remove from your finder: :includes => [:posts]
+
+2015-11-03 00:02:37[WARN] user: gabase
+http://localhost:3000/posts/resumen
+Unused Eager Loading detected
+  User => [:posts]
+  Remove from your finder: :includes => [:posts]
+
+2015-11-03 00:03:13[WARN] user: gabase
+http://localhost:3000/posts/resumen
+Unused Eager Loading detected
+  User => [:posts]
+  Remove from your finder: :includes => [:posts]
+
+2015-11-03 00:05:01[WARN] user: gabase
+http://localhost:3000/admin/post?_pjax=%5Bdata-pjax-container%5D
+Unused Eager Loading detected
+  Post => [:user]
+  Remove from your finder: :includes => [:user]
+
+2015-11-03 00:05:51[WARN] user: gabase
+http://localhost:3000/admin/user/2/edit?_pjax=%5Bdata-pjax-container%5D
+Unused Eager Loading detected
+  Post => [:user]
+  Remove from your finder: :includes => [:user]
+
+2015-11-03 00:06:13[WARN] user: gabase
+http://localhost:3000/admin/user/3/edit?_pjax=%5Bdata-pjax-container%5D
+Unused Eager Loading detected
+  Post => [:user]
+  Remove from your finder: :includes => [:user]
+
+2015-11-03 00:06:17[WARN] user: gabase
+http://localhost:3000/admin/post?_pjax=%5Bdata-pjax-container%5D
+Unused Eager Loading detected
+  Post => [:user]
+  Remove from your finder: :includes => [:user]
+
+2015-11-03 00:06:26[WARN] user: gabase
+http://localhost:3000/admin/post?_pjax=%5Bdata-pjax-container%5D&page=2&sort=id&sort_reverse=false&_pjax=%5Bdata-pjax-container%5D
+Unused Eager Loading detected
+  Post => [:user]
+  Remove from your finder: :includes => [:user]
+
+2015-11-03 00:06:28[WARN] user: gabase
+http://localhost:3000/admin/post?_pjax=%5Bdata-pjax-container%5D&page=3&sort=id&sort_reverse=false&_pjax=%5Bdata-pjax-container%5D
+Unused Eager Loading detected
+  Post => [:user]
+  Remove from your finder: :includes => [:user]
+
+2015-11-03 00:06:32[WARN] user: gabase
+http://localhost:3000/admin/post?_pjax=%5Bdata-pjax-container%5D&sort=id&sort_reverse=false&_pjax=%5Bdata-pjax-container%5D
+Unused Eager Loading detected
+  Post => [:user]
+  Remove from your finder: :includes => [:user]
+
+2015-11-03 00:07:21[WARN] user: gabase
+http://localhost:3000/admin/post?_pjax=%5Bdata-pjax-container%5D
+Unused Eager Loading detected
+  Post => [:user]
+  Remove from your finder: :includes => [:user]
+
+2015-11-03 00:07:30[WARN] user: gabase
+http://localhost:3000/admin/post?model_name=post&utf8=%E2%9C%93&f%5Balta%5D%5B56461%5D%5Bo%5D=_null&f%5Balta%5D%5B56461%5D%5Bv%5D%5B%5D=&f%5Balta%5D%5B56461%5D%5Bv%5D%5B%5D=&f%5Balta%5D%5B56461%5D%5Bv%5D%5B%5D=&query=&_pjax=%5Bdata-pjax-container%5D
+Unused Eager Loading detected
+  Post => [:user]
+  Remove from your finder: :includes => [:user]
+
+2015-11-03 00:07:53[WARN] user: gabase
+http://localhost:3000/admin/post
+Unused Eager Loading detected
+  Post => [:user]
+  Remove from your finder: :includes => [:user]
+
+2015-11-03 00:08:01[WARN] user: gabase
+http://localhost:3000/posts/resumen
+Unused Eager Loading detected
+  User => [:posts]
+  Remove from your finder: :includes => [:posts]
+
+2015-11-03 00:08:04[WARN] user: gabase
+http://localhost:3000/posts/resumen
+Unused Eager Loading detected
+  User => [:posts]
+  Remove from your finder: :includes => [:posts]
+
+2015-11-03 00:08:14[WARN] user: gabase
+http://localhost:3000/posts/resumen
+Unused Eager Loading detected
+  User => [:posts]
+  Remove from your finder: :includes => [:posts]
+
+2015-11-03 00:11:12[WARN] user: gabase
+http://localhost:3000/posts/resumen
+Unused Eager Loading detected
+  User => [:posts]
+  Remove from your finder: :includes => [:posts]
+
+2015-11-03 00:11:42[WARN] user: gabase
+http://localhost:3000/?date=03-12-2015
+Unused Eager Loading detected
+  Post => [:user]
+  Remove from your finder: :includes => [:user]
+
+2015-11-03 00:11:43[WARN] user: gabase
+http://localhost:3000/?date=03-01-2016
+Unused Eager Loading detected
+  Post => [:user]
+  Remove from your finder: :includes => [:user]
+
+2015-11-03 00:11:48[WARN] user: gabase
+http://localhost:3000/posts/resumen
+Unused Eager Loading detected
+  User => [:posts]
+  Remove from your finder: :includes => [:posts]
+
+2015-11-03 00:11:51[WARN] user: gabase
+http://localhost:3000/posts/resumen
+Unused Eager Loading detected
+  User => [:posts]
+  Remove from your finder: :includes => [:posts]
+
+2015-11-03 00:11:57[WARN] user: gabase
+http://localhost:3000/posts/resumen
+Unused Eager Loading detected
+  User => [:posts]
+  Remove from your finder: :includes => [:posts]
+
+2015-11-03 00:13:03[WARN] user: gabase
+http://localhost:3000/posts/resumen?date=03-12-2015
+Unused Eager Loading detected
+  User => [:posts]
+  Remove from your finder: :includes => [:posts]
+
+2015-11-03 00:13:07[WARN] user: gabase
+http://localhost:3000/posts/resumen?date=03-01-2016
+Unused Eager Loading detected
+  User => [:posts]
+  Remove from your finder: :includes => [:posts]
+
+2015-11-03 00:13:10[WARN] user: gabase
+http://localhost:3000/posts/resumen?date=03-01-2016
+Unused Eager Loading detected
+  User => [:posts]
+  Remove from your finder: :includes => [:posts]
+
+2015-11-03 00:13:21[WARN] user: gabase
+http://localhost:3000/posts/resumen?date=03-12-2015
+Unused Eager Loading detected
+  User => [:posts]
+  Remove from your finder: :includes => [:posts]
+
+2015-11-03 00:13:24[WARN] user: gabase
+http://localhost:3000/posts/resumen?date=03-12-2015
+Unused Eager Loading detected
+  User => [:posts]
+  Remove from your finder: :includes => [:posts]
+
+2015-11-03 00:14:40[WARN] user: gabase
+http://localhost:3000/?date=03-12-2015
+Unused Eager Loading detected
+  Post => [:user]
+  Remove from your finder: :includes => [:user]
+
+2015-11-03 00:54:27[WARN] user: gabase
+http://localhost:3000/posts/resumen
+Unused Eager Loading detected
+  User => [:posts]
+  Remove from your finder: :includes => [:posts]
+
+2015-11-03 00:54:31[WARN] user: gabase
+http://localhost:3000/posts/resumen
+Unused Eager Loading detected
+  User => [:posts]
+  Remove from your finder: :includes => [:posts]
+
+2015-11-03 00:54:40[WARN] user: gabase
+http://localhost:3000/posts/resumen
+Unused Eager Loading detected
+  User => [:posts]
+  Remove from your finder: :includes => [:posts]
+
+2015-11-03 00:54:45[WARN] user: gabase
+http://localhost:3000/posts/resumen
+Unused Eager Loading detected
+  User => [:posts]
+  Remove from your finder: :includes => [:posts]
+
+2015-11-03 00:56:20[WARN] user: gabase
+http://localhost:3000/.pdf?date=Octubre+2015
+Unused Eager Loading detected
+  Post => [:user]
+  Remove from your finder: :includes => [:user]
+
+2015-11-03 00:56:54[WARN] user: gabase
+http://localhost:3000/.pdf?date=Octubre+2015
+Unused Eager Loading detected
+  Post => [:user]
+  Remove from your finder: :includes => [:user]
+
+2015-11-03 00:57:10[WARN] user: gabase
+http://localhost:3000/.pdf?date=Octubre+2015
+Unused Eager Loading detected
+  Post => [:user]
+  Remove from your finder: :includes => [:user]
+
+2015-11-03 00:57:26[WARN] user: gabase
+http://localhost:3000/.pdf?date=Octubre+2015
+Unused Eager Loading detected
+  Post => [:user]
+  Remove from your finder: :includes => [:user]
+
+2015-11-03 01:18:21[WARN] user: gabase
+http://localhost:3000/.pdf?date=Octubre+2015
+Unused Eager Loading detected
+  Post => [:user]
+  Remove from your finder: :includes => [:user]
+
+2015-11-03 01:19:06[WARN] user: gabase
+http://localhost:3000/.pdf?date=Octubre+2015
+Unused Eager Loading detected
+  Post => [:user]
+  Remove from your finder: :includes => [:user]
+
+2015-11-03 01:20:24[WARN] user: gabase
+http://localhost:3000/.pdf?date=Octubre+2015
+Unused Eager Loading detected
+  Post => [:user]
+  Remove from your finder: :includes => [:user]
+
+2015-11-03 01:21:49[WARN] user: gabase
+http://localhost:3000/.pdf?date=Octubre+2015
+Unused Eager Loading detected
+  Post => [:user]
+  Remove from your finder: :includes => [:user]
+
+2015-11-03 01:22:27[WARN] user: gabase
+http://localhost:3000/.pdf?date=Octubre+2015
+Unused Eager Loading detected
+  Post => [:user]
+  Remove from your finder: :includes => [:user]
+
+2015-11-03 01:44:21[WARN] user: gabase
+http://localhost:3000/?date=03-08-2015
+Unused Eager Loading detected
+  Post => [:user]
+  Remove from your finder: :includes => [:user]
+
+2015-11-03 01:47:21[WARN] user: gabase
+http://localhost:3000/.pdf?date=Octubre+2015
+Unused Eager Loading detected
+  Post => [:user]
+  Remove from your finder: :includes => [:user]
+
+2015-11-03 19:07:27[WARN] user: gabase
+http://localhost:3000/.pdf?date=Octubre+2015
+Unused Eager Loading detected
+  Post => [:user]
+  Remove from your finder: :includes => [:user]
+

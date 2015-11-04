@@ -1,0 +1,22 @@
+<%= form_for(@recurso) do |f| %>
+  <% if @post.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@post.errors.count, "error") %> prohibited this post from being saved:</h2>
+
+      <ul>
+      <% @post.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+                <%= f.text_area :name, class: "form-control post_title", label: false, autofocus: true, placeholder: "Recurso", rows: 1 %>
+
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+
+  <button type="button" class="btn btn-default" data-dismiss="modal" id="mynewpostclose">Close</button>
+              <%= submit_tag "Create", class: "btn btn-primary" %>
+<% end %>

@@ -12,7 +12,7 @@ default: &default
 development:
   <<: *default
   database: cadmax_development
-  username: GaBase
+  username: gabase
   password: secret
 
 # Warning: The database defined as "test" will be erased and
@@ -21,7 +21,7 @@ development:
 test:
   <<: *default
   database: cadmax_test
-  username: GaBase
+  username: gabase
   password: secret
 
 production:

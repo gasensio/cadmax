@@ -6,10 +6,12 @@ Rails.application.routes.draw do
   get 'posts/resumen'
   get 'posts/foro'
   get 'foros/index'
+
 end
   resources :posts
   resources :proyectos
   resources :clientes
+  resources :recursos
   resources :foros
   devise_for :users, controllers: { registrations: "registrations" }
   resources :users, only: [:show]

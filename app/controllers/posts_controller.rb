@@ -3,7 +3,6 @@ class PostsController < ApplicationController
   before_action :set_post, only: [:show, :edit, :update, :destroy]
 
 
-
   # GET /posts
   # GET /posts.json
   def index
@@ -22,14 +21,16 @@ class PostsController < ApplicationController
     @proyectos = Proyecto.all
     @cliente = Cliente.new
     @clientes = Cliente.all
+    @recurso = Recurso.new
+    @recursos = Recurso.all
     respond_to do |format|
         format.html
         format.json
         format.csv { send_data @posts.to_csv }
         format.xls # { send_data @posts.to_csv(col_sep: "\t") }
         format.pdf do
-          pdf = PartePdf.new(@post)
-          send_data pdf.render, filename: "Parte.pdf",
+          pdf = PartegeneralPdf.new(@post, @date, view_context)
+          send_data pdf.render, filename: "Partegeneral.pdf",
                                 type: "application/pdf",
                                 disposition: "attachment"
         end
@@ -45,10 +46,10 @@ class PostsController < ApplicationController
         format.csv { send_data @posts.to_csv }
         format.xls # { send_data @posts.to_csv(col_sep: "\t") }
         format.pdf do
-          pdf = PartePdf.new(@post)
+          pdf = PartePdf.new(@post, view_context)
           send_data pdf.render, filename: "Parte.pdf",
                                 type: "application/pdf",
-                                disposition: "inline"
+                                disposition: "attachment"
         end
       end
   end
@@ -145,6 +146,6 @@ class PostsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def post_params
-      params.require(:post).permit(:title, :content, :pedido, :horasof, :horasnf, :extra, :extraf, :nocturnas, :vacaciones, :bolsahg, :bolsahu, :alta, :search, :status, :proyecto, :cliente, :user_id, :inicio, :fin, :name, :viaje, :espera, :total )
+      params.require(:post).permit(:title, :content, :pedido, :horasof, :horasnf, :extra, :extraf, :nocturnas, :vacaciones, :bolsahg, :bolsahu, :alta, :search, :status, :proyecto, :cliente, :recurso, :user_id, :inicio, :fin, :name, :viaje, :espera, :total )
     end
 end
